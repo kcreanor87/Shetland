@@ -8,7 +8,6 @@ public class TownCanvas : MonoBehaviour {
 	public Market _market;
 	public Canvas _canvas;
 	public GameObject _welcomeGO;
-	public Canvas _ui;
 	public RumourGenerator _rumourGen;
 	public List <GameObject> _buildings = new List<GameObject>();
 	public List <GameObject> _buildingCanvas = new List<GameObject>();
@@ -23,7 +22,6 @@ public class TownCanvas : MonoBehaviour {
 		_rumourGen = gameObject.GetComponent<RumourGenerator>();
 		_canvas = gameObject.GetComponent<Canvas>();
 		_market = gameObject.GetComponent<Market>();
-		_ui = GameObject.Find("UI").GetComponent<Canvas>();
 		_welcomeGO = GameObject.Find("Welcome");
 		_canvas.enabled = false;
 	}
@@ -31,7 +29,6 @@ public class TownCanvas : MonoBehaviour {
 	public void OpenCanvas(){
 		SetActiveBuildings();
 		Time.timeScale = 0.0f;
-		_ui.enabled = false;
 		_canvas.enabled = true;
 		_market._townManager = _townManager;
 		_market.UpdatePrices();		
@@ -40,7 +37,6 @@ public class TownCanvas : MonoBehaviour {
 	public void CloseCanvas(){
 		_canvas.enabled = false;
 		Time.timeScale = 1.0f;
-		_ui.enabled = true;
 		WM_UI.UpdateUI();
 	}
 

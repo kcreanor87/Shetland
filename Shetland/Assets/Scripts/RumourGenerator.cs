@@ -51,6 +51,7 @@ public class RumourGenerator : MonoBehaviour {
 			_rumourText.text = "You hear nothing but local anecdotes and petty arguments";
 		}
 		_manager._obols -= _cost;
+		WM_UI.UpdateUI();
 		_activeTown.GeneratePrices();
 		_rumourActive = true;
 		_rumourButton.interactable = false;

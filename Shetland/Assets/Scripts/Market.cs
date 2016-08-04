@@ -33,6 +33,7 @@ public class Market : MonoBehaviour {
 			_manager._resources[resource]++;
 			_manager._obols -= _townManager._buyPrices[resource];
 			UpdatePrices();
+			WM_UI.UpdateUI();
 		}		
 	}
 
@@ -41,6 +42,7 @@ public class Market : MonoBehaviour {
 			_manager._resources[resource]--;
 			_manager._obols += _townManager._sellPrices[resource];
 			UpdatePrices();
+			WM_UI.UpdateUI();
 		}		
 	}
 
