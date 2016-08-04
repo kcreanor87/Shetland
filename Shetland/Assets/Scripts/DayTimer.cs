@@ -8,11 +8,13 @@ public class DayTimer : MonoBehaviour {
 	public int _days;
 	public GameObject _clock;
 	public List <GameObject> _towns = new List <GameObject>();
+	public RumourGenerator _rumourScript;
 
 	void Start(){
 		_clock = GameObject.Find("Clock");
 		StartCoroutine(Timer());
 		_towns.AddRange(GameObject.FindGameObjectsWithTag("Town"));
+		_rumourScript = GameObject.Find("TownCanvas").GetComponent<RumourGenerator>();
 
 	}
 
@@ -35,7 +37,8 @@ public class DayTimer : MonoBehaviour {
 		_manager._resources[2] += _manager._factoryOuput[2];
 		_manager._resources[3] += _manager._factoryOuput[3];
 		WM_UI.UpdateUI();
-		ResetPrices();
+		_rumourScript.ClearRumour();
+		ResetPrices();		
 		StartCoroutine(Timer());
 	}
 

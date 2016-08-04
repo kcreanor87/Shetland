@@ -9,12 +9,18 @@ public class TownCanvas : MonoBehaviour {
 	public Canvas _canvas;
 	public GameObject _welcomeGO;
 	public Canvas _ui;
+	public RumourGenerator _rumourGen;
 	public List <GameObject> _buildings = new List<GameObject>();
 	public List <GameObject> _buildingCanvas = new List<GameObject>();
 	public List <Button> _workshopButtons = new List <Button>();
+	public Text _marketName, _innName, _smithName;
 
 	void Start(){
 		PopulateGOList();
+		_marketName = GameObject.Find("MarketButtonText").GetComponent<Text>();
+		_innName = GameObject.Find("InnButtonText").GetComponent<Text>();
+		_smithName = GameObject.Find("SmithButtonText").GetComponent<Text>();
+		_rumourGen = gameObject.GetComponent<RumourGenerator>();
 		_canvas = gameObject.GetComponent<Canvas>();
 		_market = gameObject.GetComponent<Market>();
 		_ui = GameObject.Find("UI").GetComponent<Canvas>();
@@ -42,7 +48,7 @@ public class TownCanvas : MonoBehaviour {
 		_buildingCanvas[index].SetActive(true);
 		_welcomeGO.SetActive(false);
 		WorkshopActivate();
-
+		_rumourGen.EnterText();
 	}
 
 	public void CloseBuilding(int index){
@@ -76,5 +82,21 @@ public class TownCanvas : MonoBehaviour {
 	public void PurchaseBuilding(int index){
 		_townManager._activeBuildings[index] = true;
 		WorkshopActivate();
+		UpgradableBuildingNames();
+	}
+
+	void UpgradableBuildingNames(){
+		if (_townManager._activeBuildings[12]){
+			_marketName.text = "Exchange";
+		}
+		else if (_townManager._activeBuildings[10]){
+			_marketName.text = "Bazaar";
+		}
+		if (_townManager._activeBuildings[11] && _townManager._activeBuildings[2]){
+			_innName.text = "Town Hall";
+		}
+		if (_townManager._activeBuildings[13] && _market._townManager._activeBuildings[5]){
+			_smithName.text = "Arsenal";
+		}
 	}
 }

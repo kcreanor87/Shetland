@@ -40,6 +40,8 @@ public class LevelGen : MonoBehaviour {
 	public Transform _waterParent;
 	//Access Player Controls for setting spawn location
 	public PlayerControls_WM _playerControl;
+	//List of town names
+	public List <string> _names = new List<string>();
 
 	void Start () {
 		//Allocate transforms for parenting
@@ -149,6 +151,8 @@ public class LevelGen : MonoBehaviour {
 	}
 	//Function to calculate available areas for towns
 	void CalculateTowns(){
+		//Generate the list of potential Town names
+		GenerateNames();
 		//loops through all available poitns and ensure they are at least 10.0f from the edges, and add to _spawnable list if so
 		for (int i = _points.Count-1; i > -1; i--){
 			if (_points[i].x > 8 && _points[i].x < (_sizeX-8)){
@@ -167,7 +171,11 @@ public class LevelGen : MonoBehaviour {
 		//For each town in the list created via the above functions, instantiate a town and add it to the _used List 
 		for (int i = 0; i < _towns.Count; i++){
 			var town = (GameObject) Instantiate (_townPrefab, _towns[i], Quaternion.identity);
-			town.transform.SetParent(_townParent);
+			var script = town.GetComponentInChildren<TownManager>();
+			var index = Random.Range(0, _names.Count);
+			script._name = _names[index];
+			_names.RemoveAt(index);
+			town.transform.SetParent(_townParent);			
 			_used.Add(_towns[i]);
 		}
 		UpdatePoints();
@@ -307,5 +315,18 @@ public class LevelGen : MonoBehaviour {
 		_terrainParent.localScale = new Vector3(10,10,10);
 		_resourceParent.localScale = new Vector3(10,10,10);
 		_waterParent.localScale = new Vector3(10,10,10);
+	}
+
+	void GenerateNames(){
+		_names.Add("Glasgow");
+		_names.Add("Edinburgh");
+		_names.Add("Dundee");
+		_names.Add("Aberdeen");
+		_names.Add("Inverness");
+		_names.Add("Stirling");
+		_names.Add("Fort William");
+		_names.Add("Perth");
+		_names.Add("Arrochar");
+		_names.Add("St Andrews");
 	}	
 }
