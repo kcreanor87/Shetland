@@ -13,8 +13,9 @@ public class ActivateFactory : MonoBehaviour {
 	public static int _type;
 	public static int _amount;
 	public static bool _active;
-	public bool _affordable;
+	public static bool _affordable;
 	public static Factories _activeFactory;
+	public static Button _activateButton;
 
 	public WM_UI _ui;
 
@@ -28,14 +29,17 @@ public class ActivateFactory : MonoBehaviour {
 		_stoneCost = GameObject.Find("StoneCost").GetComponent<Text>();
 		_ironCost = GameObject.Find("IronCost").GetComponent<Text>();
 		_coalCost = GameObject.Find("CoalCost").GetComponent<Text>();
+		_activateButton = GameObject.Find("FactoryActivate").GetComponent<Button>();
 		_factoryPrompt.SetActive(false);
 		_ui = GameObject.Find("UI").GetComponent<WM_UI>();
 
 	}
 	public static void OpenUI(){
+		CheckResources();
 		_factoryName.text = _name;
 		_factoryText.text = "+ " + _amount + " " + _manager._resourceNames[_type] + " Per Day";
 		_buttonText.text = (_active) ? "Upgrade" : "Activate";
+		_activateButton.interactable = _affordable;
 		_woodCost.text = _activeFactory._costs[0].ToString();
 		_stoneCost.text = _activeFactory._costs[1].ToString();
 		_ironCost.text = _activeFactory._costs[2].ToString();
@@ -47,8 +51,7 @@ public class ActivateFactory : MonoBehaviour {
 		_factoryPrompt.SetActive(false);
 		Time.timeScale = 1.0f;
 	}
-	public void Activate(){
-		CheckResources();
+	public void Activate(){		
 		if (!_active && _affordable){
 			PayResources();	
 			_activeFactory._active = true;
@@ -77,7 +80,7 @@ public class ActivateFactory : MonoBehaviour {
 		OpenUI();
 	}
 
-	void CheckResources(){
+	static void CheckResources(){
 		int _checked = 0;
 		_affordable = false;
 		for (int i = 0; i < _activeFactory._costs.Count; i++){

@@ -58,6 +58,8 @@ public class PlayerControls_WM : MonoBehaviour {
 					_agent.SetDestination(_objectPos);
 					_agent.Resume();
 					_movingToResource= true;
+					_movingToFactory = false;
+					_movingToTown = false;
 					_resourceScript = hit.collider.gameObject.GetComponent<ResourceGen>();
 					_range = 3.0f;
 					break;
@@ -66,6 +68,8 @@ public class PlayerControls_WM : MonoBehaviour {
 					_agent.SetDestination(_objectPos);
 					_agent.Resume();
 					_movingToFactory= true;
+					_movingToResource= false;
+					_movingToTown = false;
 					_factoryScript = hit.collider.gameObject.GetComponent<Factories>();
 					_range = 5.0f;
 					break;
@@ -75,6 +79,8 @@ public class PlayerControls_WM : MonoBehaviour {
 					_agent.Resume();
 					_townCanvas._townManager = hit.collider.gameObject.GetComponent<TownManager>();
 					_movingToTown = true;
+					_movingToResource= false;
+					_movingToFactory = false;
 					_range = 1.0f;				
 					break;
 				}		

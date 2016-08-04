@@ -23,7 +23,7 @@ public class _manager : MonoBehaviour {
 		_factoryOuput.Add(0);
 		_factoryOuput.Add(0);
 
-		_resources.Add(0);
+		_resources.Add(1);
 		_resources.Add(0);
 		_resources.Add(0);
 		_resources.Add(0);
