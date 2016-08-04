@@ -7,10 +7,12 @@ public class TownManager : MonoBehaviour {
 	public List <float> _basePrice = new List <float>();
 	public List <int> _buyPrices = new List <int>();
 	public List <int> _sellPrices = new List <int>();
+	public List <bool> _activeBuildings = new List<bool>();
 
 	// Use this for initialization
 	void Start () {
 		SpawnPrices();
+		PopulateBuildings();
 	}
 
 	void SpawnPrices(){
@@ -46,4 +48,12 @@ public class TownManager : MonoBehaviour {
 		_sellPrices[2] = Mathf.FloorToInt(_basePrice[2] * _manager._sellModifier);
 		_sellPrices[3] = Mathf.FloorToInt(_basePrice[3] * _manager._sellModifier);
 	}
+
+	void PopulateBuildings(){
+		for (int i = 0; i < 14; i++){
+			_activeBuildings.Add(false);
+		}
+		_activeBuildings[0] = true;
+		_activeBuildings[1] = true;
+ 	}
 }
