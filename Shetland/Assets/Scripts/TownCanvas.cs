@@ -9,6 +9,7 @@ public class TownCanvas : MonoBehaviour {
 	public Canvas _canvas;
 	public GameObject _welcomeGO;
 	public RumourGenerator _rumourGen;
+	public Caravan _caravan;
 	public List <GameObject> _buildings = new List<GameObject>();
 	public List <GameObject> _buildingCanvas = new List<GameObject>();
 	public List <Button> _workshopButtons = new List <Button>();
@@ -20,6 +21,7 @@ public class TownCanvas : MonoBehaviour {
 		_innName = GameObject.Find("InnButtonText").GetComponent<Text>();
 		_smithName = GameObject.Find("SmithButtonText").GetComponent<Text>();
 		_rumourGen = gameObject.GetComponent<RumourGenerator>();
+		_caravan = gameObject.GetComponent<Caravan>();
 		_canvas = gameObject.GetComponent<Canvas>();
 		_market = gameObject.GetComponent<Market>();
 		_welcomeGO = GameObject.Find("Welcome");
@@ -45,6 +47,7 @@ public class TownCanvas : MonoBehaviour {
 		_welcomeGO.SetActive(false);
 		WorkshopActivate();
 		_rumourGen.EnterText();
+		_caravan.Open();
 	}
 
 	public void CloseBuilding(int index){
@@ -54,10 +57,6 @@ public class TownCanvas : MonoBehaviour {
 	}
 
 	void PopulateGOList(){
-		_buildings.AddRange(GameObject.FindGameObjectsWithTag("Building"));
-		_buildings.Reverse();
-		_buildingCanvas.AddRange(GameObject.FindGameObjectsWithTag("BuildingCanvas"));
-		_buildingCanvas.Reverse();
 		for (int i = 0; i < _buildingCanvas.Count; i++){
 			_buildingCanvas[i].SetActive(false);
 		}

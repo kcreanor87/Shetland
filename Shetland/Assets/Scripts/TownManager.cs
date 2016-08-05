@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class TownManager : MonoBehaviour {
 
 	public string _name;
+	public bool _visited;
 	public List <float> _basePrice = new List <float>();
 	public List <int> _buyPrices = new List <int>();
 	public List <int> _sellPrices = new List <int>();

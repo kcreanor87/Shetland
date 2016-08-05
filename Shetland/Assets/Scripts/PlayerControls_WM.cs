@@ -101,6 +101,7 @@ public class PlayerControls_WM : MonoBehaviour {
 					_movingToFactory = false;
 				}
 				else{
+					_townCanvas._townManager._visited = true;
 					_townCanvas.OpenCanvas();
 					_agent.SetDestination(transform.position);
 					_agent.Stop();
