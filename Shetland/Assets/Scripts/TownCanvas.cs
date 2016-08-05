@@ -42,12 +42,12 @@ public class TownCanvas : MonoBehaviour {
 		WM_UI.UpdateUI();
 	}
 
-	public void OpenBuilding(int index){
-		_buildingCanvas[index].SetActive(true);
+	public void OpenBuilding(int index){		
 		_welcomeGO.SetActive(false);
 		WorkshopActivate();
 		_rumourGen.EnterText();
 		_caravan.Open();
+		_buildingCanvas[index].SetActive(true);
 	}
 
 	public void CloseBuilding(int index){

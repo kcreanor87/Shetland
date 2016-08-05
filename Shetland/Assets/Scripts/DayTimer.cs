@@ -7,6 +7,7 @@ public class DayTimer : MonoBehaviour {
 	public int _hours;
 	public int _days;
 	public GameObject _clock;
+	public int _rumourTimer;
 	public List <GameObject> _towns = new List <GameObject>();
 	public RumourGenerator _rumourScript;
 
@@ -25,21 +26,30 @@ public class DayTimer : MonoBehaviour {
 		if (_hours >= 24){
 			_days++;
 			_hours = 0;
-			EndOfDay();						
+			EndOfDay(true);					
 		}
 		else{
 			StartCoroutine(Timer());
 		}
+		if (_rumourScript._rumourActive){
+			_rumourTimer++;
+			RumourTimer();
+		}
 	}
-	void EndOfDay(){
+	void EndOfDay(bool restart){
 		_manager._resources[0] += _manager._factoryOuput[0];
 		_manager._resources[1] += _manager._factoryOuput[1];
 		_manager._resources[2] += _manager._factoryOuput[2];
 		_manager._resources[3] += _manager._factoryOuput[3];
 		WM_UI.UpdateUI();
-		_rumourScript.ClearRumour();
 		ResetPrices();		
-		StartCoroutine(Timer());
+		if (restart) StartCoroutine(Timer());
+	}
+	void RumourTimer(){
+		if (_rumourTimer >= 24){
+			_rumourScript.ClearRumour();
+			_rumourTimer = 0;
+		}
 	}
 
 	void UpdateClock(){
@@ -51,6 +61,19 @@ public class DayTimer : MonoBehaviour {
 		for (int i = 0; i < _towns.Count; i++){
 			var _script = _towns[i].GetComponent<TownManager>();
 			_script.GeneratePrices();
+		}
+	}
+
+	public void AdvanceTime(int amount){
+		if (_hours + amount >= 24){
+			var remainder = _hours + amount - 24;
+			EndOfDay(false);
+			_days++;
+			_hours = remainder;
+			UpdateClock();
+		}
+		else {
+			_hours += amount;
 		}
 	}
 }

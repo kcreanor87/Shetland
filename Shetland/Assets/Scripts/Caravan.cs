@@ -48,6 +48,7 @@ public class Caravan : MonoBehaviour {
 				var buttonScript = button.GetComponent<TravelButton>();
 				buttonScript._destination = _townScripts[i].transform.FindChild("Entrance").GetComponent<Transform>().position;
 				buttonScript._cost = _cost;
+				buttonScript._time = time;
 				button.transform.SetParent(_caravanParent);
 				var buttonChild = button.transform.FindChild("Text");
 				var buttonText = buttonChild.GetComponent<Text>();
