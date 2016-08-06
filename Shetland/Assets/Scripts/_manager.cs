@@ -12,8 +12,6 @@ public class _manager : MonoBehaviour {
 	public static float _buyModifier = 1.2f;
 	public static float _sellModifier = 0.8f;
 
-	public float _helloTest;
-
 	void Start(){
 		_resourceNames.Add("Wood");
 		_resourceNames.Add("Stone");
@@ -29,7 +27,5 @@ public class _manager : MonoBehaviour {
 		_resources.Add(0);
 		_resources.Add(0);
 		_resources.Add(0);
-
-		_helloTest = 1000;
 	}	
 }
