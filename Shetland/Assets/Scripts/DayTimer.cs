@@ -69,6 +69,8 @@ public class DayTimer : MonoBehaviour {
 			var remainder = _hours + amount - 24;
 			EndOfDay(false);
 			_days++;
+			_rumourTimer += amount;
+			RumourTimer();
 			_hours = remainder;
 			UpdateClock();
 		}
