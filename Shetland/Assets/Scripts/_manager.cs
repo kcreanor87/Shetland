@@ -30,6 +30,6 @@ public class _manager : MonoBehaviour {
 		_resources.Add(0);
 		_resources.Add(0);
 
-		_helloTest = 1;
+		_helloTest = 1000;
 	}	
 }
