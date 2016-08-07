@@ -9,6 +9,8 @@ public class TownManager : MonoBehaviour {
 	public List <int> _buyPrices = new List <int>();
 	public List <int> _sellPrices = new List <int>();
 	public List <bool> _activeBuildings = new List<bool>();
+	public float _marketBuyMod = 1.3f;
+	public float _marketSellMod = 0.7f;
 
 	public float _rumourMod = 1.0f;
 	public int _rumourType;
@@ -24,16 +26,13 @@ public class TownManager : MonoBehaviour {
 		_basePrice.Add(Random.Range(10.0f, 20.0f));
 		_basePrice.Add(Random.Range(25.0f, 40.0f));
 		_basePrice.Add(Random.Range(25.0f, 40.0f));
+		_basePrice.Add(Random.Range(25.0f, 40.0f));
+		_basePrice.Add(Random.Range(25.0f, 40.0f));
 
-		_buyPrices.Add(Mathf.FloorToInt(_basePrice[0] * _manager._buyModifier));
-		_buyPrices.Add(Mathf.FloorToInt(_basePrice[1] * _manager._buyModifier));
-		_buyPrices.Add(Mathf.FloorToInt(_basePrice[2] * _manager._buyModifier));
-		_buyPrices.Add(Mathf.FloorToInt(_basePrice[3] * _manager._buyModifier));
-
-		_sellPrices.Add(Mathf.FloorToInt(_basePrice[0] * _manager._sellModifier));
-		_sellPrices.Add(Mathf.FloorToInt(_basePrice[1] * _manager._sellModifier));
-		_sellPrices.Add(Mathf.FloorToInt(_basePrice[2] * _manager._sellModifier));
-		_sellPrices.Add(Mathf.FloorToInt(_basePrice[3] * _manager._sellModifier));
+		for (int i = 0; i < _basePrice.Count; i++){
+			_buyPrices.Add(Mathf.FloorToInt(_basePrice[i]*_marketBuyMod));
+			_sellPrices.Add(Mathf.FloorToInt(_basePrice[i]*_marketSellMod));
+		}
 	}
 	
 	public void GeneratePrices(){
@@ -41,18 +40,15 @@ public class TownManager : MonoBehaviour {
 		_basePrice[1] = Random.Range(10.0f, 20.0f);
 		_basePrice[2] = Random.Range(25.0f, 40.0f);
 		_basePrice[3] = Random.Range(25.0f, 40.0f);
+		_basePrice[4] = Random.Range(145.0f, 225.0f);
+		_basePrice[5] = Random.Range(275.0f, 440.0f);
 
 		_basePrice[_rumourType] *= _rumourMod;
 
-		_buyPrices[0] = Mathf.FloorToInt(_basePrice[0] * _manager._buyModifier);
-		_buyPrices[1] = Mathf.FloorToInt(_basePrice[1] * _manager._buyModifier);
-		_buyPrices[2] = Mathf.FloorToInt(_basePrice[2] * _manager._buyModifier);
-		_buyPrices[3] = Mathf.FloorToInt(_basePrice[3] * _manager._buyModifier);
-
-		_sellPrices[0] = Mathf.FloorToInt(_basePrice[0] * _manager._sellModifier);
-		_sellPrices[1] = Mathf.FloorToInt(_basePrice[1] * _manager._sellModifier);
-		_sellPrices[2] = Mathf.FloorToInt(_basePrice[2] * _manager._sellModifier);
-		_sellPrices[3] = Mathf.FloorToInt(_basePrice[3] * _manager._sellModifier);
+		for (int i = 0; i < _basePrice.Count; i++){
+			_buyPrices[i] = Mathf.FloorToInt(_basePrice[i] * _marketBuyMod);
+			_sellPrices[i] = Mathf.FloorToInt(_basePrice[i] * _marketSellMod);
+		}
 	}
 
 	void PopulateBuildings(){

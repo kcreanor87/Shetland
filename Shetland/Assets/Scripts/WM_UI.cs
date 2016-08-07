@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class WM_UI : MonoBehaviour {
 
-	public static Text _woodTxt, _stoneTxt, _ironTxt, _coalTxt, _obolTxt;
+	public static Text _woodTxt, _stoneTxt, _ironTxt, _coalTxt, _steelTxt, _diamondTxt, _obolTxt;
 	public static GameObject _resourcePrompt;
 	public static Text _promptText;
 	public static ResourceGen _resourceScript;
@@ -19,6 +19,8 @@ public class WM_UI : MonoBehaviour {
 		_ironTxt = GameObject.Find("Iron").GetComponent<Text>();
 		_coalTxt = GameObject.Find("Coal").GetComponent<Text>();
 		_obolTxt = GameObject.Find("Obols").GetComponent<Text>();
+		_steelTxt = GameObject.Find("Steel").GetComponent<Text>();
+		_diamondTxt = GameObject.Find("Diamonds").GetComponent<Text>();
 		UpdateUI();
 	}
 	
@@ -27,6 +29,8 @@ public class WM_UI : MonoBehaviour {
 		_stoneTxt.text = "Stone: " + _manager._resources[1] + "(+" + _manager._factoryOuput[1] + " /day)";
 		_ironTxt.text = "Iron: " + _manager._resources[2] + "(+" + _manager._factoryOuput[2] + " /day)";
 		_coalTxt.text = "Coal: " + _manager._resources[3] + "(+" + _manager._factoryOuput[3] + " /day)";
+		_coalTxt.text = "Steel: " + _manager._resources[4];
+		_coalTxt.text = "Diamonds: " + _manager._resources[5];
 		_obolTxt.text = "Obols: " + _manager._obols;
 	}
 
