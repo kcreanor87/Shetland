@@ -14,12 +14,14 @@ public class TownCanvas : MonoBehaviour {
 	public List <GameObject> _buildingCanvas = new List<GameObject>();
 	public List <Button> _workshopButtons = new List <Button>();
 	public Text _marketName, _innName, _smithName;
+	public AdditionalResources _additionalResources;
 
 	void Start(){
 		PopulateGOList();
 		_marketName = GameObject.Find("MarketButtonText").GetComponent<Text>();
 		_innName = GameObject.Find("InnButtonText").GetComponent<Text>();
 		_smithName = GameObject.Find("SmithButtonText").GetComponent<Text>();
+		_additionalResources = gameObject.GetComponent<AdditionalResources>();
 		_rumourGen = gameObject.GetComponent<RumourGenerator>();
 		_caravan = gameObject.GetComponent<Caravan>();
 		_canvas = gameObject.GetComponent<Canvas>();
@@ -33,7 +35,7 @@ public class TownCanvas : MonoBehaviour {
 		Time.timeScale = 0.0f;
 		_canvas.enabled = true;
 		_market._townManager = _townManager;
-		_market.UpdatePrices();		
+		_market.UpdatePrices();
 	}
 
 	public void CloseCanvas(){
@@ -46,8 +48,18 @@ public class TownCanvas : MonoBehaviour {
 		_welcomeGO.SetActive(false);
 		WorkshopActivate();
 		_rumourGen.EnterText();
-		_caravan.Open();
-		_buildingCanvas[index].SetActive(true);
+		_caravan.Open();		
+		if (index == 4){
+			_buildingCanvas[4].SetActive(true);
+			_additionalResources.CheckResources(0);
+		}
+		else if (index == 6){
+			_buildingCanvas[4].SetActive(true);
+			_additionalResources.CheckResources(1);
+		}
+		else{
+			_buildingCanvas[index].SetActive(true);
+		}
 	}
 
 	public void CloseBuilding(int index){
