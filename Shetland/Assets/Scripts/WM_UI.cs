@@ -25,12 +25,12 @@ public class WM_UI : MonoBehaviour {
 	}
 	
 	public static void UpdateUI(){
-		_woodTxt.text = "Wood: " + _manager._resources[0] + "(+" + _manager._factoryOuput[0] + " /day)";
-		_stoneTxt.text = "Stone: " + _manager._resources[1] + "(+" + _manager._factoryOuput[1] + " /day)";
-		_ironTxt.text = "Iron: " + _manager._resources[2] + "(+" + _manager._factoryOuput[2] + " /day)";
-		_coalTxt.text = "Coal: " + _manager._resources[3] + "(+" + _manager._factoryOuput[3] + " /day)";
-		_coalTxt.text = "Steel: " + _manager._resources[4];
-		_coalTxt.text = "Diamonds: " + _manager._resources[5];
+		_woodTxt.text = "Wood: " + _manager._resources[0] + "(+" + _manager._factoryOuput[0]+ ")";
+		_stoneTxt.text = "Stone: " + _manager._resources[1] + "(+" + _manager._factoryOuput[1]+ ")";
+		_ironTxt.text = "Iron: " + _manager._resources[2] + "(+" + _manager._factoryOuput[2] + ")";
+		_coalTxt.text = "Coal: " + _manager._resources[3] + "(+" + _manager._factoryOuput[3] + ")";
+		_steelTxt.text = "Steel: " + _manager._resources[4];
+		_diamondTxt.text = "Diamonds: " + _manager._resources[5];
 		_obolTxt.text = "Obols: " + _manager._obols;
 	}
 
