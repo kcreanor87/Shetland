@@ -48,7 +48,7 @@ public class TownManager : MonoBehaviour {
 		UpdatePrices();
 	}
 
-	void UpdatePrices(){
+	public void UpdatePrices(){
 		for (int i = 0; i < _basePrice.Count; i++){
 			_buyPrices[i] = Mathf.FloorToInt(_basePrice[i] * _marketBuyMod);
 			_sellPrices[i] = Mathf.FloorToInt(_basePrice[i] * _marketSellMod);

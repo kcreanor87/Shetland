@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,13 +7,17 @@ public class DayTimer : MonoBehaviour {
 
 	public int _hours;
 	public int _days;
+	public Text _dayCounter;
 	public GameObject _clock;
 	public int _rumourTimer;
 	public List <GameObject> _towns = new List <GameObject>();
 	public RumourGenerator _rumourScript;
+	public DayCycle _dayCycle;
 
 	void Start(){
+		_dayCycle = GameObject.Find("MainLight").GetComponent<DayCycle>();
 		_clock = GameObject.Find("Clock");
+		_dayCounter = transform.FindChild("DayCounter").GetComponent<Text>();
 		StartCoroutine(Timer());
 		_towns.AddRange(GameObject.FindGameObjectsWithTag("Town"));
 		_rumourScript = GameObject.Find("TownCanvas").GetComponent<RumourGenerator>();
@@ -22,7 +27,7 @@ public class DayTimer : MonoBehaviour {
 	IEnumerator Timer(){
 		yield return new WaitForSeconds(5.0f);
 		_hours++;
-		UpdateClock();
+		UpdateClock();		
 		if (_hours >= 24){
 			_days++;
 			_hours = 0;
@@ -32,9 +37,10 @@ public class DayTimer : MonoBehaviour {
 			StartCoroutine(Timer());
 		}
 		if (_rumourScript._rumourActive){
-			_rumourTimer++;
+			_rumourTimer++;			
 			RumourTimer();
 		}
+		_dayCycle.SetLightColor();
 	}
 	void EndOfDay(bool restart){
 		_manager._resources[0] += _manager._factoryOuput[0];
@@ -42,13 +48,17 @@ public class DayTimer : MonoBehaviour {
 		_manager._resources[2] += _manager._factoryOuput[2];
 		_manager._resources[3] += _manager._factoryOuput[3];
 		WM_UI.UpdateUI();
-		ResetPrices();		
+		ResetPrices();
+		_dayCounter.text = _days.ToString();
 		if (restart) StartCoroutine(Timer());
 	}
 	void RumourTimer(){
 		if (_rumourTimer >= 24){
 			_rumourScript.ClearRumour();
 			_rumourTimer = 0;
+		}
+		else{
+			_rumourScript._rumourTimeTxt.text = (24 - _rumourTimer).ToString();
 		}
 	}
 
@@ -67,15 +77,18 @@ public class DayTimer : MonoBehaviour {
 	public void AdvanceTime(int amount){
 		if (_hours + amount >= 24){
 			var remainder = _hours + amount - 24;
-			EndOfDay(false);
-			_days++;
+			_days++;						
 			_rumourTimer += amount;
 			RumourTimer();
 			_hours = remainder;
 			UpdateClock();
+			EndOfDay(false);
 		}
 		else {
 			_hours += amount;
+			_rumourTimer += amount;
+			RumourTimer();
+			UpdateClock();
 		}
 	}
 }

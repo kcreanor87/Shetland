@@ -14,6 +14,7 @@ public class TownCanvas : MonoBehaviour {
 	public List <GameObject> _buildingCanvas = new List<GameObject>();
 	public List <Button> _workshopButtons = new List <Button>();
 	public Text _marketName, _innName, _smithName;
+	public Text _townName;
 	public AdditionalResources _additionalResources;
 
 	void Start(){
@@ -21,6 +22,7 @@ public class TownCanvas : MonoBehaviour {
 		_marketName = GameObject.Find("MarketButtonText").GetComponent<Text>();
 		_innName = GameObject.Find("InnButtonText").GetComponent<Text>();
 		_smithName = GameObject.Find("SmithButtonText").GetComponent<Text>();
+		_townName = GameObject.Find("TownName").GetComponent<Text>();
 		_additionalResources = gameObject.GetComponent<AdditionalResources>();
 		_rumourGen = gameObject.GetComponent<RumourGenerator>();
 		_caravan = gameObject.GetComponent<Caravan>();
@@ -31,6 +33,8 @@ public class TownCanvas : MonoBehaviour {
 	}
 
 	public void OpenCanvas(){
+		_townName.text = _townManager._name;
+		UpgradableBuildingNames();
 		SetActiveBuildings();
 		Time.timeScale = 0.0f;
 		_canvas.enabled = true;
@@ -95,9 +99,15 @@ public class TownCanvas : MonoBehaviour {
 	void UpgradableBuildingNames(){
 		if (_townManager._activeBuildings[12]){
 			_marketName.text = "Exchange";
+			_townManager._marketBuyMod = 1.05f;
+			_townManager._marketSellMod = 0.9f;
+			_townManager.UpdatePrices();
 		}
 		else if (_townManager._activeBuildings[10]){
 			_marketName.text = "Bazaar";
+			_townManager._marketBuyMod = 1.15f;
+			_townManager._marketSellMod = 0.8f;
+			_townManager.UpdatePrices();
 		}
 		if (_townManager._activeBuildings[11] && _townManager._activeBuildings[2]){
 			_innName.text = "Town Hall";
