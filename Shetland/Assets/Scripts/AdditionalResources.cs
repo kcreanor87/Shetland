@@ -30,7 +30,7 @@ public class AdditionalResources : MonoBehaviour {
 		else{
 			_ironText.enabled = true;
 			_ironText.text = "Iron: " + _manager._resources[2] + "(-4)";
-			_coalText.text = "Coal: " + _manager._resources[3] + "(-1)";
+			_coalText.text = "Coal: " + _manager._resources[3] + "(-2)";
 			var pos = new Vector3(100, _coalText.transform.localPosition.y, _coalText.transform.localPosition.z);
 			_coalText.transform.localPosition = pos;
 			_buttonText.text = "Steel +1";

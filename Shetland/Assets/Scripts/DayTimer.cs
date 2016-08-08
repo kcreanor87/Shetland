@@ -20,7 +20,7 @@ public class DayTimer : MonoBehaviour {
 	}
 
 	IEnumerator Timer(){
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(5.0f);
 		_hours++;
 		UpdateClock();
 		if (_hours >= 24){

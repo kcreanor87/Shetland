@@ -44,7 +44,7 @@ public class RumourGenerator : MonoBehaviour {
 			//Decrese in price
 			_activeTown._rumourMod = (Random.Range(0.3f, 0.6f));
 			_activeTown._rumourType = resource;
-			_rumourText.text = "You hear word that " + _manager._resourceNames[resource] + " is abundant in " + _activeTown._name;
+			_rumourText.text = "Somebody mentions that sources of " + _manager._resourceNames[resource] + " are abundant in " + _activeTown._name + " at the moment.";
 		}
 		else{
 			//You hear nothing
@@ -61,6 +61,7 @@ public class RumourGenerator : MonoBehaviour {
 	public void ClearRumour(){
 		_activeTown._rumourMod = 1.0f;
 		_rumourActive = false;
+		_activeTown.GeneratePrices();
 	}
 
 	public void EnterText(){
