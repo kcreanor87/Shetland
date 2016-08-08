@@ -7,6 +7,7 @@ public class PlayerControls_WM : MonoBehaviour {
 	public bool _movingToFactory;
 	public bool _movingToResource;
 	public bool _movingToTown;
+	public bool _movingToHarbour;
 	public float _range;
 	public Vector3 _objectPos;
 	public Factories _factoryScript;
@@ -82,6 +83,15 @@ public class PlayerControls_WM : MonoBehaviour {
 					_movingToResource= false;
 					_movingToFactory = false;
 					_range = 1.0f;				
+					break;
+					case "Harbour":
+					_objectPos = hit.transform.FindChild("Entrance").position;
+					_agent.SetDestination(_objectPos);
+					_agent.Resume();
+					_movingToTown = true;
+					_movingToResource= false;
+					_movingToFactory = false;
+					_range = 1.0f;	
 					break;
 				}		
 			}
