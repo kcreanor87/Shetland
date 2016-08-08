@@ -32,6 +32,7 @@ public class LevelGen : MonoBehaviour {
 	public GameObject _resource;
 	public GameObject _trees;
 	public GameObject _blocker;
+	public GameObject _harbourPrefab;
 	//All the gameobjects in the heirarchy for assigning parents and keeping inspector organised
 	public Transform _townParent;
 	public Transform _factoryParent;
@@ -56,6 +57,7 @@ public class LevelGen : MonoBehaviour {
 		CachePoints();
 		GenerateWater();
 		GenerateTerrain();
+		GenerateHarbour();
 		CalculateTowns();
 		GenerateTowns();	
 		ObjectSpawns(_mill, 2.0f);	
@@ -114,9 +116,8 @@ public class LevelGen : MonoBehaviour {
 				}				
 			}
 			//Leave point blank (sea) along edges, add point to _used list
-			if (_points[i].x == 0 || _points[i].x == (_sizeX -1) || _points[i].z == 0 || _points[i].z == (_sizeZ -1)){
-				var blocker = (GameObject) Instantiate(_blocker, _points[i], Quaternion.identity);
-				blocker.transform.SetParent(_terrainParent);
+			if (Mathf.Approximately(_points[i].x, 0) || _points[i].x >=_sizeX || Mathf.Approximately(_points[i].z, 0) || _points[i].z >= _sizeZ){
+				Instantiate(_blocker, _points[i], Quaternion.identity, _terrainParent);
 				_used.Add(_points[i]);
 			}
 			//If the closest seed is far enough inland, ignore it
@@ -125,8 +126,7 @@ public class LevelGen : MonoBehaviour {
 			}
 			//Otherwise leave area blank and add to _used list		
 			else{
-				var blockerB = (GameObject) Instantiate(_blocker, _points[i], Quaternion.identity);
-				blockerB.transform.SetParent(_terrainParent);
+				Instantiate(_blocker, _points[i], Quaternion.identity, _terrainParent);
 				_used.Add(_points[i]);
 			}			
 		}
@@ -141,6 +141,64 @@ public class LevelGen : MonoBehaviour {
 			}
 		}
 	}
+	//Funciton to position feature on extreme edge of the map
+	void GenerateHarbour(){
+		//Create variables to store man/minpositional values, and vectors of points
+		float maxX = 0;
+		float minX = Mathf.Infinity;
+		float maxZ = 0;
+		float minZ = Mathf.Infinity;
+		var posXmax = new Vector3(0,0,0);
+		var posXmin = new Vector3(_sizeX,0,_sizeZ);
+		var posZmax = new Vector3(0,0,0);
+		var posZmin = new Vector3(_sizeX,0,_sizeZ);
+		//Loop through all the available points to find the highest and lowest value on each axis
+		for (int i = 0; i < _points.Count; i++){
+			if (_points[i].x > maxX){
+				maxX = _points[i].x;
+				posXmax = _points[i];
+			}
+			if (_points[i].x < minX){
+				minX = _points[i].x;
+				posXmin = _points[i];
+			}
+			if (_points[i].z > maxZ){
+				maxZ = _points[i].z;
+				posZmax = _points[i];
+			}
+			if (_points[i].z < minZ){
+				minZ = _points[i].z;
+				posZmin = _points[i];
+			}
+		}
+		//Select one of the 4 extremes at random and set rotation to suit direction
+		int edge = Random.Range(0, 	4);
+		var pos = new Vector3(0,0,0);
+		float rot = 0.0f;
+		switch(edge){
+			case 0: 
+			pos = posXmax;
+			rot = -90;
+			break;
+			case 1: 
+			pos = posXmin;
+			rot = 90;
+			break;
+			case 2: 
+			pos = posZmax;
+			rot = 180;
+			break;
+			case 3: 
+			pos = posZmin;
+			rot = 0;
+			break;
+		}		
+		//Instantiate the harbour at the selected position/rotation
+		Instantiate(_harbourPrefab, pos, Quaternion.Euler(0, rot, 0), _townParent);
+		//Add this point to the list of used points
+		_used.Add(pos);
+	}
+
 	void PositionPlayer(){
 		//Position the player on an unused tile
 		int x = Random.Range(0, _points.Count -1);
@@ -314,7 +372,7 @@ public class LevelGen : MonoBehaviour {
 		_factoryParent.localScale = new Vector3(10,10,10);
 		_terrainParent.localScale = new Vector3(10,10,10);
 		_resourceParent.localScale = new Vector3(10,10,10);
-		_waterParent.localScale = new Vector3(10,10,10);
+		_waterParent.localScale = new Vector3(12,12,12);
 	}
 
 	void GenerateNames(){
