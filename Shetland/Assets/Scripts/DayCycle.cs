@@ -23,7 +23,7 @@ public class DayCycle : MonoBehaviour {
 
 	void MoveAcross(){
 		if (_day){
-			transform.Rotate(3.1f*Time.deltaTime, 0, 0);
+			transform.Rotate(3f*Time.deltaTime, 0, 0);
 			if (_dayTimer._hours > 10 && _mainLight.intensity > 0){
 				_mainLight.intensity -= Time.deltaTime* 0.2f;
 			}
@@ -46,6 +46,31 @@ public class DayCycle : MonoBehaviour {
 			_day = false;
 			_mainLight.enabled = false;
 			transform.rotation = Quaternion.identity;
+			_playerLight.enabled = true;
+		}
+	}
+
+	public void AdvanceTime(){
+		SetLightColor();
+		if (_dayTimer._hours < 3){
+			_mainLight.intensity = (float)0.5f*_dayTimer._hours;
+			_playerLight.intensity = 1.0f-((float)0.5f*_dayTimer._hours);	
+		}
+		else if (_dayTimer._hours <= 10){
+			_mainLight.intensity = 1.0f;
+			_playerLight.intensity = 0.0f;
+		}
+		else if (_dayTimer._hours == 11){
+			_mainLight.intensity = 0.5f;
+			_playerLight.intensity = 0.5f;
+		}
+		else{
+			_mainLight.intensity = 0.0f;
+			_playerLight.intensity = 1.0f;
+		}
+		if (_dayTimer._hours < 12){
+			var rot = 180f * ((float)_dayTimer._hours/12);
+			transform.rotation = Quaternion.AngleAxis(rot, Vector3.right);
 		}
 	}
 }

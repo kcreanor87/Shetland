@@ -90,5 +90,6 @@ public class DayTimer : MonoBehaviour {
 			RumourTimer();
 			UpdateClock();
 		}
+		_dayCycle.AdvanceTime();
 	}
 }
