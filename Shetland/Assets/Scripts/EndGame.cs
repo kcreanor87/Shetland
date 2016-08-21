@@ -7,7 +7,7 @@ public class EndGame : MonoBehaviour {
 	public Canvas _harbourCanvas;
 
 	void Start(){
-		_harbourCanvas = GameObject.Find("HarbourCanvas").GetComponent<Canvas>();
+		_harbourCanvas = gameObject.GetComponent<Canvas>();
 		_harbourCanvas.enabled = false;
 	}
 

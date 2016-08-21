@@ -92,4 +92,15 @@ public class DayTimer : MonoBehaviour {
 		}
 		_dayCycle.AdvanceTime();
 	}
+
+	public void Sleep(){
+		_days++;
+		int amount = 24 - _hours;					
+		_rumourTimer += amount;
+		RumourTimer();
+		_hours = 0;
+		UpdateClock();
+		EndOfDay(false);
+		_dayCycle.AdvanceTime();
+	}
 }

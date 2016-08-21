@@ -56,7 +56,7 @@ public class TownManager : MonoBehaviour {
 	}
 
 	void PopulateBuildings(){
-		for (int i = 0; i < 14; i++){
+		for (int i = 0; i < 12; i++){
 			_activeBuildings.Add(false);
 		}
 		_activeBuildings[0] = true;

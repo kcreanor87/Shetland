@@ -9,9 +9,11 @@ public class RumourGenerator : MonoBehaviour {
 	public GameObject _rumourGO;
 	public Text _rumourTypeTxt, _rumourTownTxt, _rumourModTxt, _rumourTimeTxt;
 	public Button _rumourButton;
+	public Button _restButton;
 	public List <GameObject> _towns = new List<GameObject>();
 	public TownManager _activeTown;
 	public TownCanvas _townCanvas;
+	public DayTimer _dayTimer;
 	public bool _rumourActive;
 	public int _cost = 50;
 
@@ -19,12 +21,14 @@ public class RumourGenerator : MonoBehaviour {
 	void Start () {
 		_rumourText = GameObject.Find("RumourText").GetComponent<Text>();
 		_rumourButton = GameObject.Find("Get Rumour").GetComponent<Button>();
+		_restButton = GameObject.Find("Rest").GetComponent<Button>();
 		_rumourButtonText = GameObject.Find("RumourButtonText").GetComponent<Text>();
 		_rumourTypeTxt = GameObject.Find("RumourType").GetComponent<Text>();
 		_rumourTownTxt = GameObject.Find("RumourTown").GetComponent<Text>();
 		_rumourModTxt = GameObject.Find("RumourMod").GetComponent<Text>();
 		_rumourTimeTxt = GameObject.Find("TimeRemaining").GetComponent<Text>();
 		_rumourGO = GameObject.Find("RumourGO");
+		_dayTimer = GameObject.Find("Timer").GetComponent<DayTimer>();
 		_townCanvas = gameObject.GetComponent<TownCanvas>();
 		_rumourGO.SetActive(false);
 		GetTowns();
@@ -79,6 +83,7 @@ public class RumourGenerator : MonoBehaviour {
 		_rumourText.text = (_rumourActive) ? "There is nothing new to find out, you should come back tomorrow" : "You can spend a few coins to hear the latest rumours";
 		_rumourButtonText.text = "Rumour (" + _cost + "o)";
 		_rumourButton.interactable = (!_rumourActive && _manager._obols >= _cost);
+		_restButton.interactable = (_dayTimer._hours >= 12 && _manager._obols >= 20);
 	}
 
 	void GetTowns(){
