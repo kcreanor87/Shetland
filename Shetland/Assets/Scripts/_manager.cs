@@ -22,11 +22,11 @@ public class _manager : MonoBehaviour {
 		_factoryOuput.Add(0);
 		_factoryOuput.Add(0);
 
-		_resources.Add(100);
-		_resources.Add(100);
-		_resources.Add(100);
-		_resources.Add(100);
-		_resources.Add(100);
-		_resources.Add(100);
+		_resources.Add(1000);
+		_resources.Add(1000);
+		_resources.Add(1000);
+		_resources.Add(1000);
+		_resources.Add(1000);
+		_resources.Add(1000);
 	}
 }
