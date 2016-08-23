@@ -2,9 +2,7 @@
 
 public class PlayerControls_WM : MonoBehaviour {
 
-	public NavMeshAgent _agent;
-	public Vector3 _startPos;
-	public bool _movingToFactory;
+	public NavMeshAgent _agent;	public bool _movingToFactory;
 	public bool _movingToResource;
 	public bool _movingToTown;
 	public bool _movingToHarbour;
@@ -35,7 +33,6 @@ public class PlayerControls_WM : MonoBehaviour {
 		_townCanvas = GameObject.Find("TownCanvas").GetComponent<TownCanvas>();
 		_agent = gameObject.GetComponent<NavMeshAgent>();
 		_activateScript = gameObject.GetComponent<ActivateFactory>();
-		transform.position = _startPos*10;
 		_agent.enabled = true;
 		_agent.Stop();		
 	}
@@ -67,7 +64,7 @@ public class PlayerControls_WM : MonoBehaviour {
 					_movingToFactory = false;
 					_movingToTown = false;
 					_movingToHarbour = false;
-					_resourceScript = hit.collider.gameObject.GetComponent<ResourceGen>();
+					_resourceScript = hit.collider.gameObject.GetComponentInParent<ResourceGen>();
 					_range = 3.0f;
 					break;
 					case "Factory":

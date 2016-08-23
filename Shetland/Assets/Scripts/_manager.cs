@@ -10,7 +10,7 @@ public class _manager : MonoBehaviour {
 
 	public static List <int> _factoryOuput = new List<int>();
 
-	void Start(){
+	void Awake(){
 		_resourceNames.Add("Wood");
 		_resourceNames.Add("Stone");
 		_resourceNames.Add("Iron");

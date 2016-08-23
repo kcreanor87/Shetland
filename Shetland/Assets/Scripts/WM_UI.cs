@@ -13,7 +13,6 @@ public class WM_UI : MonoBehaviour {
 		_resourcePrompt = GameObject.Find("ResourcePrompt");
 		_promptText = GameObject.Find("PromptText").GetComponent<Text>();
 		_resourcePrompt.SetActive(false);
-
 		_woodTxt = GameObject.Find("Wood").GetComponent<Text>();
 		_stoneTxt = GameObject.Find("Stone").GetComponent<Text>();
 		_ironTxt = GameObject.Find("Iron").GetComponent<Text>();

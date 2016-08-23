@@ -8,12 +8,4 @@ public class BuildingCost {
 	public int _ironCost;
 	public int _coalCost;
 	public int _preReq;
-
-	/*public void PriceCost(string name, int wood, int stone, int iron, int coal){
-		_name = name;
-		_woodCost = wood;
-		_stoneCost = stone;
-		_ironCost = iron;
-		_coalCost = coal;
-	}*/
 }

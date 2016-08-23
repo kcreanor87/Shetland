@@ -9,7 +9,7 @@ public class DayCycle : MonoBehaviour {
 	public bool _day;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		_mainLight = gameObject.GetComponent<Light>();
 		_playerLight = GameObject.Find("PlayerLight").GetComponent<Light>();
 		_dayTimer = GameObject.Find("Timer").GetComponent<DayTimer>();
