@@ -23,7 +23,7 @@ public class DayCycle : MonoBehaviour {
 
 	void MoveAcross(){
 		if (_day){
-			transform.Rotate(3f*Time.deltaTime, 0, 0);
+			transform.Rotate(2.9f*Time.deltaTime, 0, 0);
 			if (_dayTimer._hours > 10 && _mainLight.intensity > 0){
 				_mainLight.intensity -= Time.deltaTime* 0.2f;
 			}
