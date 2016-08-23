@@ -21,6 +21,7 @@ public class DayTimer : MonoBehaviour {
 		StartCoroutine(Timer());
 		_towns.AddRange(GameObject.FindGameObjectsWithTag("Town"));
 		_rumourScript = GameObject.Find("TownCanvas").GetComponent<RumourGenerator>();
+		UpdateClock();
 
 	}
 
@@ -48,8 +49,7 @@ public class DayTimer : MonoBehaviour {
 		_manager._resources[2] += _manager._factoryOuput[2];
 		_manager._resources[3] += _manager._factoryOuput[3];
 		WM_UI.UpdateUI();
-		ResetPrices();
-		_dayCounter.text = _days.ToString();
+		ResetPrices();		
 		if (restart) StartCoroutine(Timer());
 	}
 	void RumourTimer(){
@@ -65,6 +65,7 @@ public class DayTimer : MonoBehaviour {
 	void UpdateClock(){
 		float rot = ((float)_hours/24.0f) * -360.0f;
 		_clock.transform.eulerAngles = new Vector3(0,0,rot);
+		_dayCounter.text = _days.ToString();
 	}
 
 	void ResetPrices(){
@@ -90,6 +91,17 @@ public class DayTimer : MonoBehaviour {
 			RumourTimer();
 			UpdateClock();
 		}
+		_dayCycle.AdvanceTime();
+	}
+
+	public void Sleep(){
+		_days++;
+		int amount = 24 - _hours;					
+		_rumourTimer += amount;
+		RumourTimer();
+		_hours = 0;
+		UpdateClock();
+		EndOfDay(false);
 		_dayCycle.AdvanceTime();
 	}
 }

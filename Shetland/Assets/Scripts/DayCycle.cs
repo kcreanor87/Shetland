@@ -9,7 +9,7 @@ public class DayCycle : MonoBehaviour {
 	public bool _day;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		_mainLight = gameObject.GetComponent<Light>();
 		_playerLight = GameObject.Find("PlayerLight").GetComponent<Light>();
 		_dayTimer = GameObject.Find("Timer").GetComponent<DayTimer>();
@@ -23,7 +23,7 @@ public class DayCycle : MonoBehaviour {
 
 	void MoveAcross(){
 		if (_day){
-			transform.Rotate(3f*Time.deltaTime, 0, 0);
+			transform.Rotate(2.9f*Time.deltaTime, 0, 0);
 			if (_dayTimer._hours > 10 && _mainLight.intensity > 0){
 				_mainLight.intensity -= Time.deltaTime* 0.2f;
 			}

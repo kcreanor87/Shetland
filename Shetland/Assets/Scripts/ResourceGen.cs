@@ -4,13 +4,17 @@ public class ResourceGen : MonoBehaviour {
 
 	public int _type;
 	public int _amount;
+	public bool _taken;
+	public GameObject _childPrefab;
+	public GameObject _child;
 	public ResourceGen _script;
 
 	// Use this for initialization
 	void Start () {
+		SpawnChild();
 		GenerateType();
 		GenerateAmount();
-		_script = gameObject.GetComponent<ResourceGen>();
+		_script = gameObject.GetComponent<ResourceGen>();		
 	}
 	
 	void GenerateType(){
@@ -48,11 +52,16 @@ public class ResourceGen : MonoBehaviour {
 			_manager._resources[3] += _amount;
 			break;
 		}
+		_taken = true;
 	}
 
 	public void Activate(){
 		WM_UI._resourceScript = _script;
 		WM_UI.ResourcePrompt();
-		Destroy(gameObject);
+		Destroy(_child);
+	}
+
+	void SpawnChild(){
+		if (!_taken) _child = (GameObject) Instantiate (_childPrefab, transform.position, Quaternion.identity, transform);
 	}
 }
