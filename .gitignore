@@ -18,9 +18,12 @@ ExportedObj/
 *.booproj
 *.svd
 *.meta
+*.dwlt
+
 
 #Folders
 Temp/
+/Library/expandedItems
 
 
 # Unity3D generated meta files
@@ -28,6 +31,9 @@ Temp/
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+
+#SceneSetup
+lastscenemanagersetup/txt
 
 # Builds
 *.apk
