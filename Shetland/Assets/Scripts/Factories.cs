@@ -9,12 +9,13 @@ public class Factories : MonoBehaviour {
 	public Factories _script;
 	public List <int> _costs = new List<int>();
 	public int _factoryLevel;
-
+	public ActivateFactory _activateFactory;
 	public bool _active;
 	public List <GameObject> _meshes = new List <GameObject>();
 
 	void Start(){
 		_script = gameObject.GetComponent<Factories>();
+		_activateFactory = GameObject.Find("Player").GetComponent<ActivateFactory>();
 		ValuePerDay();
 		PopulateMeshList();
 		PopulateCostList();
@@ -44,12 +45,12 @@ public class Factories : MonoBehaviour {
 		}
 	}
 	public void EnableFactory(){
-		ActivateFactory._active = _active;
-		ActivateFactory._activeFactory = _script;
-		ActivateFactory._name = _name;
-		ActivateFactory._type = _type;
-		ActivateFactory._amount = _perDay;
-		ActivateFactory.Open();
+		_activateFactory._active = _active;
+		_activateFactory._activeFactory = _script;
+		_activateFactory._name = _name;
+		_activateFactory._type = _type;
+		_activateFactory._amount = _perDay;
+		_activateFactory.Open();
 	}
 
 	public void UpgradeFactory(){		

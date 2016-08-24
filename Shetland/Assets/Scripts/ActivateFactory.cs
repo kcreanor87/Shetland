@@ -1,26 +1,27 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class ActivateFactory : MonoBehaviour {
 
-	public static GameObject _factoryPrompt;
-	public static Text _factoryName;
-	public static Text _factoryText;
-	public static Text _buttonText;
-	public static Text _woodCost, _stoneCost, _ironCost, _coalCost;
-	public static string _name;
-	public static int _type;
-	public static int _amount;
-	public static bool _active;
-	public static bool _affordable;
-	public static Factories _activeFactory;
-	public static Button _activateButton;
+	public GameObject _factoryPrompt;
+	public Text _factoryName;
+	public Text _factoryText;
+	public Text _buttonText;
+	public Text _woodCost, _stoneCost, _ironCost, _coalCost;
+	public string _name;
+	public int _type;
+	public int _amount;
+	public bool _active;
+	public bool _affordable;
+	public Factories _activeFactory;
+	public Button _activateButton;
+	public SaveGame _saveGame;
 
 	public WM_UI _ui;
 
 	// Use this for initialization
 	void Start () {
+		_saveGame = GameObject.Find("Loader").GetComponent<SaveGame>();
 		_factoryPrompt = GameObject.Find("FactoryPrompt");
 		_buttonText = GameObject.Find("ActivateText").GetComponent<Text>();
 		_factoryName = GameObject.Find("FactoryName").GetComponent<Text>();
@@ -35,7 +36,7 @@ public class ActivateFactory : MonoBehaviour {
 		_active = false;
 
 	}
-	public static void OpenUI(){
+	public void OpenUI(){		
 		CheckResources();
 		_factoryName.text = _name;
 		_factoryText.text = "+ " + _amount + " " + _manager._resourceNames[_type] + " Per Day";
@@ -47,6 +48,7 @@ public class ActivateFactory : MonoBehaviour {
 		_coalCost.text = _activeFactory._costs[3].ToString();
 		_factoryPrompt.SetActive(true);
 		Time.timeScale = 0f;
+		_saveGame.Save();
 	}
 	public void Cancel(){
 		_factoryPrompt.SetActive(false);
@@ -77,11 +79,11 @@ public class ActivateFactory : MonoBehaviour {
 		}
 	}
 
-	public static void Open(){
+	public void Open(){
 		OpenUI();
 	}
 
-	static void CheckResources(){
+	void CheckResources(){
 		int _checked = 0;
 		_affordable = false;
 		for (int i = 0; i < _activeFactory._costs.Count; i++){

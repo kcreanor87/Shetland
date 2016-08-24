@@ -16,8 +16,10 @@ public class EndGame : MonoBehaviour {
 	public Button _partAbutton, _partBbutton, _partCbutton, _partDbutton;
 	public GameObject _openScreen;
 	public GameObject _buildScreen;
+	public SaveGame _saveGame;
 
-	void Start(){		
+	void Start(){
+		_saveGame = GameObject.Find("Loader").GetComponent<SaveGame>();
 		_build = GameObject.Find("Build");
 		_buy = GameObject.Find("Buy");
 		_brag = GameObject.Find("Brag");
@@ -32,6 +34,7 @@ public class EndGame : MonoBehaviour {
 	}
 
 	public void OpenCanvas(){
+		_saveGame.Save();
 		CalculateOptions();
 		Time.timeScale = 0.0f;
 		_harbourCanvas.enabled = true;

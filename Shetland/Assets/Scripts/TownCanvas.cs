@@ -22,9 +22,11 @@ public class TownCanvas : MonoBehaviour {
 	public bool _affordable;
 	public Button _buildButton;
 	public int _activeBuilding;
+	public SaveGame _saveGame;
 
 	void Start(){
-		CollectTextElements();				
+		CollectTextElements();	
+		_saveGame = GameObject.Find("Loader").GetComponent<SaveGame>();			
 		_dayTimer = GameObject.Find("Timer").GetComponent<DayTimer>();
 		_buildButton = GameObject.Find("BuildButton").GetComponent<Button>();
 		_additionalResources = gameObject.GetComponent<AdditionalResources>();
@@ -52,6 +54,7 @@ public class TownCanvas : MonoBehaviour {
 	}
 
 	public void OpenCanvas(){
+		_saveGame.Save();
 		_townName.text = _townManager._name;
 		UpgradableBuildingNames();
 		SetActiveBuildings();

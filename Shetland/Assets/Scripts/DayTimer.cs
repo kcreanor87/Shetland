@@ -13,6 +13,7 @@ public class DayTimer : MonoBehaviour {
 	public List <GameObject> _towns = new List <GameObject>();
 	public RumourGenerator _rumourScript;
 	public DayCycle _dayCycle;
+	public SaveGame _saveGame;
 
 	void Start(){
 		_dayCycle = GameObject.Find("MainLight").GetComponent<DayCycle>();
@@ -23,6 +24,7 @@ public class DayTimer : MonoBehaviour {
 		_rumourScript = GameObject.Find("TownCanvas").GetComponent<RumourGenerator>();
 		UpdateClock();
 		Time.timeScale =1.0f;
+		_saveGame = GameObject.Find("Loader").GetComponent<SaveGame>();
 	}
 
 	IEnumerator Timer(){
@@ -49,8 +51,9 @@ public class DayTimer : MonoBehaviour {
 		_manager._resources[2] += _manager._factoryOuput[2];
 		_manager._resources[3] += _manager._factoryOuput[3];
 		WM_UI.UpdateUI();
-		ResetPrices();		
-		if (restart) StartCoroutine(Timer());
+		ResetPrices();
+		_saveGame.Save();	
+		if (restart) StartCoroutine(Timer());		
 	}
 	void RumourTimer(){
 		if (_rumourTimer >= 24){

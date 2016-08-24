@@ -14,6 +14,7 @@ public class RumourGenerator : MonoBehaviour {
 	public TownManager _activeTown;
 	public TownCanvas _townCanvas;
 	public DayTimer _dayTimer;
+	public SaveGame _saveGame;
 	public bool _rumourActive;
 	public int _cost = 50;
 	public int _loadedRumourTown;
@@ -35,6 +36,7 @@ public class RumourGenerator : MonoBehaviour {
 		_townCanvas = gameObject.GetComponent<TownCanvas>();
 		_rumourGO.SetActive(false);
 		GetTowns();
+		_saveGame = GameObject.Find("Loader").GetComponent<SaveGame>();
 		if (_rumourActive) LoadRumour();
 	}
 
@@ -75,6 +77,7 @@ public class RumourGenerator : MonoBehaviour {
 		_activeTown.GeneratePrices();
 		_rumourActive = true;
 		_rumourButton.interactable = false;
+		_saveGame.Save();
 	}
 
 	public void ClearRumour(){

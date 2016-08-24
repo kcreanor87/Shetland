@@ -1,0 +1,1260 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Euler",
+				"Euler(float x, float y, float z)	Quaternion"
+			],
+			[
+				"Qaut",
+				"Quaternion()	Quaternion()"
+			],
+			[
+				"_tow",
+				"_towns	List<GameObject>"
+			],
+			[
+				"town",
+				"TownManager	TownManager"
+			],
+			[
+				"_town",
+				"_townManagers	List<TownManager>"
+			],
+			[
+				"Add",
+				"Add(T item)	void"
+			],
+			[
+				"_act",
+				"_activateFactory	ActivateFactory"
+			],
+			[
+				"_ma",
+				"_mainLight	Light"
+			],
+			[
+				"layer",
+				"_layerMask	LayerMask"
+			],
+			[
+				"Get",
+				"GetComponent<T>()	T"
+			],
+			[
+				"active",
+				"_active	bool"
+			],
+			[
+				"Mesh",
+				"MeshRenderer	MeshRenderer"
+			],
+			[
+				"time",
+				"timeScale	float { get; set; }"
+			],
+			[
+				"Player",
+				"PlayerControls_WM	PlayerControls_WM"
+			],
+			[
+				"Man",
+				"_manager	_manager"
+			],
+			[
+				"_a",
+				"_managerScript	_manager"
+			],
+			[
+				"_resou",
+				"_resources	List<int>"
+			],
+			[
+				"_partB",
+				"_partB	bool"
+			],
+			[
+				"_bui",
+				"_built	bool"
+			],
+			[
+				"GEt",
+				"GetComponent<T>()	T"
+			],
+			[
+				"_rumour",
+				"_rumourTimer	int"
+			],
+			[
+				"rumour",
+				"_rumourScript	RumourGenerator"
+			],
+			[
+				"_loaded",
+				"_loadedRumourTown	int"
+			],
+			[
+				"Rumour",
+				"LoadRumour()	void"
+			],
+			[
+				"SaveT",
+				"SaveTimeOfDay()	void"
+			],
+			[
+				"_day",
+				"_dayCycle	DayCycle"
+			],
+			[
+				"rum",
+				"_rumourTimer	int"
+			],
+			[
+				"Day",
+				"DayCycle	DayCycle"
+			],
+			[
+				"F",
+				"Find(string name)	GameObject"
+			],
+			[
+				"_child",
+				"_childPrefab	GameObject"
+			],
+			[
+				"_resour",
+				"_resourceGens	List<ResourceGen>"
+			],
+			[
+				"_resouce",
+				"_resourceGens	List<ResourceGen>"
+			],
+			[
+				"child",
+				"GetChild(int index)	Transform"
+			],
+			[
+				"_re",
+				"_resourceGens	List<ResourceGen>"
+			],
+			[
+				"_resource",
+				"_resourceGens	List<ResourceGen>"
+			],
+			[
+				"Resource",
+				"ResourceGen	ResourceGen"
+			],
+			[
+				"Resour",
+				"ResourceGen	ResourceGen"
+			],
+			[
+				"GetComponentIn",
+				"GetComponentInParent<T>()	T"
+			],
+			[
+				"LoadPl",
+				"LoadPlayerResources()	void"
+			],
+			[
+				"SveP",
+				"SavePlayerResources()	void"
+			],
+			[
+				"Load",
+				"LoadLevel	LoadLevel"
+			],
+			[
+				"de",
+				"SetDestination(Vector3 target)	bool"
+			],
+			[
+				"Find",
+				"FindWithTag(string tag)	GameObject"
+			],
+			[
+				"Save",
+				"SavePlayerPos()	void"
+			],
+			[
+				"_fact",
+				"_factories	List<Factories>"
+			],
+			[
+				"_factor",
+				"_factories	List<Factories>"
+			],
+			[
+				"fact",
+				"_factories	List<Factories>"
+			],
+			[
+				"nam",
+				"_name	string"
+			],
+			[
+				"Set",
+				"SetInt(string key, int value)	void"
+			],
+			[
+				"_res",
+				"_resourceSpawns	List<GameObject>"
+			],
+			[
+				"Instantiate",
+				"Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent)	Object"
+			],
+			[
+				"FindObjects",
+				"FindGameObjectsWithTag(string tag)	GameObject[]"
+			],
+			[
+				"Gt",
+				"GetInt(string key, int defaultValue)	int"
+			],
+			[
+				"pla",
+				"PlayerPrefs	PlayerPrefs"
+			],
+			[
+				"new",
+				"new	new"
+			],
+			[
+				"Town",
+				"TownManager	TownManager"
+			],
+			[
+				"Lo",
+				"LoadScene(int sceneBuildIndex)	void"
+			],
+			[
+				"Scene",
+				"SceneManager	SceneManager"
+			],
+			[
+				"_built",
+				"_builtGO	GameObject"
+			],
+			[
+				"_bo",
+				"_bought	bool"
+			],
+			[
+				"_bragg",
+				"_bragged	bool"
+			],
+			[
+				"_bra",
+				"_braggedGO	GameObject"
+			],
+			[
+				"_part",
+				"_partA	bool"
+			],
+			[
+				"_pr",
+				"_partB	bool"
+			],
+			[
+				"_build",
+				"_buildScreen	GameObject"
+			],
+			[
+				"_moving",
+				"_movingToHarbour	bool"
+			],
+			[
+				"col",
+				"color	Color { get; set; }"
+			],
+			[
+				"_buildin",
+				"_buildingCosts	List<BuildingCost>"
+			],
+			[
+				"_buil",
+				"_buildingCosts	List<BuildingCost>"
+			],
+			[
+				"re",
+				"_resources	List<int>"
+			],
+			[
+				"Close",
+				"CloseBuilding(int index)	void"
+			],
+			[
+				"Gener",
+				"GenerateTerrain"
+			],
+			[
+				"_spa",
+				"_spawnable"
+			],
+			[
+				"_size",
+				"_sizeX"
+			],
+			[
+				"Generate",
+				"GenerateTowns"
+			],
+			[
+				"quaternion",
+				"Quaternion.identity"
+			],
+			[
+				"SceneManager",
+				"SceneManager.LoadScene(sceneName, mode)"
+			],
+			[
+				"_tut",
+				"_tutScreen2"
+			],
+			[
+				"_room",
+				"_roomSelector"
+			],
+			[
+				"CursorLock",
+				"Cursor.lockState"
+			],
+			[
+				"Cursor",
+				"Cursor.CursorLockMode.None"
+			],
+			[
+				"CursorLockM",
+				"CursorLockMode.Locked"
+			],
+			[
+				"LockMo",
+				"CursorLockMode.Locked"
+			],
+			[
+				"_tutsc",
+				"_tutScreen2"
+			],
+			[
+				"_tutScree",
+				"_tutScreen2"
+			],
+			[
+				"MouseButton",
+				"Input.GetMouseButtonDown(button)"
+			],
+			[
+				"retu",
+				"return"
+			],
+			[
+				"wait",
+				"WaitForSeconds(seconds)"
+			],
+			[
+				"Start",
+				"StartCoroutine"
+			],
+			[
+				"key",
+				"KeyCode"
+			],
+			[
+				"WaitFor",
+				"WaitForSeconds(seconds)"
+			],
+			[
+				"Fa",
+				"FadeCo"
+			],
+			[
+				"GetKey",
+				"Input.GetKeyDown(name)"
+			],
+			[
+				"look",
+				"lookSpeed"
+			],
+			[
+				"mousepo",
+				"Input.mousePosition"
+			],
+			[
+				"Disable",
+				"DisableText()	IEnumerator"
+			],
+			[
+				"dam",
+				"_dam	int"
+			],
+			[
+				"cal",
+				"_calcDam	CalculateDamage"
+			],
+			[
+				"_def",
+				"_defPoint	Vector3"
+			],
+			[
+				"_mov",
+				"_moving	bool"
+			],
+			[
+				"Can",
+				"_coverCanvas	Canvas"
+			],
+			[
+				"_cover",
+				"_cover	Cover"
+			],
+			[
+				"at",
+				"_attacking	bool"
+			],
+			[
+				"_player",
+				"_player	PlayerTurn"
+			],
+			[
+				"range",
+				"ranged"
+			],
+			[
+				"FollowG",
+				"FollowGO()	void"
+			],
+			[
+				"angle",
+				"angleA"
+			],
+			[
+				"_play",
+				"_playerTarget	Vector3"
+			],
+			[
+				"Camera",
+				"Camera.main"
+			],
+			[
+				"f",
+				"fieldOfView	float { get; set; }"
+			],
+			[
+				"_targe",
+				"_target	Transform"
+			],
+			[
+				"player",
+				"_player	PlayerTurn"
+			],
+			[
+				"_pla",
+				"_player	Transform"
+			],
+			[
+				"foll",
+				"FollowGO()	void"
+			],
+			[
+				"Shotc",
+				"ShotCam()	IEnumerator"
+			],
+			[
+				"Ienumer",
+				"IEnumerator	IEnumerator"
+			],
+			[
+				"_mid",
+				"_midPoint.transform"
+			],
+			[
+				"Ena",
+				"EnableShotCam()	void"
+			],
+			[
+				"Game",
+				"GameObject"
+			],
+			[
+				"tran",
+				"transform	Transform { get; }"
+			],
+			[
+				"_target",
+				"_targetPos	Vector3"
+			],
+			[
+				"tr",
+				"transform.position.x"
+			],
+			[
+				"t",
+				"transform	Transform { get; }"
+			],
+			[
+				"tra",
+				"transform.position"
+			],
+			[
+				"act",
+				"activeGO"
+			],
+			[
+				"target",
+				"_target	Transform"
+			],
+			[
+				"Rotate",
+				"Rotate(Transform target)	void"
+			],
+			[
+				"error",
+				"ErrorMessage(bool active)	void"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Assets/Scripts/ActivateFactory.cs",
+			"settings":
+			{
+				"buffer_size": 3016,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/SaveGame.cs",
+			"settings":
+			{
+				"buffer_size": 6728,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Factories.cs",
+			"settings":
+			{
+				"buffer_size": 2700,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/EndGame.cs",
+			"settings":
+			{
+				"buffer_size": 3434,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/WorldMap.cs",
+			"settings":
+			{
+				"buffer_size": 2228,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"commi",
+				"Git: Quick Commit"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"Git add",
+				"Git: Add..."
+			],
+			[
+				"Git",
+				"Git: Add All"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"omnishar",
+				"OmniSharpSublime: Clean"
+			],
+			[
+				"Pac",
+				"Preferences: Browse Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 67.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts"
+	],
+	"file_history":
+	[
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/FOW.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/PlayerSight.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TownCanvas.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/RumourGenerator.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WorldMap.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/PlayerControls_WM.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DayTimer.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WM_UI.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TravelButton.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TownManager.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/SaveGame.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/ResourceGen.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/NewGame.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Market.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/MainMenu.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Highscores.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Factories.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/EndGame.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DayCycle.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Caravan.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/CameraControl.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/BuildingCost.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/AdditionalResources.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/ActivateFactory.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/_manager.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/LoadLevel.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/LevelGen.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/LoadInformation.cs",
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/User/OmniSharpSublime.sublime-settings",
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Shetland.sublime-project",
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/User/C#.sublime-settings",
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/User/Plain text.sublime-settings",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin_0-3/Assets/Scripts/DoorTrigger.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin_0-3/Assets/Scripts/LOAD_LEVEL.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin_0-3/Assets/Scripts/LookAround.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin_0-3/Assets/Scripts/CamControl.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin_0-3/Assets/Scripts/FadeOut.cs",
+		"/C/Users/Kenny/Desktop/Dunedin Camore Builds/WebGL/index.html",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin_0-3/Assets/Scripts/LeakDetect.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin/Assets/Scripts/LookAround.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin/Assets/Scripts/DoorTrigger.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin/Assets/Scripts/CamControl.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin/Assets/CamControl.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin Canmore/Unity/Dunedin/Assets/LookAround.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/_CombatManager/CombatGenerator.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/Player/PlayerTurn.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/_CombatManager/CalculateDamage.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/Enemy/EnemyScript.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/Enemy/HealthBar.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/Enemy/DisableText.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/_CombatManager/DamageText.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/Player/CameraController.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/Player/CameraFacing.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/Terrain/Cover.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/_manager.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/_CombatManager/AuxilliaryPower.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/UI/CombatUI.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/UI/Tooltip.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/Player/MoveIndicator.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/_CombatManager/MoveIndicator.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/HealthBar.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/UI/SkillsMenu.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/PlayerTurn.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/AuxilliaryPower.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/EnemyScript.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/GenerateStats.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/CombatUI.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/UI/TargetedEnemy.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/CameraController.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/UI/SkillIndentifier.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/CombatGenerator.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/DamageText.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/CalculateDamage.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/TurnManager.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/CombatStats.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/EnemyDatabase.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Inventory Scripts/ArmourDatabase.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Inventory Scripts/WeaponDatabase.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Inventory Scripts/Weapon.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/UI/ButtonIcon.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/UI/ButtonIcon.cs\"C",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Scripts/UI/ButtonIcon.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/PlayerControls.cs",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Assets/Scripts/Combat Scripts/UI/ButtonIcons.cs",
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/OmniSharp/Default.sublime-keymap",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol/Obol.sln\"C",
+		"/C/Users/Kenny/Documents/Projects/Obol/Obol_sublime.sublime-project",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/CalculateDamage.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/CombatUI.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Honalulu_v0-2.sln",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/TurnManager.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/EnemyScript.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/CombatGenerator.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/PlayerTurn.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/ProGen/ProGen Testing/Assets/LevelGenerator.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/ProGen/ProGen Testing/Assets/Terrain.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/CombatOver.cs",
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/OmniSharp/OmniSharpSublime.sublime-settings",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/_manager.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CalculateDamage.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CombatStats.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CombatOver.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/EnemyDatabase.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CombatGenerator.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/WeaponDatabase.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/DamageText.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/GenerateStats.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CombatUI.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/ButtonsGenerator.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/EnemyScript.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/Armour.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/ArmourDatabase.cs",
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/Weapon.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/RangedDatabase.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/ChestSlot.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/LegSlot.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/RangedWeapon.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/MeleeWeapon.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/MeleeDatabase.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/RangedDatabase.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/RagedWeapon.cs",
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/HealthBar.cs"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"<current file>",
+			"<open folders>",
+			"C:\\Users\\Kenny\\Documents\\Projects\\Obol",
+			"\"\"",
+			".",
+			"\"\"",
+			"PlayerTurn.cs",
+			"CombatUI.cs",
+			"C:\\Users\\Kenny\\Documents\\Projects\\Michigan\\Honalulu_v0-2\\Assets\\Scripts",
+			"PlayerTurn.cs",
+			"EnemyScript.cs",
+			"PlayerTurn.cs",
+			"CombatUI.cs",
+			"PlayerTurn.cs",
+			"EnemyTurn.cs",
+			"<open files>",
+			"TurnManager.cs",
+			"<open files>",
+			"_manager.cs"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"));\n",
+			"}\n",
+			"_nextTurnButton",
+			"UpdateAP",
+			"(){\n",
+			"_playerTurnUI",
+			"_targetRenderer",
+			"){\n",
+			"_playerTurnUI",
+			"_target",
+			"_toolTipGO",
+			"ToolTipDisabled",
+			"_toolTipGO",
+			"_combatUI",
+			"_toolTipGO",
+			"_attackCbutton",
+			"_attackBbutton",
+			"_attackCSprite_0",
+			"_aimedShot_0",
+			"_attackCSprite_1",
+			"_attackBSprite_1",
+			"_attackBSprite_0",
+			"();\n",
+			"_dodge_2",
+			"_dodge_1",
+			"_dodge_0",
+			"_state",
+			"UpdateAP",
+			"_dodge",
+			"Damage",
+			"_move",
+			"_buttonGOs",
+			"0",
+			";\n",
+			"_att",
+			"new",
+			"_target",
+			"_trans",
+			"_AP",
+			"5",
+			"_losText",
+			"_moveActive",
+			"_aP",
+			"_actionsRemaining",
+			"_turnManager",
+			"_tM",
+			"_actionsRemaining",
+			";\n",
+			"position",
+			";\n",
+			"_speed",
+			"_mousePos",
+			"position",
+			"deltaTime",
+			"float",
+			">();\n",
+			"_turnIndex",
+			"_combatants",
+			"StartCoroutine",
+			"_moveInd",
+			"EnemyGenerator",
+			"_enemies",
+			"_sortedEnemies",
+			"_enemyName",
+			"EnemyType",
+			"combat",
+			";\n",
+			"value",
+			"_spriteObj",
+			"_itemSprites",
+			"}\n",
+			"_itemReplacedIndex",
+			");\n",
+			"\");\n",
+			"Collider",
+			"_itemIndex",
+			"Death",
+			";\n",
+			"0f",
+			"colliderAI",
+			"_enemyAI",
+			";\n",
+			"(){\n",
+			"_managerObj",
+			"NextRes",
+			"GeneratePrices",
+			"_priceScript",
+			";;",
+			";\n",
+			"[]",
+			"health",
+			");\n",
+			";\n",
+			"arrowTest",
+			"muzzleFlash",
+			"flashDuration",
+			"_TESTHEALTH",
+			"_speed",
+			"miniMap",
+			"playerTrans",
+			"currentCash",
+			"endTurnPrompt",
+			"availableAP",
+			"//display",
+			"playerCashText",
+			"safeCrackCost",
+			"safeCrackSkill",
+			"lockPickCost",
+			"lockPickSkill",
+			"=",
+			"sneakCost",
+			"sneakSpeed",
+			"sneakStat",
+			"moveCost",
+			"moveSpeed",
+			"baseMove",
+			"moveStat",
+			"currentTurn",
+			"maxTurns",
+			"fals",
+			"currentAP",
+			"maxAP"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"_targetMaterial",
+			"_targetGO",
+			"_aimedShotBtn",
+			"_regularShotBtn",
+			"_aimedShot_0",
+			"_aimedShot_1",
+			"_aimedShot_0",
+			"_regularShot_1",
+			"_regularShot_0",
+			"_guard_2",
+			"_guard_1",
+			"_guard_0",
+			"_moveButton",
+			"_targetPos",
+			"transform",
+			"_ap",
+			"_errorText",
+			"_moving",
+			"_AP",
+			"_aP",
+			"_playerTurn",
+			"",
+			"_tM._actionsRemaining",
+			"_moveArea",
+			"CombatGenerator",
+			"_combatants",
+			"_sortedInit",
+			"_charName",
+			"CombatStats",
+			"_inventoryObj",
+			"_inventorySprites",
+			"Recover",
+			"_enemyAI",
+			"_health",
+			"_arrowTest",
+			"_muzzleFlash",
+			"_flashDuration",
+			"_testHealth",
+			"_moveSpeed"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/Scripts/ActivateFactory.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2871,
+								2871
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"41,46": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/SaveGame.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2718,
+								2728
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/Factories.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2700,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1174,
+								1174
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"1913,1917": "Parameter can be IComparable"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/EndGame.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3434,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1189,
+								1189
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"2356,2360": "Parameter can be IComparable",
+								"3355,3360": "Method 'Board' can be made static."
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/WorldMap.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1574,
+								1574
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"1976,1979": "Could not determine type",
+								"2001,2006": "'Quaternion' does not contain a definition for 'Euler'",
+								"2014,2015": "'Quaternion' does not contain a definition for 'Euler'"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 25.0
+	},
+	"output.find_results":
+	{
+		"height": 25.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.variable_get":
+	{
+		"height": 25.0
+	},
+	"pinned_build_system": "",
+	"project": "Shetland.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Assets\\Scripts\\TurnManager.cs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 259.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
