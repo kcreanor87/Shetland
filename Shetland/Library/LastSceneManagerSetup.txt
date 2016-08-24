@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/GameOver.unity
+=======
+- path: Assets/Scenes/MainMenu.unity
+>>>>>>> d6ace668e1e04852a045665863f16cb05a2924cc
   isLoaded: 1
   isActive: 1
