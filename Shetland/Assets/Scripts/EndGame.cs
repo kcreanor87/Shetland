@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour {
 
@@ -118,5 +119,10 @@ public class EndGame : MonoBehaviour {
 		_partBbutton.interactable = (_manager._resources[3] >= 1000 && !_partB);
 		_partCbutton.interactable = (_manager._resources[4] >= 1000 && !_partC);
 		_partDbutton.interactable = (_manager._resources[5] >= 1000 && !_partD);
+	}
+
+	public void Board(){
+		NewGame._score = _manager._obols;
+		SceneManager.LoadScene(2);
 	}
 }
