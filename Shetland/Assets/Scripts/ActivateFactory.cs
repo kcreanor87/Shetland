@@ -32,6 +32,7 @@ public class ActivateFactory : MonoBehaviour {
 		_activateButton = GameObject.Find("FactoryActivate").GetComponent<Button>();
 		_factoryPrompt.SetActive(false);
 		_ui = GameObject.Find("UI").GetComponent<WM_UI>();
+		_active = false;
 
 	}
 	public static void OpenUI(){

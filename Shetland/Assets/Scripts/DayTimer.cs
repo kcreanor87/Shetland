@@ -22,7 +22,7 @@ public class DayTimer : MonoBehaviour {
 		_towns.AddRange(GameObject.FindGameObjectsWithTag("Town"));
 		_rumourScript = GameObject.Find("TownCanvas").GetComponent<RumourGenerator>();
 		UpdateClock();
-
+		Time.timeScale =1.0f;
 	}
 
 	IEnumerator Timer(){

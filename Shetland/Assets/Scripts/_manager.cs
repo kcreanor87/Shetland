@@ -11,6 +11,7 @@ public class _manager : MonoBehaviour {
 	public static List <int> _factoryOuput = new List<int>();
 
 	void Awake(){
+		_resourceNames.Clear();
 		_resourceNames.Add("Wood");
 		_resourceNames.Add("Stone");
 		_resourceNames.Add("Iron");
@@ -18,16 +19,21 @@ public class _manager : MonoBehaviour {
 		_resourceNames.Add("Steel");
 		_resourceNames.Add("Diamonds");
 
+		_factoryOuput.Clear();
 		_factoryOuput.Add(0);
 		_factoryOuput.Add(0);
 		_factoryOuput.Add(0);
 		_factoryOuput.Add(0);
 
+		_resources.Clear();
 		_resources.Add(1000);
 		_resources.Add(1000);
 		_resources.Add(1000);
 		_resources.Add(1000);
 		_resources.Add(1000);
 		_resources.Add(1000);
+
+		_obols = 1000;
+		_repute = 1000;
 	}
 }

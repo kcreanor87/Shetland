@@ -14,6 +14,7 @@ public class PlayerControls_WM : MonoBehaviour {
 	public ActivateFactory _activateScript;
 	public TownCanvas _townCanvas;
 	public EndGame _endGame;
+	public LayerMask _layerMask;
 
 	// Use this for initialization
 	void Start () {		
@@ -34,14 +35,15 @@ public class PlayerControls_WM : MonoBehaviour {
 		_agent = gameObject.GetComponent<NavMeshAgent>();
 		_activateScript = gameObject.GetComponent<ActivateFactory>();
 		_agent.enabled = true;
-		_agent.Stop();		
+		_agent.Stop();
+		_inMenu = false;	
 	}
 
 	void DetectInput(){
 		if (Input.GetMouseButton(0)){
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			if (Physics.Raycast(ray, out hit)){
+			if (Physics.Raycast(ray, out hit, 100f, _layerMask) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()){
 				if (hit.collider.tag == "Ground"){
 					float dist = Vector3.Distance(hit.point, transform.position);
 					if (dist > 1.0f){
@@ -54,7 +56,7 @@ public class PlayerControls_WM : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0)){
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			if (Physics.Raycast(ray, out hit)){
+			if (Physics.Raycast(ray, out hit, 100f, _layerMask) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()){
 				switch (hit.collider.tag){
 					case "Resource":
 					_objectPos = hit.transform.position;
