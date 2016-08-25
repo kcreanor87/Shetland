@@ -58,12 +58,12 @@ public class TownCanvas : MonoBehaviour {
 	public void OpenCanvas(){
 		_saveGame.Save();
 		_mapToggle.SetActive(false);
-		_townName.text = _townManager._name;
-		UpgradableBuildingNames();
-		SetActiveBuildings();
+		_townName.text = _townManager._name;		
+		SetActiveBuildings();		
 		Time.timeScale = 0.0f;
 		_canvas.enabled = true;
 		_market._townManager = _townManager;
+		UpgradableBuildingNames();
 		_market.UpdatePrices();
 	}
 
@@ -127,15 +127,28 @@ public class TownCanvas : MonoBehaviour {
 
 	public void OpenBuildCanvas(int index){
 		_activeBuilding = index;
-		_woodCost.text = _buildingCosts[index]._woodCost.ToString();
-		_stoneCost.text = _buildingCosts[index]._stoneCost.ToString();
-		_ironCost.text = _buildingCosts[index]._ironCost.ToString();
-		_coalCost.text = _buildingCosts[index]._coalCost.ToString();
-		_buildName.text = _buildingCosts[index]._name;
-		_buildDesc.text = _buildingCosts[index]._desc;
-		_preReqs.text = (_buildingCosts[index]._preReq > 0) ? _preReqs.text = _buildingCosts[_buildingCosts[index]._preReq]._name : null;
-		CheckAffordability(index);
-		_buildButton.interactable = _affordable && !_townManager._activeBuildings[index];
+		if (!_townManager._activeBuildings[index]){
+			_woodCost.text = _buildingCosts[index]._woodCost.ToString();
+			_stoneCost.text = _buildingCosts[index]._stoneCost.ToString();
+			_ironCost.text = _buildingCosts[index]._ironCost.ToString();
+			_coalCost.text = _buildingCosts[index]._coalCost.ToString();
+			_buildName.text = _buildingCosts[index]._name;
+			_buildDesc.text = _buildingCosts[index]._desc;
+			_preReqs.text = (_buildingCosts[index]._preReq > 0) ? _preReqs.text = _buildingCosts[_buildingCosts[index]._preReq]._name : null;
+			CheckAffordability(index);
+			_buildButton.interactable = _affordable;
+		}
+		else{
+			_woodCost.text = null;
+			_stoneCost.text = null;
+			_ironCost.text = null;
+			_coalCost.text = null;
+			_buildName.text = _buildingCosts[index]._name;
+			_buildDesc.text = _buildDesc.text = _buildingCosts[index]._desc;
+			_preReqs.text = null;	
+		}
+		
+		_buildButton.gameObject.SetActive(!_townManager._activeBuildings[index]);
 		_buildingCanvas[7].SetActive(true);
 	}
 
@@ -149,6 +162,7 @@ public class TownCanvas : MonoBehaviour {
 		UpdateWorkshopButtons();
 		UpgradableBuildingNames();
 		_buildingCanvas[7].SetActive(false);
+		_market.UpdatePrices();
 	}
 
 	void CheckAffordability(int buildingType){
@@ -179,11 +193,23 @@ public class TownCanvas : MonoBehaviour {
 			_townManager._marketSellMod = 0.8f;
 			_townManager.UpdatePrices();
 		}
+		else{
+			_marketName.text = "Market";
+			_townManager._marketBuyMod = 1.3f;
+			_townManager._marketSellMod = 0.7f;
+			_townManager.UpdatePrices();
+		}
 		if (_townManager._activeBuildings[9] && _townManager._activeBuildings[2]){
 			_innName.text = "Town Hall";
 		}
+		else{
+			_innName.text = "Inn";
+		}
 		if (_townManager._activeBuildings[11] && _market._townManager._activeBuildings[5]){
 			_smithName.text = "Arsenal";
+		}
+		else{
+			_smithName.text = "Smith";
 		}
 	}
 }

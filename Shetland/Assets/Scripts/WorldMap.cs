@@ -94,7 +94,13 @@ public class WorldMap : MonoBehaviour {
 			var prefab = (GameObject) Instantiate(_prefabs[5], pos, rot, _worldMap.transform);
 			var script = prefab.GetComponent<WorldMap_Icons>();
 			script._name = "Harbour";
+			_activeIcons.Add(prefab);
 		}
+		var playerPos = _wmCam.WorldToScreenPoint(_playerLight.gameObject.transform.position);
+		var player = (GameObject) Instantiate(_prefabs[6], playerPos, rot, _worldMap.transform);
+		var playerScript = player.GetComponent<WorldMap_Icons>();
+		playerScript._name = "Player";
+		_activeIcons.Add(player);
 	}
 
 	void ClearIcons(){

@@ -24,6 +24,10 @@ public class SaveGame : MonoBehaviour {
 		if (!NewGame._newGame) Load();
 	}
 
+	void Start(){
+		if (!NewGame._newGame) LoadTowns();
+	}
+
 	void PopulateLists(){
 		_player = GameObject.FindWithTag("Player");
 		_endGame = GameObject.Find("HarbourCanvas").GetComponent<EndGame>();
@@ -62,8 +66,7 @@ public class SaveGame : MonoBehaviour {
 	}
 
 	public void Load(){
-		LoadResourceSpawns();
-		LoadTowns();
+		LoadResourceSpawns();		
 		LoadFactories();
 		LoadPlayerPos();
 		LoadPlayerResources();
@@ -79,6 +82,7 @@ public class SaveGame : MonoBehaviour {
 				PlayerPrefs.SetInt(_buildingScripts[i]._name + i + "_" + j, _buildingScripts[i]._activeBuildings[j] ? 1 : 0);				
 			}
 			PlayerPrefs.SetInt("TownSeen" + i, (_buildingScripts[i]._seen ? 1 : 0));
+			PlayerPrefs.SetInt("TownVisited" + i, (_buildingScripts[i]._visited ? 1 : 0));
 		}
 	}
 
@@ -88,6 +92,7 @@ public class SaveGame : MonoBehaviour {
 				_buildingScripts[i]._activeBuildings[j] = PlayerPrefs.GetInt(_buildingScripts[i]._name + i + "_" + j) > 0;				
 			}
 			_buildingScripts[i]._seen = (PlayerPrefs.GetInt("TownSeen" + i) > 0);
+			_buildingScripts[i]._visited = (PlayerPrefs.GetInt("TownVisited" + i) > 0);
 		}
 	}
 

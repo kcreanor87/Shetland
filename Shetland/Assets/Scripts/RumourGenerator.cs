@@ -76,6 +76,7 @@ public class RumourGenerator : MonoBehaviour {
 		WM_UI.UpdateUI();
 		_activeTown.GeneratePrices();
 		_rumourActive = true;
+		_dayTimer._rumourTimer = 0;
 		_rumourButton.interactable = false;
 		_saveGame.Save();
 	}

@@ -82,8 +82,16 @@ public class EndGame : MonoBehaviour {
 
 	public void Build(){
 		//Open Build canvas
-		_buildScreen.SetActive(true);
+		UpdateButtons();
+		_buildScreen.SetActive(true);		
 		_openScreen.SetActive(false);
+	}
+
+	void UpdateButtons(){
+		_partAbutton.gameObject.SetActive(!_partA);
+		_partBbutton.gameObject.SetActive(!_partB);
+		_partCbutton.gameObject.SetActive(!_partC);
+		_partDbutton.gameObject.SetActive(!_partD);
 	}
 
 	public void Back(){
@@ -114,6 +122,7 @@ public class EndGame : MonoBehaviour {
 			_manager._resources[5] -= 1000;
 			break;
 		}
+		UpdateButtons();
 		WM_UI.UpdateUI();
 		_built = (_partA && _partB && _partC && _partD);
 	}
