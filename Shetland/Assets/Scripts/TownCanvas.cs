@@ -23,6 +23,7 @@ public class TownCanvas : MonoBehaviour {
 	public Button _buildButton;
 	public int _activeBuilding;
 	public SaveGame _saveGame;
+	public GameObject _mapToggle;
 
 	void Start(){
 		CollectTextElements();	
@@ -40,6 +41,7 @@ public class TownCanvas : MonoBehaviour {
 	}
 
 	void CollectTextElements(){
+		_mapToggle = GameObject.Find("MapToggle");
 		_woodCost = GameObject.Find("WoodBuild").GetComponent<Text>();
 		_stoneCost = GameObject.Find("StoneCost").GetComponent<Text>();
 		_ironCost = GameObject.Find("IronCost").GetComponent<Text>();
@@ -55,6 +57,7 @@ public class TownCanvas : MonoBehaviour {
 
 	public void OpenCanvas(){
 		_saveGame.Save();
+		_mapToggle.SetActive(false);
 		_townName.text = _townManager._name;
 		UpgradableBuildingNames();
 		SetActiveBuildings();
@@ -65,6 +68,7 @@ public class TownCanvas : MonoBehaviour {
 	}
 
 	public void CloseCanvas(){
+		_mapToggle.SetActive(true);
 		_canvas.enabled = false;
 		Time.timeScale = 1.0f;
 		WM_UI.UpdateUI();

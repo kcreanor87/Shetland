@@ -11,12 +11,15 @@ public class TownManager : MonoBehaviour {
 	public List <bool> _activeBuildings = new List<bool>();
 	public float _marketBuyMod = 1.3f;
 	public float _marketSellMod = 0.7f;
-
+ 	public Transform _player;
 	public float _rumourMod = 1.0f;
 	public int _rumourType;
+	public bool _seen;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+		_player	= GameObject.Find("Player").GetComponent<Transform>();
+		CheckStartDistance();
 		SpawnPrices();
 		PopulateBuildings();
 	}
@@ -62,4 +65,12 @@ public class TownManager : MonoBehaviour {
 		_activeBuildings[0] = true;
 		_activeBuildings[1] = true;
  	}
+
+ 	void OnTriggerEnter(Collider other){
+		_seen |= (other.gameObject.tag == "Player");
+	}
+
+	void CheckStartDistance(){
+		_seen |= (Vector3.Distance(_player.position, transform.position) < 10.0f);
+	}
 }

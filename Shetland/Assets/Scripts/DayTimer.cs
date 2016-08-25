@@ -14,6 +14,7 @@ public class DayTimer : MonoBehaviour {
 	public RumourGenerator _rumourScript;
 	public DayCycle _dayCycle;
 	public SaveGame _saveGame;
+	public PlayerSight _playerSight;
 
 	void Start(){
 		_dayCycle = GameObject.Find("MainLight").GetComponent<DayCycle>();
@@ -21,7 +22,8 @@ public class DayTimer : MonoBehaviour {
 		_dayCounter = transform.FindChild("DayCounter").GetComponent<Text>();
 		StartCoroutine(Timer());
 		_towns.AddRange(GameObject.FindGameObjectsWithTag("Town"));
-		_rumourScript = GameObject.Find("TownCanvas").GetComponent<RumourGenerator>();
+		_rumourScript = GameObject.Find("TownCanvas").GetComponent<RumourGenerator>();		
+		_playerSight = GameObject.Find("SightRadius").GetComponent<PlayerSight>();
 		UpdateClock();
 		Time.timeScale =1.0f;
 		_saveGame = GameObject.Find("Loader").GetComponent<SaveGame>();
@@ -69,6 +71,7 @@ public class DayTimer : MonoBehaviour {
 		float rot = ((float)_hours/24.0f) * -360.0f;
 		_clock.transform.eulerAngles = new Vector3(0,0,rot);
 		_dayCounter.text = _days.ToString();
+		_playerSight.ChangeSightSize();
 	}
 
 	void ResetPrices(){

@@ -12,13 +12,16 @@ public class EndGame : MonoBehaviour {
 	public bool _ticket, _built, _bought, _bragged;
 	public int _winType;
 	public bool _affordable;
+	public bool _seen;
 	public GameObject _build, _buy, _brag, _board, _boughtGO, _braggedGO, _builtGO;
 	public Button _partAbutton, _partBbutton, _partCbutton, _partDbutton;
 	public GameObject _openScreen;
 	public GameObject _buildScreen;
 	public SaveGame _saveGame;
+	public GameObject _mapToggle;
 
 	void Start(){
+		_mapToggle = GameObject.Find("MapToggle");
 		_saveGame = GameObject.Find("Loader").GetComponent<SaveGame>();
 		_build = GameObject.Find("Build");
 		_buy = GameObject.Find("Buy");
@@ -34,6 +37,7 @@ public class EndGame : MonoBehaviour {
 	}
 
 	public void OpenCanvas(){
+		_mapToggle.SetActive(false);
 		_saveGame.Save();
 		CalculateOptions();
 		Time.timeScale = 0.0f;
@@ -57,6 +61,7 @@ public class EndGame : MonoBehaviour {
 	}
 
 	public void CloseCanvas(){
+		_mapToggle.SetActive(true);
 		_harbourCanvas.enabled = false;
 		Time.timeScale = 1.0f;
 		PlayerControls_WM._inMenu = false;

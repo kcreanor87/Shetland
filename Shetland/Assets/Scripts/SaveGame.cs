@@ -9,6 +9,8 @@ public class SaveGame : MonoBehaviour {
 	public List <GameObject> _factoryGO = new List <GameObject>();
 	public List <GameObject> _resourceSpawns = new List <GameObject>();
 	public List <ResourceGen> _resourceGens = new List <ResourceGen>();
+	public List <GameObject> _fowGO = new List <GameObject>();
+	public List <FOW> _fow = new List <FOW>();
 	public EndGame _endGame;
 	public Vector3 _playerPos;
 	public GameObject _player;
@@ -41,6 +43,10 @@ public class SaveGame : MonoBehaviour {
 		for (int i = 0; i < _resourceSpawns.Count; i++){
 			_resourceGens.Add(_resourceSpawns[i].GetComponent<ResourceGen>());
 		}
+		_fowGO.AddRange(GameObject.FindGameObjectsWithTag("FOW"));
+		for (int i = 0; i < _fowGO.Count; i++){
+			_fow.Add(_fowGO[i].GetComponent<FOW>());
+		}
 	}
 
 	public void Save(){
@@ -52,6 +58,7 @@ public class SaveGame : MonoBehaviour {
 		SaveTimeOfDay();
 		SaveRumour();
 		SaveHarbourProgress();
+		SaveFOW();
 	}
 
 	public void Load(){
@@ -63,33 +70,38 @@ public class SaveGame : MonoBehaviour {
 		LoadTimeOfDay();
 		LoadRumour();
 		LoadHarbourProgress();
+		LoadFOW();
 	}
 
 	void SaveTowns(){
 		for (int i = 0; i < _buildingScripts.Count; i++){
 			for (int j = 0; j < _buildingScripts[i]._activeBuildings.Count; j++){
-				PlayerPrefs.SetInt(_buildingScripts[i]._name + i + "_" + j, _buildingScripts[i]._activeBuildings[j] ? 1 : 0);
+				PlayerPrefs.SetInt(_buildingScripts[i]._name + i + "_" + j, _buildingScripts[i]._activeBuildings[j] ? 1 : 0);				
 			}
+			PlayerPrefs.SetInt("TownSeen" + i, (_buildingScripts[i]._seen ? 1 : 0));
 		}
 	}
 
 	void LoadTowns(){
 		for (int i = 0; i < _buildingScripts.Count; i++){
 			for (int j = 0; j < _buildingScripts[i]._activeBuildings.Count; j++){
-				_buildingScripts[i]._activeBuildings[j] = PlayerPrefs.GetInt(_buildingScripts[i]._name + i + "_" + j) > 0;
+				_buildingScripts[i]._activeBuildings[j] = PlayerPrefs.GetInt(_buildingScripts[i]._name + i + "_" + j) > 0;				
 			}
+			_buildingScripts[i]._seen = (PlayerPrefs.GetInt("TownSeen" + i) > 0);
 		}
 	}
 
 	void SaveFactories(){
 		for (int i = 0; i < _factories.Count; i++){
 			PlayerPrefs.SetInt("Factory" + i, _factories[i]._factoryLevel);
+			PlayerPrefs.SetInt("FactorySeen" + i, (_factories[i]._seen ? 1 : 0));
 		}
 	}
 
 	void LoadFactories(){
 		for (int i = 0; i < _factories.Count; i++){
 			_factories[i]._factoryLevel = PlayerPrefs.GetInt("Factory" + i);
+			_factories[i]._seen = (PlayerPrefs.GetInt("FactorySeen" + i) > 0);
 			_factories[i].SwitchMesh();
 		}
 	}
@@ -175,6 +187,7 @@ public class SaveGame : MonoBehaviour {
 		PlayerPrefs.SetInt("Bragged", (_endGame._bragged ? 1 : 0));
 		PlayerPrefs.SetInt("Ticket", (_endGame._ticket ? 1 : 0));
 		PlayerPrefs.SetInt("WinType", _endGame._winType);
+		PlayerPrefs.SetInt("HarbourSeen", (_endGame._seen ? 1 :0));
 	}
 
 	void LoadHarbourProgress(){
@@ -187,5 +200,18 @@ public class SaveGame : MonoBehaviour {
 		_endGame._bragged = (PlayerPrefs.GetInt("Bragged") > 0);
 		_endGame._ticket = (PlayerPrefs.GetInt("Ticket") > 0);
 		_endGame._winType = PlayerPrefs.GetInt("WinType");
+		_endGame._seen = (PlayerPrefs.GetInt("HarbourSeen") > 0);
+	}
+
+	void SaveFOW(){
+		for (int i = 0; i < _fow.Count; i++){
+			PlayerPrefs.SetInt("FOW" + i, (_fow[i]._active ? 1 : 0));
+		}
+	}
+
+	void LoadFOW(){
+		for (int i = 0; i < _fow.Count; i++){
+			_fow[i]._active = (PlayerPrefs.GetInt("FOW" + i) > 0);
+		}
 	}
 }

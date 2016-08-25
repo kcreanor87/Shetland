@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 
 public class WorldMap : MonoBehaviour {
@@ -14,21 +14,26 @@ public class WorldMap : MonoBehaviour {
 	public List <GameObject> _factories = new List <GameObject>();
 	public List <Factories> _factoryScripts = new List <Factories>();
 	public List <GameObject> _prefabs = new List <GameObject>();
+	public List <GameObject> _activeIcons = new List <GameObject>();
+	public EndGame _harbourScript;
+	public GameObject _harbour;
 
 	void Start(){		
 		_wmCam = GameObject.Find("WorldMapCamera").GetComponent<Camera>();
 		_worldMap = GameObject.Find("WorldMap");
-		_wmToggle = GameObject.Find("ToggleMap");
+		_wmToggle = GameObject.Find("MapToggle");
 		_playerLight = GameObject.Find("PlayerLight").GetComponent<Light>();
 		_mainLight = GameObject.Find("MainLight").GetComponent<Light>();
 		_wmLight = GameObject.Find("WMLight").GetComponent<Light>();
+		_harbour = GameObject.Find("Harbour");
+		_harbourScript = GameObject.Find("HarbourCanvas").GetComponent<EndGame>();
 		FindBuildings();
-		SpawnIcons();
 		_wmCam.enabled = false;
 		_worldMap.SetActive(false);
 	}
 
 	public void OpenMap(){
+		SpawnIcons();
 		Time.timeScale = 0.0f;
 		PlayerControls_WM._inMenu = true;
 		_wmCam.enabled = true;
@@ -48,6 +53,7 @@ public class WorldMap : MonoBehaviour {
 		_wmToggle.SetActive(true);
 		Time.timeScale = 1.0f;
 		PlayerControls_WM._inMenu = false;
+		ClearIcons();
 
 	}
 
@@ -64,9 +70,37 @@ public class WorldMap : MonoBehaviour {
 
 	void SpawnIcons(){
 		Quaternion rot = Quaternion.Euler(0, 0, 45f);
-		for (int i = 0; i < _townManagers.Count; i++){
-			var pos = _wmCam.WorldToScreenPoint(_townManagers[i].gameObject.transform.position);
-			Instantiate(_prefabs[0], pos, rot, _worldMap.transform);
+		for (int i = 0; i < _townManagers.Count; i++){			
+			if (_townManagers[i]._seen){
+				var pos = _wmCam.WorldToScreenPoint(_townManagers[i].gameObject.transform.position);
+				var prefab = (GameObject) Instantiate(_prefabs[0], pos, rot, _worldMap.transform);
+				var script = prefab.GetComponent<WorldMap_Icons>();
+				script._name = _townManagers[i]._name;
+				_activeIcons.Add(prefab);
+			}			
 		}
+		for (int i = 0; i < _factoryScripts.Count; i++){
+			if (_factoryScripts[i]._seen){
+				var pos = _wmCam.WorldToScreenPoint(_factoryScripts[i].gameObject.transform.position);
+				var type = _factoryScripts[i]._type + 1;
+				var prefab = (GameObject) Instantiate(_prefabs[type], pos, rot, _worldMap.transform);
+				var script = prefab.GetComponent<WorldMap_Icons>();
+				script._name = _factoryScripts[i]._name;
+				_activeIcons.Add(prefab);
+			}			
+		}
+		if (_harbourScript._seen){
+			var pos = _wmCam.WorldToScreenPoint(_harbour.transform.position);
+			var prefab = (GameObject) Instantiate(_prefabs[5], pos, rot, _worldMap.transform);
+			var script = prefab.GetComponent<WorldMap_Icons>();
+			script._name = "Harbour";
+		}
+	}
+
+	void ClearIcons(){
+		for (int i = 0; i < _activeIcons.Count; i++){
+			Destroy(_activeIcons[i]);
+		}
+		_activeIcons.Clear();
 	}
 }

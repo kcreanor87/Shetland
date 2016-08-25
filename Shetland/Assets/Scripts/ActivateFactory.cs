@@ -15,8 +15,9 @@ public class ActivateFactory : MonoBehaviour {
 	public bool _affordable;
 	public Factories _activeFactory;
 	public Button _activateButton;
+	public GameObject _activateGO;
 	public SaveGame _saveGame;
-
+	public GameObject _mapToggle;
 	public WM_UI _ui;
 
 	// Use this for initialization
@@ -30,13 +31,16 @@ public class ActivateFactory : MonoBehaviour {
 		_stoneCost = GameObject.Find("StoneCost").GetComponent<Text>();
 		_ironCost = GameObject.Find("IronCost").GetComponent<Text>();
 		_coalCost = GameObject.Find("CoalCost").GetComponent<Text>();
+		_activateGO = GameObject.Find("FactoryActivate");
 		_activateButton = GameObject.Find("FactoryActivate").GetComponent<Button>();
+		_mapToggle = GameObject.Find("MapToggle");
 		_factoryPrompt.SetActive(false);
 		_ui = GameObject.Find("UI").GetComponent<WM_UI>();
 		_active = false;
 
 	}
-	public void OpenUI(){		
+	public void OpenUI(){
+		_mapToggle.SetActive(false);		
 		CheckResources();
 		_factoryName.text = _name;
 		_factoryText.text = "+ " + _amount + " " + _manager._resourceNames[_type] + " Per Day";
@@ -51,29 +55,34 @@ public class ActivateFactory : MonoBehaviour {
 		_saveGame.Save();
 	}
 	public void Cancel(){
+		_mapToggle.SetActive(true);
 		_factoryPrompt.SetActive(false);
 		Time.timeScale = 1.0f;
 	}
 	public void Activate(){		
 		if (!_active && _affordable){
-			PayResources();	
-			_activeFactory._active = true;
 			_activeFactory._factoryLevel++;
+			PayResources();	
+			_activeFactory._active = true;			
 			_activeFactory.SwitchMesh();
 			_activeFactory.UpgradeCost();			
 			_manager._factoryOuput[_type] += _amount;
+			_activeFactory.Names();
 			Time.timeScale = 1.0f;
 			_factoryPrompt.SetActive(false);
+			_mapToggle.SetActive(true);
 			WM_UI.UpdateUI();
 					
 		}
 		else if (_affordable){
 			if (_activeFactory._factoryLevel < 3){
-				PayResources();
 				_activeFactory._factoryLevel++;
+				PayResources();
 				_activeFactory.UpgradeFactory();
 				_activeFactory.SwitchMesh();
+				_activeFactory.Names();
 				_factoryPrompt.SetActive(false);
+				_mapToggle.SetActive(true);
 				Time.timeScale = 1.0f;
 			}			
 		}
@@ -90,6 +99,7 @@ public class ActivateFactory : MonoBehaviour {
 			if (_manager._resources[i] >= _activeFactory._costs[i])	_checked++;
 			_affordable = (_checked == 4);
 		}
+		_activateGO.SetActive((_activeFactory._factoryLevel < 3));
 	}
 
 	void PayResources(){

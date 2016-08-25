@@ -11,35 +11,39 @@ public class Factories : MonoBehaviour {
 	public int _factoryLevel;
 	public ActivateFactory _activateFactory;
 	public bool _active;
+	public bool _seen;
 	public List <GameObject> _meshes = new List <GameObject>();
+	public Transform _player;
 
-	void Start(){
+	void Awake(){
 		_script = gameObject.GetComponent<Factories>();
 		_activateFactory = GameObject.Find("Player").GetComponent<ActivateFactory>();
+		_player	= GameObject.Find("Player").GetComponent<Transform>();
+		CheckStartDistance();
 		ValuePerDay();
 		PopulateMeshList();
 		PopulateCostList();
 		SwitchMesh();
 		//Calculate upgrade cost
-		UpgradeCost();
+		UpgradeCost();		
 	}
 
 	void ValuePerDay(){
 		switch(_type){
 			case 0:
-			_name = "Sawmill";
+			_name = "Potential Sawmill";
 			_perDay = 3;
 			break;
 			case 1:
-			_name = "Quarry";
+			_name = "Potential Quarry";
 			_perDay = 2;
 			break;
 			case 2:
-			_name = "Iron Mine";
+			_name = "Iron Source";
 			_perDay = 1;
 			break;
 			case 3:
-			_name = "Coal Mine";
+			_name = "Coal Source";
 			_perDay = 1;
 			break;
 		}
@@ -55,10 +59,9 @@ public class Factories : MonoBehaviour {
 
 	public void UpgradeFactory(){		
 		_manager._factoryOuput[_type] += _perDay;
-		_perDay *= 2;
+		_perDay *= 2;		
 		WM_UI.UpdateUI();
 		UpgradeCost();
-
 	}
 
 	public void SwitchMesh(){
@@ -137,5 +140,29 @@ public class Factories : MonoBehaviour {
 			_costs[3] = 16;
 			break;
 		}
+	}
+	public void Names(){
+		switch (_type){
+			case 0:
+			_name = "Sawmill Lvl " + _factoryLevel;
+			break;
+			case 1:
+			_name = "Quarry Lvl " + _factoryLevel;
+			break;
+			case 2:
+			_name = "Iron Mine Lvl " + _factoryLevel;
+			break;
+			case 3:
+			_name = "Coal Mine Lvl " + _factoryLevel;
+			break;
+		}
+	}
+
+	void OnTriggerEnter(Collider other){
+		_seen |= (other.gameObject.tag == "Player");
+	}
+
+	void CheckStartDistance(){
+		_seen |= (Vector3.Distance(_player.position, transform.position) < 10.0f);
 	}
 }

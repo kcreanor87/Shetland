@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Caravan.cs" />
      <Compile Include="Assets\Scripts\DayCycle.cs" />
      <Compile Include="Assets\Scripts\DayTimer.cs" />
+     <Compile Include="Assets\Scripts\DetectCollisions.cs" />
      <Compile Include="Assets\Scripts\EndGame.cs" />
      <Compile Include="Assets\Scripts\FOW.cs" />
      <Compile Include="Assets\Scripts\Factories.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Scripts\TravelButton.cs" />
      <Compile Include="Assets\Scripts\WM_UI.cs" />
      <Compile Include="Assets\Scripts\WorldMap.cs" />
+     <Compile Include="Assets\Scripts\WorldMap_Icons.cs" />
      <Compile Include="Assets\Scripts\_manager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -4,6 +4,94 @@
 		"selected_items":
 		[
 			[
+				"Player",
+				"PlayerPrefs	PlayerPrefs"
+			],
+			[
+				"LoadF",
+				"LoadFOW()	void"
+			],
+			[
+				"SaveF",
+				"SaveFOW()	void"
+			],
+			[
+				"Get",
+				"GetInt(string key)	int"
+			],
+			[
+				"_fow",
+				"_fow	List<FOW>"
+			],
+			[
+				"F",
+				"FindGameObjectsWithTag(string tag)	GameObject[]"
+			],
+			[
+				"_act",
+				"_activateGO	GameObject"
+			],
+			[
+				"_cti",
+				"_activateGO	GameObject"
+			],
+			[
+				"_active",
+				"_activeFactory	Factories"
+			],
+			[
+				"name",
+				"Names()	void"
+			],
+			[
+				"type",
+				"_type	int"
+			],
+			[
+				"GEt",
+				"GetComponent<T>()	T"
+			],
+			[
+				"Find",
+				"Find(string name)	GameObject"
+			],
+			[
+				"Vector3",
+				"Vector3(float x, float y, float z)	Vector3(float x, float y, float z)"
+			],
+			[
+				"set",
+				"SetAsFirstSibling()	void"
+			],
+			[
+				"World",
+				"WorldMap_Icons	WorldMap_Icons"
+			],
+			[
+				"_badge",
+				"_badgeText	Text"
+			],
+			[
+				"Uni",
+				"UnityEngine	UnityEngine"
+			],
+			[
+				"parent",
+				"GetComponentsInParent<T>()	T[]"
+			],
+			[
+				"_ton",
+				"_townManagers	List<TownManager>"
+			],
+			[
+				"_",
+				"_type	int"
+			],
+			[
+				"_factor",
+				"_factoryScripts	List<Factories>"
+			],
+			[
 				"Euler",
 				"Euler(float x, float y, float z)	Quaternion"
 			],
@@ -28,20 +116,12 @@
 				"Add(T item)	void"
 			],
 			[
-				"_act",
-				"_activateFactory	ActivateFactory"
-			],
-			[
 				"_ma",
 				"_mainLight	Light"
 			],
 			[
 				"layer",
 				"_layerMask	LayerMask"
-			],
-			[
-				"Get",
-				"GetComponent<T>()	T"
 			],
 			[
 				"active",
@@ -54,10 +134,6 @@
 			[
 				"time",
 				"timeScale	float { get; set; }"
-			],
-			[
-				"Player",
-				"PlayerControls_WM	PlayerControls_WM"
 			],
 			[
 				"Man",
@@ -78,10 +154,6 @@
 			[
 				"_bui",
 				"_built	bool"
-			],
-			[
-				"GEt",
-				"GetComponent<T>()	T"
 			],
 			[
 				"_rumour",
@@ -114,10 +186,6 @@
 			[
 				"Day",
 				"DayCycle	DayCycle"
-			],
-			[
-				"F",
-				"Find(string name)	GameObject"
 			],
 			[
 				"_child",
@@ -172,19 +240,11 @@
 				"SetDestination(Vector3 target)	bool"
 			],
 			[
-				"Find",
-				"FindWithTag(string tag)	GameObject"
-			],
-			[
 				"Save",
 				"SavePlayerPos()	void"
 			],
 			[
 				"_fact",
-				"_factories	List<Factories>"
-			],
-			[
-				"_factor",
 				"_factories	List<Factories>"
 			],
 			[
@@ -454,76 +514,16 @@
 			[
 				"_pla",
 				"_player	Transform"
-			],
-			[
-				"foll",
-				"FollowGO()	void"
-			],
-			[
-				"Shotc",
-				"ShotCam()	IEnumerator"
-			],
-			[
-				"Ienumer",
-				"IEnumerator	IEnumerator"
-			],
-			[
-				"_mid",
-				"_midPoint.transform"
-			],
-			[
-				"Ena",
-				"EnableShotCam()	void"
-			],
-			[
-				"Game",
-				"GameObject"
-			],
-			[
-				"tran",
-				"transform	Transform { get; }"
-			],
-			[
-				"_target",
-				"_targetPos	Vector3"
-			],
-			[
-				"tr",
-				"transform.position.x"
-			],
-			[
-				"t",
-				"transform	Transform { get; }"
-			],
-			[
-				"tra",
-				"transform.position"
-			],
-			[
-				"act",
-				"activeGO"
-			],
-			[
-				"target",
-				"_target	Transform"
-			],
-			[
-				"Rotate",
-				"Rotate(Transform target)	void"
-			],
-			[
-				"error",
-				"ErrorMessage(bool active)	void"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Assets/Scripts/ActivateFactory.cs",
+			"file": "Assets/Scripts/WorldMap.cs",
 			"settings":
 			{
-				"buffer_size": 3016,
+				"buffer_size": 3544,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "Assets/Scripts/SaveGame.cs",
 			"settings":
 			{
-				"buffer_size": 6728,
+				"buffer_size": 7680,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,23 +539,23 @@
 			"file": "Assets/Scripts/Factories.cs",
 			"settings":
 			{
-				"buffer_size": 2700,
+				"buffer_size": 3367,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/EndGame.cs",
+			"file": "Assets/Scripts/PlayerSight.cs",
 			"settings":
 			{
-				"buffer_size": 3434,
-				"line_ending": "Windows"
+				"buffer_size": 1018,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/WorldMap.cs",
+			"file": "Assets/Scripts/FOW.cs",
 			"settings":
 			{
-				"buffer_size": 2228,
+				"buffer_size": 282,
 				"line_ending": "Unix"
 			}
 		}
@@ -647,30 +647,33 @@
 	],
 	"file_history":
 	[
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/FOW.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/PlayerSight.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/EndGame.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WorldMap_Icons.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DayTimer.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TownCanvas.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TownManager.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WM_UI.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TravelButton.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/ResourceGen.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/ActivateFactory.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Factories.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/PlayerSight.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DetectCollisions.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/SaveGame.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WM_Tooltip.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/FOW.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/RumourGenerator.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WorldMap.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/PlayerControls_WM.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DayTimer.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WM_UI.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TravelButton.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TownManager.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/SaveGame.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/ResourceGen.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/NewGame.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Market.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/MainMenu.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Highscores.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Factories.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/EndGame.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DayCycle.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Caravan.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/CameraControl.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/BuildingCost.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/AdditionalResources.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/ActivateFactory.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/_manager.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/LoadLevel.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/LevelGen.cs",
@@ -771,10 +774,7 @@
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/LegSlot.cs",
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/RangedWeapon.cs",
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/MeleeWeapon.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/MeleeDatabase.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/RangedDatabase.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/RagedWeapon.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/HealthBar.cs"
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/MeleeDatabase.cs"
 	],
 	"find":
 	{
@@ -811,6 +811,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"();\n",
 			"\"));\n",
 			"}\n",
 			"_nextTurnButton",
@@ -989,37 +990,37 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/ActivateFactory.cs",
+					"file": "Assets/Scripts/WorldMap.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3016,
+						"buffer_size": 3544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2871,
-								2871
+								1464,
+								1464
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"41,46": "Using directive is not used by code and can be removed safely."
+								"671,675": "Unexpected symbol `void'' in class, struct, or interface member declaration"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 641.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1031,15 +1032,50 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6728,
+						"buffer_size": 7680,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2718,
-								2728
+								3102,
+								3102
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"3363,3364": "Invocation error: MissingArgumentForRequiredParameter",
+								"3366,3367": "Error: Boolean",
+								"3368,3369": "Error: Boolean"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 546.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/Factories.cs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								702,
+								702
 							]
 						],
 						"settings":
@@ -1048,68 +1084,35 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 1404.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "Assets/Scripts/Factories.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2700,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1174,
-								1174
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"1913,1917": "Parameter can be IComparable"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
 					"buffer": 3,
-					"file": "Assets/Scripts/EndGame.cs",
+					"file": "Assets/Scripts/PlayerSight.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3434,
+						"buffer_size": 1018,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1189,
-								1189
+								573,
+								573
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"2356,2360": "Parameter can be IComparable",
-								"3355,3360": "Method 'Board' can be made static."
+								"445,453": "Parameter can be declared with base type",
+								"462,464": "Convert to 'switch' statement"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
@@ -1123,37 +1126,31 @@
 				},
 				{
 					"buffer": 4,
-					"file": "Assets/Scripts/WorldMap.cs",
+					"file": "Assets/Scripts/FOW.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2228,
+						"buffer_size": 282,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1574,
-								1574
+								105,
+								105
 							]
 						],
 						"settings":
 						{
-							"oops":
-							{
-								"1976,1979": "Could not determine type",
-								"2001,2006": "'Quaternion' does not contain a definition for 'Euler'",
-								"2014,2015": "'Quaternion' does not contain a definition for 'Euler'"
-							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
