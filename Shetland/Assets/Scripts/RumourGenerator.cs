@@ -20,6 +20,7 @@ public class RumourGenerator : MonoBehaviour {
 	public int _loadedRumourTown;
 	public int _loadedRumourType;
 	public bool _increase;
+	public bool _noRumour;
 
 	// Use this for initialization
 	void Start () {
@@ -57,21 +58,22 @@ public class RumourGenerator : MonoBehaviour {
 			_activeTown._rumourMod = (Random.Range(1.5f, 2.0f));
 			_activeTown._rumourType = _loadedRumourType;
 			_increase = true;
-			SpawnUI();
 			_rumourText.text = "You hear word that " + _manager._resourceNames[_loadedRumourType] + " is scarce in " + _activeTown._name;
 		}
 		else if (chance > 50){
 			//Decrese in price
 			_activeTown._rumourMod = (Random.Range(0.3f, 0.6f));
 			_activeTown._rumourType = _loadedRumourType;
-			_increase = false;
-			SpawnUI();
+			_increase = false;			
 			_rumourText.text = "Somebody mentions that sources of " + _manager._resourceNames[_loadedRumourType] + " are abundant in " + _activeTown._name + " at the moment.";
 		}
 		else{
 			//You hear nothing
 			_rumourText.text = "You hear nothing but local anecdotes and petty arguments";
+			_activeTown._rumourMod = 1.0f;
+			_noRumour = true;
 		}
+		SpawnUI();
 		_manager._obols -= _cost;
 		WM_UI.UpdateUI();
 		_activeTown.GeneratePrices();
@@ -85,11 +87,12 @@ public class RumourGenerator : MonoBehaviour {
 		_rumourGO.SetActive(false);
 		_activeTown._rumourMod = 1.0f;
 		_rumourActive = false;
+		_noRumour = false;
 		_activeTown.GeneratePrices();
 	}
 
 	public void EnterText(){
-		_rumourText.text = (_rumourActive) ? "There is nothing new to find out, you should come back tomorrow" : "You can spend a few coins to hear the latest rumours";
+		_rumourText.text = (_rumourActive) ? "There is nothing new to find out, you should come back later" : "You can spend a few coins to hear the latest rumours";
 		_rumourButtonText.text = "Rumour (" + _cost + "o)";
 		_rumourButton.interactable = (!_rumourActive && _manager._obols >= _cost);
 		_restButton.interactable = (_dayTimer._hours >= 12 && _manager._obols >= 20);
@@ -102,8 +105,8 @@ public class RumourGenerator : MonoBehaviour {
 
 	void SpawnUI(){
 		_rumourGO.SetActive(true);
-		_rumourTypeTxt.text = _manager._resourceNames[_activeTown._rumourType];
-		_rumourTownTxt.text = _activeTown._name;
+		_rumourTypeTxt.text = (!_noRumour) ? _manager._resourceNames[_activeTown._rumourType] : "None";
+		_rumourTownTxt.text = (!_noRumour) ? _activeTown._name : "None";
 		_rumourTimeTxt.text = (24-_dayTimer._rumourTimer).ToString();
 		_rumourModTxt.text = (_activeTown._rumourMod > 1.0f) ? "+" : "-";
 	}
