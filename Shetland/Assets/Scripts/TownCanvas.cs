@@ -64,6 +64,7 @@ public class TownCanvas : MonoBehaviour {
 		_canvas.enabled = true;
 		_market._townManager = _townManager;
 		UpgradableBuildingNames();
+		_market._multiple = 1;
 		_market.UpdatePrices();
 	}
 

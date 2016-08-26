@@ -18,7 +18,7 @@ public class DayCycle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		MoveAcross();	
+		MoveAcross();
 	}
 
 	void MoveAcross(){

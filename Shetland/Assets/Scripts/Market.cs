@@ -8,6 +8,8 @@ public class Market : MonoBehaviour {
 	public Text _sell0, _sell1, _sell2, _sell3, _sell4, _sell5;
 	public Text _stock0, _stock1, _stock2, _stock3, _stock4, _stock5;
 	public Text _obols;
+	public Text _multipleText;
+	public int _multiple = 1;
 
 	void Awake(){
 		_buy0 = GameObject.Find("WoodBP").GetComponent<Text>();
@@ -32,40 +34,42 @@ public class Market : MonoBehaviour {
 		_stock5 = GameObject.Find("DiamondStock").GetComponent<Text>();
 
 		_obols = GameObject.Find("ObolsStock").GetComponent<Text>();
+
+		_multipleText = GameObject.Find("Multiply").GetComponent<Text>();
 	}
 
 	public void BuyResource(int resource){
-		if (_manager._obols >= _townManager._buyPrices[resource]){
-			_manager._resources[resource]++;
-			_manager._obols -= _townManager._buyPrices[resource];
+		if (_manager._obols >= (_multiple * _townManager._buyPrices[resource])){
+			_manager._resources[resource] += _multiple;
+			_manager._obols -= (_townManager._buyPrices[resource] * _multiple);
 			UpdatePrices();
 			WM_UI.UpdateUI();
 		}		
 	}
 
 	public void SellResource(int resource){
-		if (_manager._resources[resource] > 0){
-			_manager._resources[resource]--;
-			_manager._obols += _townManager._sellPrices[resource];
+		if (_manager._resources[resource] >= _multiple){
+			_manager._resources[resource] -= _multiple;
+			_manager._obols += (_townManager._sellPrices[resource] * _multiple);
 			UpdatePrices();
 			WM_UI.UpdateUI();
 		}		
 	}
 
 	public void UpdatePrices(){
-		_buy0.text = _townManager._buyPrices[0].ToString();
-		_buy1.text = _townManager._buyPrices[1].ToString();
-		_buy2.text = _townManager._buyPrices[2].ToString();
-		_buy3.text = _townManager._buyPrices[3].ToString();
-		_buy4.text = _townManager._buyPrices[4].ToString();
-		_buy5.text = _townManager._buyPrices[5].ToString();
+		_buy0.text = (_multiple * _townManager._buyPrices[0]).ToString();
+		_buy1.text =( _multiple * _townManager._buyPrices[1]).ToString();
+		_buy2.text = (_multiple * _townManager._buyPrices[2]).ToString();
+		_buy3.text = (_multiple * _townManager._buyPrices[3]).ToString();
+		_buy4.text = (_multiple * _townManager._buyPrices[4]).ToString();
+		_buy5.text = (_multiple * _townManager._buyPrices[5]).ToString();
 
-		_sell0.text = _townManager._sellPrices[0].ToString();
-		_sell1.text = _townManager._sellPrices[1].ToString();
-		_sell2.text = _townManager._sellPrices[2].ToString();
-		_sell3.text = _townManager._sellPrices[3].ToString();
-		_sell4.text = _townManager._sellPrices[4].ToString();
-		_sell5.text = _townManager._sellPrices[5].ToString();
+		_sell0.text = (_multiple * _townManager._sellPrices[0]).ToString();
+		_sell1.text = (_multiple * _townManager._sellPrices[1]).ToString();
+		_sell2.text = (_multiple * _townManager._sellPrices[2]).ToString();
+		_sell3.text = (_multiple * _townManager._sellPrices[3]).ToString();
+		_sell4.text = (_multiple * _townManager._sellPrices[4]).ToString();
+		_sell5.text = (_multiple * _townManager._sellPrices[5]).ToString();
 
 		_obols.text = _manager._obols.ToString();
 
@@ -76,4 +80,25 @@ public class Market : MonoBehaviour {
 		_stock4.text = _manager._resources[4].ToString();
 		_stock5.text = _manager._resources[5].ToString();
 	}	
+
+	public void SwitchMultiple(){
+		switch (_multiple){
+			case 1: 
+			_multiple = 10;
+			_multipleText.text = "x 10";
+			break;
+			case 10: 
+			_multiple = 100;
+			_multipleText.text = "x 100";
+			break;
+			case 100:
+			_multiple = 1;
+			_multipleText.text = "x 1";
+			break;
+			default:
+			_multiple = 1;
+			break;
+		}
+		UpdatePrices();
+	}
 }
