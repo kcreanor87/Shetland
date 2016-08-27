@@ -45,33 +45,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ActivateFactory.cs" />
-     <Compile Include="Assets\Scripts\AdditionalResources.cs" />
-     <Compile Include="Assets\Scripts\BuildingCost.cs" />
-     <Compile Include="Assets\Scripts\CameraControl.cs" />
-     <Compile Include="Assets\Scripts\Caravan.cs" />
-     <Compile Include="Assets\Scripts\DayCycle.cs" />
-     <Compile Include="Assets\Scripts\DayTimer.cs" />
-     <Compile Include="Assets\Scripts\DetectCollisions.cs" />
-     <Compile Include="Assets\Scripts\EndGame.cs" />
-     <Compile Include="Assets\Scripts\FOW.cs" />
-     <Compile Include="Assets\Scripts\Factories.cs" />
-     <Compile Include="Assets\Scripts\Highscores.cs" />
-     <Compile Include="Assets\Scripts\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\Market.cs" />
-     <Compile Include="Assets\Scripts\NewGame.cs" />
-     <Compile Include="Assets\Scripts\PlayerControls_WM.cs" />
-     <Compile Include="Assets\Scripts\PlayerSight.cs" />
-     <Compile Include="Assets\Scripts\ResourceGen.cs" />
-     <Compile Include="Assets\Scripts\RumourGenerator.cs" />
-     <Compile Include="Assets\Scripts\SaveGame.cs" />
-     <Compile Include="Assets\Scripts\TownCanvas.cs" />
-     <Compile Include="Assets\Scripts\TownManager.cs" />
-     <Compile Include="Assets\Scripts\TravelButton.cs" />
-     <Compile Include="Assets\Scripts\WM_UI.cs" />
-     <Compile Include="Assets\Scripts\WorldMap.cs" />
-     <Compile Include="Assets\Scripts\WorldMap_Icons.cs" />
-     <Compile Include="Assets\Scripts\_manager.cs" />
+     <Compile Include="Assets\Scripts\Daytimer\DayCycle.cs" />
+     <Compile Include="Assets\Scripts\Daytimer\DayTimer.cs" />
+     <Compile Include="Assets\Scripts\Enemies\CombatTrigger.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyWM.cs" />
+     <Compile Include="Assets\Scripts\Enemies\PlayerSpotted.cs" />
+     <Compile Include="Assets\Scripts\Factories&amp;Resources\ActivateFactory.cs" />
+     <Compile Include="Assets\Scripts\Factories&amp;Resources\Factories.cs" />
+     <Compile Include="Assets\Scripts\Factories&amp;Resources\ResourceGen.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\Highscores.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\NewGame.cs" />
+     <Compile Include="Assets\Scripts\Player Controls\PlayerControls_WM.cs" />
+     <Compile Include="Assets\Scripts\Player Controls\PlayerSight.cs" />
+     <Compile Include="Assets\Scripts\Saving\SaveGame.cs" />
+     <Compile Include="Assets\Scripts\Town&amp;Harbour\AdditionalResources.cs" />
+     <Compile Include="Assets\Scripts\Town&amp;Harbour\BuildingCost.cs" />
+     <Compile Include="Assets\Scripts\Town&amp;Harbour\Caravan.cs" />
+     <Compile Include="Assets\Scripts\Town&amp;Harbour\EndGame.cs" />
+     <Compile Include="Assets\Scripts\Town&amp;Harbour\Market.cs" />
+     <Compile Include="Assets\Scripts\Town&amp;Harbour\RumourGenerator.cs" />
+     <Compile Include="Assets\Scripts\Town&amp;Harbour\TownCanvas.cs" />
+     <Compile Include="Assets\Scripts\Town&amp;Harbour\TownManager.cs" />
+     <Compile Include="Assets\Scripts\Town&amp;Harbour\TravelButton.cs" />
+     <Compile Include="Assets\Scripts\UI\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\UI\DetectCollisions.cs" />
+     <Compile Include="Assets\Scripts\UI\FOW.cs" />
+     <Compile Include="Assets\Scripts\UI\WM_UI.cs" />
+     <Compile Include="Assets\Scripts\UI\WorldMap.cs" />
+     <Compile Include="Assets\Scripts\UI\WorldMap_Icons.cs" />
+     <Compile Include="Assets\Scripts\_manager\_manager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
