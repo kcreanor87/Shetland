@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"GEtCo",
+				"GetComponentInParent<T>()	T"
+			],
+			[
+				"pla",
+				"AtPlayer()	void"
+			],
+			[
+				"par",
+				"GetComponentInParent<T>()	T"
+			],
+			[
+				"Player",
+				"PlayerSpotted	PlayerSpotted"
+			],
+			[
+				"Chase",
+				"ChaseLoop(float looptime)	IEnumerator"
+			],
+			[
+				"Start",
+				"StartCoroutine(IEnumerator routine)	Coroutine"
+			],
+			[
+				"IEnum",
+				"IEnumerator	IEnumerator"
+			],
+			[
+				"Agent",
+				"NavMeshAgent	NavMeshAgent"
+			],
+			[
+				"get",
+				"GetComponent<T>()	T"
+			],
+			[
+				"NAvMEs",
+				"NavMeshAgent	NavMeshAgent"
+			],
+			[
+				"_mul",
+				"_multiple	int"
+			],
+			[
+				"_multiple",
+				"_multipleText	Text"
+			],
+			[
+				"Get",
+				"GetComponent<T>()	T"
+			],
+			[
+				"mult",
+				"_multiple	int"
+			],
+			[
 				"Key",
 				"KeyCode	KeyCode"
 			],
@@ -28,20 +84,12 @@
 				"WorldToScreenPoint(Vector3 position)	Vector3"
 			],
 			[
-				"Player",
-				"PlayerPrefs	PlayerPrefs"
-			],
-			[
 				"LoadF",
 				"LoadFOW()	void"
 			],
 			[
 				"SaveF",
 				"SaveFOW()	void"
-			],
-			[
-				"Get",
-				"GetInt(string key)	int"
 			],
 			[
 				"_fow",
@@ -296,10 +344,6 @@
 				"GetInt(string key, int defaultValue)	int"
 			],
 			[
-				"pla",
-				"PlayerPrefs	PlayerPrefs"
-			],
-			[
 				"new",
 				"new	new"
 			],
@@ -436,10 +480,6 @@
 				"WaitForSeconds(seconds)"
 			],
 			[
-				"Start",
-				"StartCoroutine"
-			],
-			[
 				"key",
 				"KeyCode"
 			],
@@ -474,96 +514,24 @@
 			[
 				"_def",
 				"_defPoint	Vector3"
-			],
-			[
-				"_mov",
-				"_moving	bool"
-			],
-			[
-				"Can",
-				"_coverCanvas	Canvas"
-			],
-			[
-				"_cover",
-				"_cover	Cover"
-			],
-			[
-				"at",
-				"_attacking	bool"
-			],
-			[
-				"_player",
-				"_player	PlayerTurn"
-			],
-			[
-				"range",
-				"ranged"
-			],
-			[
-				"FollowG",
-				"FollowGO()	void"
-			],
-			[
-				"angle",
-				"angleA"
-			],
-			[
-				"_play",
-				"_playerTarget	Vector3"
-			],
-			[
-				"Camera",
-				"Camera.main"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Assets/Scripts/RumourGenerator.cs",
+			"file": "Assets/Scripts/Enemies/EnemyWM.cs",
 			"settings":
 			{
-				"buffer_size": 4717,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/TownCanvas.cs",
-			"settings":
-			{
-				"buffer_size": 7141,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin_Workshops/Unity/Dryden Road/Assets/Scripts/LOAD_LEVEL.cs",
-			"settings":
-			{
-				"buffer_size": 305,
+				"buffer_size": 837,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin_Workshops/Unity/Dryden Road/Assets/Scripts/CamControl.cs",
+			"file": "Assets/Scripts/Main Menu/NewGame.cs",
 			"settings":
 			{
-				"buffer_size": 972,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/DayCycle.cs",
-			"settings":
-			{
-				"buffer_size": 2122,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/_manager.cs",
-			"settings":
-			{
-				"buffer_size": 905,
+				"buffer_size": 172,
 				"line_ending": "Windows"
 			}
 		}
@@ -651,38 +619,46 @@
 	[
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts"
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies"
 	],
 	"file_history":
 	[
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/EnemyWM.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/PlayerSpotted.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/CombatTrigger.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/PlayerSpotted.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/CombatTrigger.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DayTimer.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WorldMap.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TownCanvas.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Market.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/_manager.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DayCycle.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin_Workshops/Unity/Dryden Road/Assets/Scripts/CamControl.cs",
+		"/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin_Workshops/Unity/Dryden Road/Assets/Scripts/LOAD_LEVEL.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/RumourGenerator.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/ActivateFactory.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/FOW.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/PlayerSight.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/SaveGame.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TownManager.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Market.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/EndGame.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TownCanvas.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WorldMap.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WorldMap_Icons.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DayTimer.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WM_UI.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TravelButton.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/ResourceGen.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Factories.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DetectCollisions.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/WM_Tooltip.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/RumourGenerator.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/PlayerControls_WM.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/NewGame.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/MainMenu.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Highscores.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DayCycle.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Caravan.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/CameraControl.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/BuildingCost.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/AdditionalResources.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/_manager.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/LoadLevel.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/LevelGen.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/LoadInformation.cs",
@@ -775,14 +751,7 @@
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/Armour.cs",
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/ArmourDatabase.cs",
 		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
-		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/Weapon.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/RangedDatabase.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/ChestSlot.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/LegSlot.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/RangedWeapon.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/MeleeWeapon.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/MeleeDatabase.cs"
+		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap"
 	],
 	"find":
 	{
@@ -998,113 +967,30 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/RumourGenerator.cs",
+					"file": "Assets/Scripts/Enemies/EnemyWM.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4717,
+						"buffer_size": 837,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"2947,2948": "Invocation error: MissingArgumentForRequiredParameter",
-								"2948,2949": "Invocation error: MissingArgumentForRequiredParameter"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 546.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/Scripts/TownCanvas.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7141,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								417,
+								417
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin_Workshops/Unity/Dryden Road/Assets/Scripts/LOAD_LEVEL.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 305,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								269,
-								269
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"137,149": "'SceneManager' is not a known identifier",
-								"150,159": "'?' does not contain a definition for 'LoadScene'",
-								"166,167": "'?' does not contain a definition for 'LoadScene'",
-								"189,195": "'Cursor' is not a known identifier",
-								"196,203": "'?' does not contain a definition for 'visible'",
-								"206,210": "Cannot convert from System.Boolean to ?",
-								"238,243": "'Input' is not a known identifier",
-								"244,254": "'?' does not contain a definition for 'GetKeyDown'",
-								"25,36": "'UnityEngine' is not a known identifier",
-								"255,262": "'KeyCode' is not a known identifier",
-								"263,269": "'?' does not contain a definition for 'Escape'",
-								"270,271": "Cannot convert from ? to System.Boolean",
-								"276,287": "'Application' is not a known identifier",
-								"288,292": "'?' does not contain a definition for 'Quit'",
-								"294,295": "'?' does not contain a definition for 'Quit'",
-								"37,52": "'?' does not contain a definition for 'SceneManagement'",
-								"6,17": "'UnityEngine' is not a known identifier",
-								"81,94": "'MonoBehaviour' is not a known identifier"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1114,122 +1000,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/C/Users/Kenny/Documents/Blueprint Graphics/Creanor Consultancy/Dunedin_Workshops/Unity/Dryden Road/Assets/Scripts/CamControl.cs",
+					"buffer": 1,
+					"file": "Assets/Scripts/Main Menu/NewGame.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 972,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								292,
-								292
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"205,212": "'Vector3' is not a known identifier",
-								"229,236": "'Vector3' is not a known identifier",
-								"237,241": "'?' does not contain a definition for 'zero'",
-								"269,275": "'Cursor' is not a known identifier",
-								"276,283": "'?' does not contain a definition for 'visible'",
-								"286,291": "Cannot convert from System.Boolean to ?",
-								"330,349": "'CharacterController' is not a known identifier",
-								"376,395": "'CharacterController' is not a known identifier",
-								"396,397": "'GetComponent' is not a known identifier",
-								"398,399": "'CamControl' does not contain a definition for 'GetComponent'",
-								"424,434": "Cannot convert from ? to System.Boolean",
-								"471,478": "'Vector3' is not a known identifier",
-								"479,484": "'Input' is not a known identifier",
-								"485,492": "'?' does not contain a definition for 'GetAxis'",
-								"506,507": "'?' does not contain a definition for 'GetAxis'",
-								"511,516": "'Input' is not a known identifier",
-								"517,524": "'?' does not contain a definition for 'GetAxis'",
-								"533,534": "'?' does not contain a definition for 'GetAxis'",
-								"534,535": "Cannot convert from ? to [UnknownType Vector3]",
-								"565,574": "'transform' is not a known identifier",
-								"575,593": "'?' does not contain a definition for 'TransformDirection'",
-								"6,17": "'UnityEngine' is not a known identifier",
-								"608,609": "Cannot convert from ? to [UnknownType Vector3]",
-								"640,645": "Error: Single",
-								"664,669": "'Input' is not a known identifier",
-								"670,679": "'?' does not contain a definition for 'GetButton'",
-								"687,688": "Cannot convert from ? to System.Boolean",
-								"72,85": "'MonoBehaviour' is not a known identifier",
-								"720,721": "'Vector3' does not contain a definition for 'y'",
-								"724,733": "Cannot convert from System.Single to ?",
-								"783,784": "'Vector3' does not contain a definition for 'y'",
-								"798,802": "'Time' is not a known identifier",
-								"803,812": "Error: Single",
-								"834,838": "'?' does not contain a definition for 'Move'",
-								"855,859": "'Time' is not a known identifier",
-								"860,869": "Error: Int32",
-								"870,871": "'?' does not contain a definition for 'Move'",
-								"886,891": "'Input' is not a known identifier",
-								"892,902": "'?' does not contain a definition for 'GetKeyDown'",
-								"903,910": "'KeyCode' is not a known identifier",
-								"911,917": "'?' does not contain a definition for 'Escape'",
-								"918,919": "Cannot convert from ? to System.Boolean",
-								"931,942": "'Application' is not a known identifier",
-								"943,947": "'?' does not contain a definition for 'Quit'",
-								"949,950": "'?' does not contain a definition for 'Quit'"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Assets/Scripts/DayCycle.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2122,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								516,
-								516
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"19,24": "Using directive is not used by code and can be removed safely."
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Assets/Scripts/_manager.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 905,
+						"buffer_size": 172,
 						"regions":
 						{
 						},
@@ -1248,7 +1024,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
