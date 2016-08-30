@@ -35,5 +35,7 @@ public class _manager : MonoBehaviour {
 
 		_obols = 1000;
 		_repute = 1000;
+
+		DontDestroyOnLoad(gameObject);
 	}
 }

@@ -520,10 +520,29 @@
 	"buffers":
 	[
 		{
+			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class EnemyWM : MonoBehaviour {\n\n	public NavMeshAgent _agent;\n	public PlayerControls_WM _player;\n	public bool _spotted;\n\n	void Start(){\n		_agent = gameObject.GetComponent<NavMeshAgent>();\n		_player = GameObject.Find(\"Player\").GetComponent<PlayerControls_WM>();\n\n	}\n\n	public void ChasePlayer(){\n		print(\"Player Spotted\");\n		_spotted = true;\n		_agent.enabled = true;cd docuemt\n		StartCoroutine(ChaseLoop(0.5f));\n	}\n\n	public IEnumerator ChaseLoop(float looptime){\n		while (_spotted){\n			_agent.SetDestination(_player.transform.position);\n			yield return new WaitForSeconds(looptime);\n		}		\n	}\n\n	public void AtPlayer(){\n		_spotted = false;\n		_agent.SetDestination(transform.position);\n		_player._agent.SetDestination(_player.transform.position);\n		_player.enabled = false;\n		print(\"Combat!\");\n	}\n}\n",
 			"file": "Assets/Scripts/Enemies/EnemyWM.cs",
+			"file_size": 840,
+			"file_write_time": 131168054000911654,
 			"settings":
 			{
-				"buffer_size": 837,
+				"buffer_size": 847,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Enemies/CombatTrigger.cs",
+			"settings":
+			{
+				"buffer_size": 298,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/TEMP.cs",
+			"settings":
+			{
+				"buffer_size": 191,
 				"line_ending": "Unix"
 			}
 		},
@@ -967,7 +986,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -976,15 +995,44 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 837,
+						"buffer_size": 847,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								417,
-								417
+								314,
+								314
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/Enemies/CombatTrigger.cs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
 							]
 						],
 						"settings":
@@ -1000,7 +1048,35 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
+					"file": "Assets/Scripts/TEMP.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 191,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "Assets/Scripts/Main Menu/NewGame.cs",
 					"semi_transient": false,
 					"settings":
@@ -1024,7 +1100,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Player Controls\PlayerControls_WM.cs" />
      <Compile Include="Assets\Scripts\Player Controls\PlayerSight.cs" />
      <Compile Include="Assets\Scripts\Saving\SaveGame.cs" />
+     <Compile Include="Assets\Scripts\TEMP.cs" />
      <Compile Include="Assets\Scripts\Town&amp;Harbour\AdditionalResources.cs" />
      <Compile Include="Assets\Scripts\Town&amp;Harbour\BuildingCost.cs" />
      <Compile Include="Assets\Scripts\Town&amp;Harbour\Caravan.cs" />
@@ -74,6 +75,7 @@
      <Compile Include="Assets\Scripts\UI\WM_UI.cs" />
      <Compile Include="Assets\Scripts\UI\WorldMap.cs" />
      <Compile Include="Assets\Scripts\UI\WorldMap_Icons.cs" />
+     <Compile Include="Assets\Scripts\_manager\ManagerSpawn.cs" />
      <Compile Include="Assets\Scripts\_manager\_manager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

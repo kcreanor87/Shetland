@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class EnemyWM : MonoBehaviour {
@@ -33,5 +34,6 @@ public class EnemyWM : MonoBehaviour {
 		_player._agent.SetDestination(_player.transform.position);
 		_player.enabled = false;
 		print("Combat!");
+		SceneManager.LoadScene("Combat");
 	}
 }
