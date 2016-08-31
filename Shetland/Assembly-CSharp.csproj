@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Enemies\CombatTrigger.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyWM.cs" />
      <Compile Include="Assets\Scripts\Enemies\PlayerSpotted.cs" />
+     <Compile Include="Assets\Scripts\Enemies\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Factories&amp;Resources\ActivateFactory.cs" />
      <Compile Include="Assets\Scripts\Factories&amp;Resources\Factories.cs" />
      <Compile Include="Assets\Scripts\Factories&amp;Resources\ResourceGen.cs" />
