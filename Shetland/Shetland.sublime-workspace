@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"_spawn",
+				"_spawns	List<SpawnPoint>"
+			],
+			[
+				"Add",
+				"Add(T item)	void"
+			],
+			[
+				"_",
+				"_thisSpawn	SpawnPoint"
+			],
+			[
+				"Spawn",
+				"_spawnScript	EnemyWM"
+			],
+			[
+				"_sp",
+				"_spawnOnScreen	bool"
+			],
+			[
+				"_en",
+				"_enemyOnScreen	bool"
+			],
+			[
+				"_spaw",
+				"_spawnScript	EnemyWM"
+			],
+			[
+				"_spa",
+				"_spawnOnScreen	bool"
+			],
+			[
+				"Scren",
+				"ScreenPos	Vector3"
+			],
+			[
+				"Scree",
+				"ScreenToViewportPoint(Vector3 position)	Vector3"
+			],
+			[
+				"find",
+				"FindChild(string name)	Transform"
+			],
+			[
+				"S",
+				"StartSpawn()	void"
+			],
+			[
+				"Find",
+				"FindGameObjectsWithTag(string tag)	GameObject[]"
+			],
+			[
+				"new",
+				"NewGame	NewGame"
+			],
+			[
 				"_mana",
 				"_managerPrefab	GameObject"
 			],
@@ -84,10 +140,6 @@
 				"GetKeyDown(string name)	bool"
 			],
 			[
-				"_",
-				"_newGame	bool"
-			],
-			[
 				"player",
 				"player	GameObject"
 			],
@@ -140,10 +192,6 @@
 				"GetComponent<T>()	T"
 			],
 			[
-				"Find",
-				"Find(string name)	GameObject"
-			],
-			[
 				"Vector3",
 				"Vector3(float x, float y, float z)	Vector3(float x, float y, float z)"
 			],
@@ -194,10 +242,6 @@
 			[
 				"_town",
 				"_townManagers	List<TownManager>"
-			],
-			[
-				"Add",
-				"Add(T item)	void"
 			],
 			[
 				"_ma",
@@ -360,10 +404,6 @@
 				"GetInt(string key, int defaultValue)	int"
 			],
 			[
-				"new",
-				"new	new"
-			],
-			[
 				"Town",
 				"TownManager	TownManager"
 			],
@@ -432,10 +472,6 @@
 				"GenerateTerrain"
 			],
 			[
-				"_spa",
-				"_spawnable"
-			],
-			[
 				"_size",
 				"_sizeX"
 			],
@@ -478,104 +514,57 @@
 			[
 				"_tutsc",
 				"_tutScreen2"
-			],
-			[
-				"_tutScree",
-				"_tutScreen2"
-			],
-			[
-				"MouseButton",
-				"Input.GetMouseButtonDown(button)"
-			],
-			[
-				"retu",
-				"return"
-			],
-			[
-				"wait",
-				"WaitForSeconds(seconds)"
-			],
-			[
-				"key",
-				"KeyCode"
-			],
-			[
-				"WaitFor",
-				"WaitForSeconds(seconds)"
-			],
-			[
-				"Fa",
-				"FadeCo"
-			],
-			[
-				"look",
-				"lookSpeed"
-			],
-			[
-				"mousepo",
-				"Input.mousePosition"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"file": "Assets/Scripts/Saving/SaveGame.cs",
+			"settings":
+			{
+				"buffer_size": 8506,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Enemies/SpawnPoint.cs",
+			"settings":
+			{
+				"buffer_size": 2149,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Daytimer/DayTimer.cs",
+			"settings":
+			{
+				"buffer_size": 3127,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Town&Harbour/TownCanvas.cs",
+			"settings":
+			{
+				"buffer_size": 7199,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "Assets/Scripts/Enemies/EnemyWM.cs",
 			"settings":
 			{
-				"buffer_size": 908,
+				"buffer_size": 1085,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/Main Menu/MainMenu.cs",
-			"settings":
-			{
-				"buffer_size": 355,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/_manager/_manager.cs",
-			"settings":
-			{
-				"buffer_size": 939,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/_manager/ManagerSpawn.cs",
-			"settings":
-			{
-				"buffer_size": 364,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "using UnityEngine;\n\npublic class CombatTrigger : MonoBehaviour {\n\n	public EnemyWM _parentScript;\n\n	void Start(){\n		_parentScript = transform.GetComponentInParent<EnemyWM>();\n	}\n\n	void OnTriggerEnter(Collider col){\n		if (col.tag == \"Player\"){\n			//Start combat\n			_parentScript.AtPlayer();\n		}\n	}\n}\n",
 			"file": "Assets/Scripts/Enemies/CombatTrigger.cs",
-			"file_size": 336,
-			"file_write_time": 131170409168175374,
 			"settings":
 			{
-				"buffer_size": 298,
+				"buffer_size": 302,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/TEMP.cs",
-			"settings":
-			{
-				"buffer_size": 191,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Main Menu/NewGame.cs",
-			"settings":
-			{
-				"buffer_size": 172,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -663,13 +652,24 @@
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/_manager"
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Daytimer",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Factories&Resources",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Main Menu",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Saving",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Town&Harbour"
 	],
 	"file_history":
 	[
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Main Menu/NewGame.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TEMP.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Daytimer/DayTimer.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/CombatTrigger.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/_manager/ManagerSpawn.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/_manager/_manager.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Main Menu/MainMenu.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/EnemyWM.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/PlayerSpotted.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/CombatTrigger.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/PlayerSpotted.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/CombatTrigger.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/DayTimer.cs",
@@ -788,13 +788,7 @@
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/WeaponDatabase.cs",
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/DamageText.cs",
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/GenerateStats.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CombatUI.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/ButtonsGenerator.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/EnemyScript.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/Armour.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/ArmourDatabase.cs",
-		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
-		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap"
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CombatUI.cs"
 	],
 	"find":
 	{
@@ -1010,31 +1004,158 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/Enemies/EnemyWM.cs",
+					"file": "Assets/Scripts/Saving/SaveGame.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 908,
+						"buffer_size": 8506,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								452,
-								452
+								2790,
+								2790
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"464,465": "Unexpected symbol `StartCoroutine'', expecting `,'', `;'', `}'', or `=''"
+								"8303,8310": "Cannot convert from ? to System.Boolean"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 663.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/Enemies/SpawnPoint.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								622,
+								622
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"781,782": "Assignment is redundant"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/Daytimer/DayTimer.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2962,
+								2962
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"1498,1505": "Parameter can be IComparable"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 702.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/Town&Harbour/TownCanvas.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2864,
+								2864
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/Enemies/EnemyWM.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1085,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1035,
+								1035
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"1039,1051": "Unexpected symbol `.'', expecting `,'', `;'', `}'', or `=''"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
@@ -1047,122 +1168,27 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Assets/Scripts/Main Menu/MainMenu.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 355,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scripts/_manager/_manager.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 939,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								933,
-								933
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"67,75": "no known errors."
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/Scripts/_manager/ManagerSpawn.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 364,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								361,
-								361
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"19,24": "Using directive is not used by code and can be removed safely."
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "Assets/Scripts/Enemies/CombatTrigger.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 298,
+						"buffer_size": 302,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18,
-								18
+								174,
+								174
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"19,24": "Using directive is not used by code and can be removed safely.",
-								"234,242": "Parameter can be declared with base type"
+								"200,208": "Parameter can be declared with base type"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
@@ -1172,62 +1198,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Assets/Scripts/TEMP.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 191,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								177,
-								177
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Assets/Scripts/Main Menu/NewGame.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 172,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
 					"type": "text"
 				}
 			]
