@@ -11,6 +11,8 @@ public class SaveGame : MonoBehaviour {
 	public List <ResourceGen> _resourceGens = new List <ResourceGen>();
 	public List <GameObject> _fowGO = new List <GameObject>();
 	public List <FOW> _fow = new List <FOW>();
+	public List <GameObject> _spawnGOs = new List <GameObject>();
+	public List <SpawnPoint> _spawns = new List <SpawnPoint>();
 	public EndGame _endGame;
 	public Vector3 _playerPos;
 	public GameObject _player;
@@ -51,6 +53,10 @@ public class SaveGame : MonoBehaviour {
 		for (int i = 0; i < _fowGO.Count; i++){
 			_fow.Add(_fowGO[i].GetComponent<FOW>());
 		}
+		_spawnGOs.AddRange(GameObject.FindGameObjectsWithTag("Spawn Point"));
+		for (int i = 0; i < _spawnGOs.Count; i++){
+			_spawns.Add(_spawnGOs[i].GetComponent<SpawnPoint>());
+		}
 	}
 
 	public void Save(){
@@ -63,6 +69,7 @@ public class SaveGame : MonoBehaviour {
 		SaveRumour();
 		SaveHarbourProgress();
 		SaveFOW();
+		SaveEnemies();
 	}
 
 	public void Load(){
@@ -74,6 +81,7 @@ public class SaveGame : MonoBehaviour {
 		LoadRumour();
 		LoadHarbourProgress();
 		LoadFOW();
+		LoadEnemies();
 	}
 
 	void SaveTowns(){
@@ -217,6 +225,18 @@ public class SaveGame : MonoBehaviour {
 	void LoadFOW(){
 		for (int i = 0; i < _fow.Count; i++){
 			_fow[i]._active = (PlayerPrefs.GetInt("FOW" + i) > 0);
+		}
+	}
+
+	void SaveEnemies(){
+		for (int i = 0; i < _spawns.Count; i++){
+			PlayerPrefs.SetInt("SpawnFought" + i, (_spawns[i]._fought ? 1 : 0));
+		}
+	}
+
+	void LoadEnemies(){
+		for (int i = 0; i < _spawns.Count; i++){
+			_spawns[i]._fought = (PlayerPrefs.GetInt("SpawnFought" + i) > 0);
 		}
 	}
 }

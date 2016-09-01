@@ -11,12 +11,14 @@ public class DayTimer : MonoBehaviour {
 	public GameObject _clock;
 	public int _rumourTimer;
 	public List <GameObject> _towns = new List <GameObject>();
+	public List <GameObject> _spawns = new List <GameObject>();
 	public RumourGenerator _rumourScript;
 	public DayCycle _dayCycle;
 	public SaveGame _saveGame;
 	public PlayerSight _playerSight;
 
 	void Start(){
+		_spawns.AddRange(GameObject.FindGameObjectsWithTag("Spawn Point"));
 		_dayCycle = GameObject.Find("MainLight").GetComponent<DayCycle>();
 		_clock = GameObject.Find("Clock");
 		_dayCounter = transform.FindChild("DayCounter").GetComponent<Text>();
@@ -27,6 +29,7 @@ public class DayTimer : MonoBehaviour {
 		UpdateClock();
 		Time.timeScale =1.0f;
 		_saveGame = GameObject.Find("Loader").GetComponent<SaveGame>();
+		GenerateEnemies();
 	}
 
 	IEnumerator Timer(){
@@ -54,7 +57,8 @@ public class DayTimer : MonoBehaviour {
 		_manager._resources[3] += _manager._factoryOuput[3];
 		WM_UI.UpdateUI();
 		ResetPrices();
-		_saveGame.Save();	
+		_saveGame.Save();
+		GenerateEnemies();
 		if (restart) StartCoroutine(Timer());		
 	}
 	void RumourTimer(){
@@ -109,5 +113,12 @@ public class DayTimer : MonoBehaviour {
 		UpdateClock();
 		EndOfDay(false);
 		_dayCycle.AdvanceTime();
+	}
+
+	public void GenerateEnemies(){
+		for (int i = 0; i < _spawns.Count; i++){
+			var spawnScript = _spawns[i].GetComponent<SpawnPoint>();
+			spawnScript.StartSpawn();
+		}
 	}
 }

@@ -55,8 +55,7 @@ public class TownCanvas : MonoBehaviour {
 		_townName = GameObject.Find("TownName").GetComponent<Text>();
 	}
 
-	public void OpenCanvas(){
-		_saveGame.Save();
+	public void OpenCanvas(){		
 		_mapToggle.SetActive(false);
 		_townName.text = _townManager._name;		
 		SetActiveBuildings();		
@@ -73,6 +72,8 @@ public class TownCanvas : MonoBehaviour {
 		_canvas.enabled = false;
 		Time.timeScale = 1.0f;
 		WM_UI.UpdateUI();
+		_saveGame.Save();
+		_dayTimer.GenerateEnemies();
 	}
 
 	public void OpenBuilding(int index){		
