@@ -29,6 +29,8 @@ public class _CombatManager : MonoBehaviour {
 	public static Armour _headSlot;
 	public static Armour _chestSlot;
 	public static Armour _legSlot;
+	public static bool _inCombat;
+	public static bool _victory;
 
 	//Scripts accessed
 	private WeaponDatabase _weaponDb;

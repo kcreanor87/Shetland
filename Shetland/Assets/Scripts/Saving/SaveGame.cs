@@ -20,6 +20,8 @@ public class SaveGame : MonoBehaviour {
 	public DayTimer _dayTimer;
 	public DayCycle _dayCycle;
 	public RumourGenerator _rumourScript;
+	public bool _combatOver;
+	public bool _skipDay;
 
 	void Awake(){
 		PopulateLists();
@@ -70,9 +72,19 @@ public class SaveGame : MonoBehaviour {
 		SaveHarbourProgress();
 		SaveFOW();
 		SaveEnemies();
+		NewGame._newGame = false;
 	}
 
 	public void Load(){
+		if (_CombatManager._inCombat){
+			PostCombatLoad();
+		}
+		else{
+			NormalLoad();
+		}
+	}
+
+	void NormalLoad(){
 		LoadResourceSpawns();		
 		LoadFactories();
 		LoadPlayerPos();
@@ -82,6 +94,31 @@ public class SaveGame : MonoBehaviour {
 		LoadHarbourProgress();
 		LoadFOW();
 		LoadEnemies();
+	}
+
+	void PostCombatLoad(){
+		print("Combat Load");
+		if (_CombatManager._victory){
+			LoadPlayerPos();
+			LoadTimeOfDay();
+			LoadRumour();
+			LoadPlayerResources();
+		}
+		else{
+			LoadLastTownPos();
+			LoadTimeOfDay();
+			_skipDay = true;
+			LoadRumour();
+			LoadPlayerResources();
+		}
+		LoadResourceSpawns();		
+		LoadFactories();				
+		LoadHarbourProgress();
+		LoadFOW();
+		LoadEnemies();
+		_CombatManager._inCombat = false;
+		_CombatManager._victory = false;
+		Save();
 	}
 
 	void SaveTowns(){
@@ -126,6 +163,16 @@ public class SaveGame : MonoBehaviour {
 	}
 	void LoadPlayerPos(){
 		var pos = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
+		_player.transform.position = pos;
+		if (_playerControls._agent != null)	_playerControls._agent.SetDestination(pos);
+	}
+	public void SaveLastTownPos(Vector3 town){
+		PlayerPrefs.SetFloat("TownPosX", town.x);
+		PlayerPrefs.SetFloat("TownPosY", town.y);
+		PlayerPrefs.SetFloat("TownPosZ", town.z);
+	}
+	void LoadLastTownPos(){
+		var pos = new Vector3(PlayerPrefs.GetFloat("TownPosX"), PlayerPrefs.GetFloat("TownPosY"), PlayerPrefs.GetFloat("TownPosZ"));
 		_player.transform.position = pos;
 		if (_playerControls._agent != null)	_playerControls._agent.SetDestination(pos);
 	}

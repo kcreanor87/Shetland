@@ -73,6 +73,9 @@ public class TownCanvas : MonoBehaviour {
 		Time.timeScale = 1.0f;
 		WM_UI.UpdateUI();
 		_saveGame.Save();
+		var pos = _townManager.transform.FindChild("Entrance").position;
+		print(pos);
+		_saveGame.SaveLastTownPos(pos);
 		_dayTimer.GenerateEnemies();
 	}
 

@@ -30,6 +30,8 @@ public class DayTimer : MonoBehaviour {
 		Time.timeScale =1.0f;
 		_saveGame = GameObject.Find("Loader").GetComponent<SaveGame>();
 		GenerateEnemies();
+		if (_saveGame._skipDay) Sleep();
+		_saveGame._skipDay = false;
 	}
 
 	IEnumerator Timer(){
@@ -62,7 +64,7 @@ public class DayTimer : MonoBehaviour {
 		if (restart) StartCoroutine(Timer());		
 	}
 	void RumourTimer(){
-		if (_rumourTimer >= 24){
+		if (_rumourTimer >= 24){			
 			_rumourScript.ClearRumour();
 			_rumourTimer = 0;
 		}
@@ -104,15 +106,16 @@ public class DayTimer : MonoBehaviour {
 		_dayCycle.AdvanceTime();
 	}
 
-	public void Sleep(){
+	public void Sleep(){		
 		_days++;
-		int amount = 24 - _hours;					
+		int amount = 24 - _hours;			
 		_rumourTimer += amount;
 		RumourTimer();
 		_hours = 0;
 		UpdateClock();
 		EndOfDay(false);
 		_dayCycle.AdvanceTime();
+		print("Day Skipped. Day " + _days);
 	}
 
 	public void GenerateEnemies(){

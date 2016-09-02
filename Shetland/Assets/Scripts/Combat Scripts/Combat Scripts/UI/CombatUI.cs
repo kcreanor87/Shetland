@@ -180,10 +180,6 @@ public class CombatUI : MonoBehaviour {
 			break;
 		}
 	}
-	//Retreat function, return to previous town, day++ but prices stay the same
-	public void Retreat(){
-		SceneManager.LoadScene(0);
-	}
 
 	public void UpdateAP(){
 		_apBack.sizeDelta = new Vector2(_CombatManager._maxAP*10, 29);
