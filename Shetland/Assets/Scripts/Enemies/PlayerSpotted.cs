@@ -4,6 +4,7 @@ public class PlayerSpotted : MonoBehaviour {
 
 	public PlayerSpotted _thisScript;
 	public EnemyWM _parentScript;
+	public bool _chasing;
 
 	void Start(){
 		_thisScript = gameObject.GetComponent<PlayerSpotted>();
@@ -11,13 +12,13 @@ public class PlayerSpotted : MonoBehaviour {
 	}
 
 	void OnWillRenderObject(){
-		if (Camera.current.name == "Main Camera"){
+		if (Camera.current.name == "Main Camera" && !_chasing){
 			Seen();
 		}
 	}
 
 	void Seen(){
-		_parentScript.ChasePlayer();
-		_thisScript.enabled = false;
+		_chasing = true;
+		_parentScript.ChasePlayer();		
 	}
 }

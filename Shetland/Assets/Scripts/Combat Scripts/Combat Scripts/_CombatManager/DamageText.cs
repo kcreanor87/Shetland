@@ -14,7 +14,7 @@ public class DamageText : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake() {
-		_calcDam = GameObject.Find("_CombatManager").GetComponent<CalculateDamage>();
+		_calcDam = GameObject.Find("_combatMan").GetComponent<CalculateDamage>();
 		_text = gameObject.GetComponent<Text>();
 		_text.enabled = false;
 	}

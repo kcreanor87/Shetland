@@ -13,9 +13,9 @@ public class _CombatManager : MonoBehaviour {
 	public static int _currentHealth;
 	public static int _maxAP;
 	public static float _moveSpeed = 8.0f;
-	public static int _str = 1;
-	public static int _dex = 1;
-	public static int _vit = 1;
+	public static int _str = 5;
+	public static int _dex = 5;
+	public static int _vit = 5;
 	public static int _meleeDam;
 	public static int _rangedDam;
 	public static int _armourRating;

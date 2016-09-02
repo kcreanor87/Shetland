@@ -80,6 +80,9 @@
     <Compile Include="Assets\Scripts\Factories&amp;Resources\ActivateFactory.cs" />
     <Compile Include="Assets\Scripts\Factories&amp;Resources\Factories.cs" />
     <Compile Include="Assets\Scripts\Factories&amp;Resources\ResourceGen.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\CharDatabase.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\Character.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\CharacterCreation.cs" />
     <Compile Include="Assets\Scripts\Main Menu\Highscores.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Main Menu\NewGame.cs" />
@@ -110,7 +113,7 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Compile Include="Assets\Scripts\Combat%20Scripts\Combat%20Scripts\Enemy\EnemyScript.cs" />
+    <Compile Include="Assets\Scripts\Main%20Menu\CharacterCreation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

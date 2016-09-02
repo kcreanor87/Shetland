@@ -520,50 +520,42 @@
 	"buffers":
 	[
 		{
-			"file": "Assets/Scripts/Saving/SaveGame.cs",
+			"file": "Assets/Scripts/Combat Scripts/_CombatManager.cs",
 			"settings":
 			{
-				"buffer_size": 8506,
+				"buffer_size": 2505,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Assets/Scripts/Enemies/SpawnPoint.cs",
+			"file": "Assets/Scripts/Combat Scripts/GenerateStats.cs",
 			"settings":
 			{
-				"buffer_size": 2149,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Daytimer/DayTimer.cs",
-			"settings":
-			{
-				"buffer_size": 3127,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Town&Harbour/TownCanvas.cs",
-			"settings":
-			{
-				"buffer_size": 7199,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Enemies/EnemyWM.cs",
-			"settings":
-			{
-				"buffer_size": 1085,
+				"buffer_size": 6452,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/Enemies/CombatTrigger.cs",
+			"file": "Assets/Scripts/Combat Scripts/Combat Scripts/Player/CameraController.cs",
 			"settings":
 			{
-				"buffer_size": 302,
+				"buffer_size": 4698,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Combat Scripts/Combat Scripts/Enemy/EnemyScript.cs",
+			"settings":
+			{
+				"buffer_size": 8987,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Combat Scripts/Combat Scripts/Player/MuzzleFlash.cs",
+			"settings":
+			{
+				"buffer_size": 697,
 				"line_ending": "Unix"
 			}
 		}
@@ -652,23 +644,36 @@
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Daytimer",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Factories&Resources",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Main Menu",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Saving",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Town&Harbour"
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts/Player"
 	],
 	"file_history":
 	[
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Main Menu/NewGame.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TEMP.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts/Player/PlayerTurn.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts/UI/CombatUI.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts/_CombatManager/CombatOver.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/GenerateStats.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/_CombatManager.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/ButtonsGenerator.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts/UI/SkillsMenu.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts/_CombatManager/AuxilliaryPower.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts/_CombatManager/CalculateDamage.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts/_CombatManager/CombatGenerator.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Daytimer/DayTimer.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/CombatTrigger.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/EnemyWM.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Town&Harbour/TownCanvas.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts/Terrain/Cover.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/Combat Scripts/_CombatManager/CombatStats.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Saving/SaveGame.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/SpawnPoint.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Combat Scripts/_manager.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Main Menu/NewGame.cs",
+		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/TEMP.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/_manager/ManagerSpawn.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/_manager/_manager.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Main Menu/MainMenu.cs",
-		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/EnemyWM.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/Enemies/PlayerSpotted.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/PlayerSpotted.cs",
 		"/C/Users/Kenny/Documents/Projects/Shetland/Shetland/Assets/Scripts/CombatTrigger.cs",
@@ -772,27 +777,11 @@
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/CombatUI.cs",
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Honalulu_v0-2.sln",
 		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/TurnManager.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/EnemyScript.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/CombatGenerator.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/PlayerTurn.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/ProGen/ProGen Testing/Assets/LevelGenerator.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/ProGen/ProGen Testing/Assets/Terrain.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/CombatOver.cs",
-		"/C/Users/Kenny/AppData/Roaming/Sublime Text 3/Packages/OmniSharp/OmniSharpSublime.sublime-settings",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/_manager.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CalculateDamage.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CombatStats.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CombatOver.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/EnemyDatabase.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CombatGenerator.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Inventory Scripts/WeaponDatabase.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/DamageText.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/GenerateStats.cs",
-		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/CombatUI.cs"
+		"/C/Users/Kenny/Documents/Projects/Michigan/Honalulu_v0-2/Assets/Scripts/Combat Scripts/EnemyScript.cs"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -825,6 +814,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_manager",
 			"();\n",
 			"\"));\n",
 			"}\n",
@@ -1009,64 +999,99 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/Saving/SaveGame.cs",
+					"file": "Assets/Scripts/Combat Scripts/_CombatManager.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8506,
+						"buffer_size": 2505,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2790,
-								2790
+								2505,
+								2505
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 679.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/Combat Scripts/GenerateStats.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6452,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6382,
+								6382
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"8303,8310": "Cannot convert from ? to System.Boolean"
+								"2007,2021": "'WeaponDatabase' is not a known identifier",
+								"2024,2025": "Cannot convert from ? to [UnknownType WeaponDatabase]",
+								"2093,2107": "'ArmourDatabase' is not a known identifier",
+								"2110,2111": "Cannot convert from ? to [UnknownType ArmourDatabase]",
+								"2828,2829": "Invocation error: AmbiguousMatch",
+								"3384,3385": "Invocation error: AmbiguousMatch",
+								"3702,3703": "Invocation error: AmbiguousMatch",
+								"4325,4330": "Cannot convert from ? to System.String",
+								"4385,4390": "Cannot convert from ? to System.String",
+								"4440,4445": "Cannot convert from ? to System.String",
+								"4497,4502": "Cannot convert from ? to System.String",
+								"4551,4556": "Cannot convert from ? to System.String",
+								"4821,4835": "'WeaponDatabase' does not contain a definition for '_meleeDatabase'",
+								"4836,4841": "Error: Boolean",
+								"4911,4925": "'WeaponDatabase' does not contain a definition for '_meleeDatabase'",
+								"4928,4929": "Unknown Resolver Error",
+								"4929,4934": "Cannot convert from ? to System.String",
+								"5004,5019": "'WeaponDatabase' does not contain a definition for '_rangedDatabase'",
+								"5020,5025": "Error: Boolean",
+								"5095,5110": "'WeaponDatabase' does not contain a definition for '_rangedDatabase'",
+								"5113,5114": "Unknown Resolver Error",
+								"5114,5119": "Cannot convert from ? to System.String",
+								"5189,5202": "'ArmourDatabase' does not contain a definition for '_headDatabase'",
+								"5203,5208": "Error: Boolean",
+								"5278,5291": "'ArmourDatabase' does not contain a definition for '_headDatabase'",
+								"5294,5295": "Unknown Resolver Error",
+								"5295,5300": "Cannot convert from ? to System.String",
+								"5370,5384": "'ArmourDatabase' does not contain a definition for '_chestDatabase'",
+								"5385,5390": "Error: Boolean",
+								"5460,5474": "'ArmourDatabase' does not contain a definition for '_chestDatabase'",
+								"5477,5478": "Unknown Resolver Error",
+								"5478,5483": "Cannot convert from ? to System.String",
+								"5553,5565": "'ArmourDatabase' does not contain a definition for '_legDatabase'",
+								"5566,5571": "Error: Boolean",
+								"5641,5653": "'ArmourDatabase' does not contain a definition for '_legDatabase'",
+								"5656,5657": "Unknown Resolver Error",
+								"5657,5662": "Cannot convert from ? to System.String",
+								"873,887": "'WeaponDatabase' is not a known identifier",
+								"913,927": "'ArmourDatabase' is not a known identifier"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 663.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/Scripts/Enemies/SpawnPoint.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2149,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								622,
-								622
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"781,782": "Assignment is redundant"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2184.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1074,122 +1099,113 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Assets/Scripts/Daytimer/DayTimer.cs",
+					"file": "Assets/Scripts/Combat Scripts/Combat Scripts/Player/CameraController.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3127,
+						"buffer_size": 4698,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2962,
-								2962
+								902,
+								902
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"1498,1505": "Parameter can be IComparable"
+								"1287,1305": "Error: Boolean",
+								"2256,2272": "'TurnManager' does not contain a definition for '_activeCombatant'",
+								"2273,2276": "'?' does not contain a definition for '_go'",
+								"2277,2286": "Error: Transform",
+								"560,571": "'TurnManager' is not a known identifier",
+								"844,855": "'TurnManager' is not a known identifier",
+								"858,859": "Cannot convert from ? to [UnknownType TurnManager]"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 702.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/Scripts/Town&Harbour/TownCanvas.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7199,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2864,
-								2864
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 195.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Assets/Scripts/Enemies/EnemyWM.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1085,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1035,
-								1035
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"1039,1051": "Unexpected symbol `.'', expecting `,'', `;'', `}'', or `=''"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 81.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Assets/Scripts/Enemies/CombatTrigger.cs",
+					"buffer": 3,
+					"file": "Assets/Scripts/Combat Scripts/Combat Scripts/Enemy/EnemyScript.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 302,
+						"buffer_size": 8987,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								174,
-								174
+								1325,
+								1325
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"200,208": "Parameter can be declared with base type"
+								"120,131": "'TurnManager' is not a known identifier",
+								"1320,1331": "'MuzzleFlash' is not a known identifier",
+								"1334,1335": "Cannot convert from ? to [UnknownType MuzzleFlash]",
+								"1581,1592": "'TurnManager' is not a known identifier",
+								"1595,1596": "Cannot convert from ? to [UnknownType TurnManager]",
+								"169,180": "'MuzzleFlash' is not a known identifier",
+								"2196,2214": "Error: Boolean",
+								"2468,2484": "'TurnManager' does not contain a definition for '_activeCombatant'",
+								"2485,2491": "Cannot convert from ? to System.Single",
+								"2512,2528": "'TurnManager' does not contain a definition for '_activeCombatant'",
+								"2529,2539": "Cannot convert from ? to System.Single",
+								"3137,3145": "'TurnManager' does not contain a definition for 'NextTurn'",
+								"3147,3148": "'TurnManager' does not contain a definition for 'NextTurn'",
+								"6625,6632": "'MuzzleFlash' does not contain a definition for '_active'",
+								"6648,6649": "Error: Boolean",
+								"7755,7763": "'TurnManager' does not contain a definition for 'NextTurn'",
+								"7765,7766": "'TurnManager' does not contain a definition for 'NextTurn'",
+								"8310,8324": "'TurnManager' does not contain a definition for '_activeEnemies'",
+								"8326,8327": "Error: ?"
 							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 445.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/Combat Scripts/Combat Scripts/Player/MuzzleFlash.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -1197,7 +1213,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

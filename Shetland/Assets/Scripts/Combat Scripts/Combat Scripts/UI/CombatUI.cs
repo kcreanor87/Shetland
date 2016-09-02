@@ -68,8 +68,8 @@ public class CombatUI : MonoBehaviour {
 		_attackAbutton = GameObject.Find("AttackTypeA").GetComponent<Button>();
 		_attackBbutton = GameObject.Find("AttackTypeB").GetComponent<Button>();
 		_attackCbutton = GameObject.Find("AttackTypeC").GetComponent<Button>();
-		_calc = GameObject.Find("_CombatManager").GetComponent<CalculateDamage>();
-		_auxPower = GameObject.Find("_CombatManager").GetComponent<AuxilliaryPower>();
+		_calc = GameObject.Find("_combatMan").GetComponent<CalculateDamage>();
+		_auxPower = GameObject.Find("_combatMan").GetComponent<AuxilliaryPower>();
 		_hpap = GameObject.Find("HP/AP");
 		_hpapText = GameObject.Find("HP/AP Text").GetComponent<Text>();
 		_hpap.SetActive(false);
