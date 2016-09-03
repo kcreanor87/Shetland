@@ -63,23 +63,4 @@ public class _CombatManager : MonoBehaviour {
 		_maxAP = 40 + 5*_dex;	
 		_currentHealth = _maxHealth;	
 	}
-
-	/*void OnLevelWasLoaded(int level){
-		if (level == 0){
-			_skills.Clear();
-			_skills.Add(0);
-			_skills.Add(1);
-			_skills.Add(2);
-			_skills.Add(3);
-			_playerLevel = 1;
-			_str = 1;
-			_dex = 1;
-			_equipMelee = _weaponDb._meleeDatabase[0];
-			_equipRanged = _weaponDb._rangedDatabase[0];
-			_headSlot = _armourDb._headDatabase[0];
-			_chestSlot = _armourDb._chestDatabase[0];
-			_legSlot = _armourDb._legDatabase[0];
-			CalculateStats();
-		}
-	}*/
 }

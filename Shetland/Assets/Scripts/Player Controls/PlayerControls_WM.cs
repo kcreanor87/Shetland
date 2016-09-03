@@ -6,7 +6,9 @@ public class PlayerControls_WM : MonoBehaviour {
 	public bool _movingToResource;
 	public bool _movingToTown;
 	public bool _movingToHarbour;
+	public bool _moving;
 	public float _range;
+	public Animator _anim;
 	public static bool _inMenu;
 	public Vector3 _objectPos;
 	public Factories _factoryScript;
@@ -30,6 +32,7 @@ public class PlayerControls_WM : MonoBehaviour {
 	}
 
 	void Spawn(){
+		_anim = gameObject.GetComponent<Animator>();
 		_endGame = GameObject.Find("HarbourCanvas").GetComponent<EndGame>();
 		_townCanvas = GameObject.Find("TownCanvas").GetComponent<TownCanvas>();
 		_agent = gameObject.GetComponent<NavMeshAgent>();
@@ -49,6 +52,7 @@ public class PlayerControls_WM : MonoBehaviour {
 					if (dist > 1.0f){
 						_agent.Resume();
 						_agent.SetDestination(hit.point);
+						_moving = true;
 					}
 				}		
 			}
@@ -60,23 +64,25 @@ public class PlayerControls_WM : MonoBehaviour {
 				switch (hit.collider.tag){
 					case "Resource":
 					_objectPos = hit.transform.position;
-					_agent.SetDestination(_objectPos);
+					_agent.SetDestination(_objectPos);					
 					_agent.Resume();
 					_movingToResource= true;
 					_movingToFactory = false;
 					_movingToTown = false;
 					_movingToHarbour = false;
+					_moving = true;
 					_resourceScript = hit.collider.gameObject.GetComponentInParent<ResourceGen>();
 					_range = 3.0f;
 					break;
 					case "Factory":
 					_objectPos = hit.transform.position;
-					_agent.SetDestination(_objectPos);
+					_agent.SetDestination(_objectPos);					
 					_agent.Resume();
 					_movingToFactory= true;
 					_movingToResource= false;
 					_movingToTown = false;
 					_movingToHarbour = false;
+					_moving = true;
 					_factoryScript = hit.collider.gameObject.GetComponent<Factories>();
 					_range = 5.0f;
 					break;
@@ -89,6 +95,7 @@ public class PlayerControls_WM : MonoBehaviour {
 					_movingToResource= false;
 					_movingToFactory = false;
 					_movingToHarbour = false;
+					_moving = true;
 					_range = 1.0f;				
 					break;
 					case "Harbour":
@@ -99,11 +106,20 @@ public class PlayerControls_WM : MonoBehaviour {
 					_movingToTown = false;
 					_movingToResource= false;
 					_movingToFactory = false;
+					_moving = true;
 					_range = 1.0f;	
 					break;
 				}		
 			}
 		}
+		if (_moving){
+			_anim.SetBool("Running", true);
+			var distance = Vector3.Distance(transform.position, _agent.destination);
+			if (distance <= 1.0f){
+				_anim.SetBool("Running", false);
+				_moving = false;
+			}
+		} 
 	}
 
 	void MoveToObject(){
@@ -126,10 +142,12 @@ public class PlayerControls_WM : MonoBehaviour {
 					_townCanvas._townManager._visited = true;
 					_townCanvas.OpenCanvas();
 					_agent.SetDestination(transform.position);
+					_anim.SetBool("Running", false);
 					_agent.Stop();
 					_movingToTown = false;
 				}				
 				_agent.SetDestination(transform.position);
+				_anim.SetBool("Running", false);
 				_agent.ResetPath();
 			}
 		}

@@ -26,15 +26,15 @@ public class _manager : MonoBehaviour {
 		_factoryOuput.Add(0);
 
 		_resources.Clear();
-		_resources.Add(1000);
-		_resources.Add(1000);
-		_resources.Add(1000);
-		_resources.Add(1000);
-		_resources.Add(1000);
-		_resources.Add(1000);
+		_resources.Add(1);
+		_resources.Add(0);
+		_resources.Add(0);
+		_resources.Add(0);
+		_resources.Add(0);
+		_resources.Add(0);
 
-		_obols = 1000;
-		_repute = 1000;
+		_obols = 1;
+		_repute = 0;
 
 		DontDestroyOnLoad(gameObject);
 	}

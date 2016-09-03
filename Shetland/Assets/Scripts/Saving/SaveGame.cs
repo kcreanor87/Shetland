@@ -111,6 +111,7 @@ public class SaveGame : MonoBehaviour {
 			_skipDay = true;
 			LoadRumour();
 			LoadPlayerResources();
+			LoseResources();
 		}		
 		_CombatManager._inCombat = false;
 		_CombatManager._victory = false;
@@ -316,5 +317,13 @@ public class SaveGame : MonoBehaviour {
 			}
 		}
 		_CombatManager.CalculateStats();
+	}
+
+	void LoseResources(){
+		float loss = Random.Range(0.6f, 0.8f);
+		for (int i = 0; i < _manager._resources.Count; i++){
+			_manager._resources[i] = Mathf.CeilToInt((float)loss * _manager._resources[i]);
+			print (_manager._resources[i]);
+		}
 	}
 }
