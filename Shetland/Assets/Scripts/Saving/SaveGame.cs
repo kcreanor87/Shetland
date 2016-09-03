@@ -26,6 +26,7 @@ public class SaveGame : MonoBehaviour {
 	void Awake(){
 		PopulateLists();
 		if (!NewGame._newGame) Load();
+		else PlayerPrefs.DeleteAll();
 	}
 
 	void Start(){
@@ -72,37 +73,37 @@ public class SaveGame : MonoBehaviour {
 		SaveHarbourProgress();
 		SaveFOW();
 		SaveEnemies();
+		SaveCombatStats();
 		NewGame._newGame = false;
 	}
 
 	public void Load(){
+		LoadResourceSpawns();		
+		LoadFactories();				
+		LoadHarbourProgress();
+		LoadFOW();
+		LoadEnemies();
+		LoadCombatStats();
+		//Load Combat Specific Stats
 		if (_CombatManager._inCombat){
 			PostCombatLoad();
 		}
 		else{
 			NormalLoad();
-		}
+		}		
 	}
 
 	void NormalLoad(){
-		LoadResourceSpawns();		
-		LoadFactories();
 		LoadPlayerPos();
 		LoadPlayerResources();
 		LoadTimeOfDay();
-		LoadRumour();
-		LoadHarbourProgress();
-		LoadFOW();
-		LoadEnemies();
+		LoadRumour();		
 	}
 
 	void PostCombatLoad(){
 		print("Combat Load");
 		if (_CombatManager._victory){
-			LoadPlayerPos();
-			LoadTimeOfDay();
-			LoadRumour();
-			LoadPlayerResources();
+			NormalLoad();
 		}
 		else{
 			LoadLastTownPos();
@@ -110,12 +111,7 @@ public class SaveGame : MonoBehaviour {
 			_skipDay = true;
 			LoadRumour();
 			LoadPlayerResources();
-		}
-		LoadResourceSpawns();		
-		LoadFactories();				
-		LoadHarbourProgress();
-		LoadFOW();
-		LoadEnemies();
+		}		
 		_CombatManager._inCombat = false;
 		_CombatManager._victory = false;
 		Save();
@@ -285,5 +281,40 @@ public class SaveGame : MonoBehaviour {
 		for (int i = 0; i < _spawns.Count; i++){
 			_spawns[i]._fought = (PlayerPrefs.GetInt("SpawnFought" + i) > 0);
 		}
+	}
+
+	void SaveCombatStats(){
+		PlayerPrefs.SetInt("STR", _CombatManager._str);
+		PlayerPrefs.SetInt("DEX", _CombatManager._dex);
+		PlayerPrefs.SetInt("VIT", _CombatManager._vit);
+		PlayerPrefs.SetInt("Init", _CombatManager._init);
+		PlayerPrefs.SetInt("Melee", _CombatManager._weaponDb._meleeDatabase.IndexOf(_CombatManager._equipMelee));
+		PlayerPrefs.SetInt("Ranged", _CombatManager._weaponDb._rangedDatabase.IndexOf(_CombatManager._equipRanged));
+		PlayerPrefs.SetInt("Head", _CombatManager._armourDb._headDatabase.IndexOf(_CombatManager._headSlot));
+		PlayerPrefs.SetInt("Chest", _CombatManager._armourDb._chestDatabase.IndexOf(_CombatManager._chestSlot));
+		PlayerPrefs.SetInt("Legs", _CombatManager._armourDb._legDatabase.IndexOf(_CombatManager._legSlot));
+		for (int i = 0; i < _CombatManager._skills.Count; i++){
+			PlayerPrefs.SetInt("Skill" + i, _CombatManager._skills[i]);
+		}
+	}
+
+	void LoadCombatStats(){
+		_CombatManager._str = PlayerPrefs.GetInt("STR");
+		_CombatManager._dex = PlayerPrefs.GetInt("DEX");
+		_CombatManager._vit = PlayerPrefs.GetInt("VIT");
+		_CombatManager._init = PlayerPrefs.GetInt("Init");
+		_CombatManager._currentHealth = PlayerPrefs.GetInt("CurrentHealth");
+		_CombatManager._equipMelee = _CombatManager._weaponDb._meleeDatabase[PlayerPrefs.GetInt("Melee")];
+		_CombatManager._equipRanged = _CombatManager._weaponDb._rangedDatabase[PlayerPrefs.GetInt("Ranged")];
+		_CombatManager._headSlot = _CombatManager._armourDb._headDatabase[PlayerPrefs.GetInt("Head")];
+		_CombatManager._chestSlot = _CombatManager._armourDb._chestDatabase[PlayerPrefs.GetInt("Chest")];
+		_CombatManager._legSlot = _CombatManager._armourDb._legDatabase[PlayerPrefs.GetInt("Legs")];
+		_CombatManager._skills.Clear();
+		for (int i = 0; i < 10; i++){
+			if (PlayerPrefs.HasKey("Skill" + i)){
+				_CombatManager._skills.Add(i);
+			}
+		}
+		_CombatManager.CalculateStats();
 	}
 }

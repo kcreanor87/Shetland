@@ -10,7 +10,7 @@ public class AuxilliaryPower : MonoBehaviour {
 	public float _armourBonus = 1.0f;
 	public float _aimBonus = 1.0f;
 	public float _damageBonus = 1.0f;
-	private const int _healAmount = 50;
+	private int _healAmount = 50;
 
 	public int _auxHealth;
 	public int _auxArmour;

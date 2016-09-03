@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -45,74 +44,73 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Combat Scripts\ButtonsGenerator.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Enemy\EnemyDatabase.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Enemy\EnemyScript.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Player\CameraController.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Player\CameraFacing.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Player\MoveIndicator.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Player\MuzzleFlash.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Player\PlayerTurn.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Terrain\Cover.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Terrain\LevelGeneratorB.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\UI\CombatUI.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\UI\SkillsMenu.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\UI\TargetedEnemy.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\UI\Tooltip.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\AuxilliaryPower.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\CalculateDamage.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\CombatGenerator.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\CombatOver.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\CombatStats.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\DamageText.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\TurnManager.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\GenerateStats.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Inventory Scripts\Armour.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Inventory Scripts\ArmourDatabase.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Inventory Scripts\Weapon.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\Inventory Scripts\WeaponDatabase.cs" />
-     <Compile Include="Assets\Scripts\Combat Scripts\_CombatManager.cs" />
-     <Compile Include="Assets\Scripts\Daytimer\DayCycle.cs" />
-     <Compile Include="Assets\Scripts\Daytimer\DayTimer.cs" />
-     <Compile Include="Assets\Scripts\Enemies\CombatTrigger.cs" />
-     <Compile Include="Assets\Scripts\Enemies\EnemyWM.cs" />
-     <Compile Include="Assets\Scripts\Enemies\PlayerSpotted.cs" />
-     <Compile Include="Assets\Scripts\Enemies\SpawnPoint.cs" />
-     <Compile Include="Assets\Scripts\Factories&amp;Resources\ActivateFactory.cs" />
-     <Compile Include="Assets\Scripts\Factories&amp;Resources\Factories.cs" />
-     <Compile Include="Assets\Scripts\Factories&amp;Resources\ResourceGen.cs" />
-     <Compile Include="Assets\Scripts\Main Menu\CharDatabase.cs" />
-     <Compile Include="Assets\Scripts\Main Menu\Character.cs" />
-     <Compile Include="Assets\Scripts\Main Menu\CharacterCreation.cs" />
-     <Compile Include="Assets\Scripts\Main Menu\Highscores.cs" />
-     <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\Main Menu\NewGame.cs" />
-     <Compile Include="Assets\Scripts\Player Controls\PlayerControls_WM.cs" />
-     <Compile Include="Assets\Scripts\Player Controls\PlayerSight.cs" />
-     <Compile Include="Assets\Scripts\Saving\SaveGame.cs" />
-     <Compile Include="Assets\Scripts\Town&amp;Harbour\AdditionalResources.cs" />
-     <Compile Include="Assets\Scripts\Town&amp;Harbour\BuildingCost.cs" />
-     <Compile Include="Assets\Scripts\Town&amp;Harbour\Caravan.cs" />
-     <Compile Include="Assets\Scripts\Town&amp;Harbour\EndGame.cs" />
-     <Compile Include="Assets\Scripts\Town&amp;Harbour\Market.cs" />
-     <Compile Include="Assets\Scripts\Town&amp;Harbour\RumourGenerator.cs" />
-     <Compile Include="Assets\Scripts\Town&amp;Harbour\TownCanvas.cs" />
-     <Compile Include="Assets\Scripts\Town&amp;Harbour\TownManager.cs" />
-     <Compile Include="Assets\Scripts\Town&amp;Harbour\TravelButton.cs" />
-     <Compile Include="Assets\Scripts\UI\CameraControl.cs" />
-     <Compile Include="Assets\Scripts\UI\DetectCollisions.cs" />
-     <Compile Include="Assets\Scripts\UI\FOW.cs" />
-     <Compile Include="Assets\Scripts\UI\WM_UI.cs" />
-     <Compile Include="Assets\Scripts\UI\WorldMap.cs" />
-     <Compile Include="Assets\Scripts\UI\WorldMap_Icons.cs" />
-     <Compile Include="Assets\Scripts\_manager\ManagerSpawn.cs" />
-     <Compile Include="Assets\Scripts\_manager\_manager.cs" />
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Enemy\EnemyDatabase.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Enemy\EnemyScript.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Player\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Player\CameraFacing.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Player\MoveIndicator.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Player\MuzzleFlash.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Player\PlayerTurn.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Terrain\Cover.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\Terrain\LevelGeneratorB.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\UI\CombatUI.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\UI\SkillsMenu.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\UI\TargetedEnemy.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\UI\Tooltip.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\AuxilliaryPower.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\CalculateDamage.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\CombatGenerator.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\CombatOver.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\CombatStats.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\DamageText.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\TurnManager.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Combat Scripts\_CombatManager\_CombatManager.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Inventory Scripts\Armour.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Inventory Scripts\ArmourDatabase.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Inventory Scripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Combat Scripts\Inventory Scripts\WeaponDatabase.cs" />
+    <Compile Include="Assets\Scripts\Daytimer\DayCycle.cs" />
+    <Compile Include="Assets\Scripts\Daytimer\DayTimer.cs" />
+    <Compile Include="Assets\Scripts\Enemies\CombatTrigger.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyWM.cs" />
+    <Compile Include="Assets\Scripts\Enemies\PlayerSpotted.cs" />
+    <Compile Include="Assets\Scripts\Enemies\SpawnPoint.cs" />
+    <Compile Include="Assets\Scripts\Factories&amp;Resources\ActivateFactory.cs" />
+    <Compile Include="Assets\Scripts\Factories&amp;Resources\Factories.cs" />
+    <Compile Include="Assets\Scripts\Factories&amp;Resources\ResourceGen.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\CharDatabase.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\Character.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\CharacterCreation.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\Highscores.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\NewGame.cs" />
+    <Compile Include="Assets\Scripts\Player Controls\PlayerControls_WM.cs" />
+    <Compile Include="Assets\Scripts\Player Controls\PlayerSight.cs" />
+    <Compile Include="Assets\Scripts\Saving\SaveGame.cs" />
+    <Compile Include="Assets\Scripts\Town&amp;Harbour\AdditionalResources.cs" />
+    <Compile Include="Assets\Scripts\Town&amp;Harbour\BuildingCost.cs" />
+    <Compile Include="Assets\Scripts\Town&amp;Harbour\Caravan.cs" />
+    <Compile Include="Assets\Scripts\Town&amp;Harbour\EndGame.cs" />
+    <Compile Include="Assets\Scripts\Town&amp;Harbour\Market.cs" />
+    <Compile Include="Assets\Scripts\Town&amp;Harbour\RumourGenerator.cs" />
+    <Compile Include="Assets\Scripts\Town&amp;Harbour\TownCanvas.cs" />
+    <Compile Include="Assets\Scripts\Town&amp;Harbour\TownManager.cs" />
+    <Compile Include="Assets\Scripts\Town&amp;Harbour\TravelButton.cs" />
+    <Compile Include="Assets\Scripts\UI\CameraControl.cs" />
+    <Compile Include="Assets\Scripts\UI\DetectCollisions.cs" />
+    <Compile Include="Assets\Scripts\UI\FOW.cs" />
+    <Compile Include="Assets\Scripts\UI\WM_UI.cs" />
+    <Compile Include="Assets\Scripts\UI\WorldMap.cs" />
+    <Compile Include="Assets\Scripts\UI\WorldMap_Icons.cs" />
+    <Compile Include="Assets\Scripts\_manager\ManagerSpawn.cs" />
+    <Compile Include="Assets\Scripts\_manager\_manager.cs" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Compile Include="Assets\Scripts\Combat%20Scripts\Combat%20Scripts\UI\Tooltip.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -122,5 +120,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>

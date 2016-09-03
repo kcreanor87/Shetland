@@ -112,7 +112,7 @@ public class Tooltip : MonoBehaviour {
 
 	void UpdateAP(int cost){
 		float APCost = ((float) cost/_pT._ap) * -1;	
-		print(APCost);
+		//print(APCost);
 		_combatUI._apImage.sprite = (APCost < -1) ? _combatUI._apNegative : _combatUI._apPositive;
 		_combatUI._apLoss.transform.localScale = (APCost <= -1.0f) ? new Vector3 (-1.0f,1.0f,1.0f) : new Vector3 (APCost, 1, 1);
 	}	
