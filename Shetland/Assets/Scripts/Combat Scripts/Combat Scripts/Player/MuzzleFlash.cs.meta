@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5fdb93fcdf71c764489409154f798899
+timeCreated: 1459866045
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - _muzzleFlash: {instanceID: 0}
+  - _bullet: {fileID: 5404096, guid: 5f93c8faf1c363c42bb7b790c2f6d1de, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
