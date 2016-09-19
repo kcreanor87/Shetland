@@ -5,6 +5,7 @@
 [Oo]bj/
 [Bb]uild
 /[Ll]ibrary/
+[Ss]upportFiles/
 sysinfo.txt
 *.stackdump
  
@@ -21,6 +22,7 @@ sysinfo.txt
 /*.user
 /*.unityproj
 /*.booproj
+/*.meta
 /.idea*/
  
 # ============ #
@@ -35,4 +37,5 @@ ehthumbs.db
 [Dd]esktop.ini
 
 # Sublime Text Files
-*.sublime-workspace
+/*.sublime-workspace
+/*.sublime-project
