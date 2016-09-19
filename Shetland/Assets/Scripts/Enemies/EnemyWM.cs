@@ -12,6 +12,10 @@ public class EnemyWM : MonoBehaviour {
 	public bool _returning;
 	public SaveGame _saveGame;
 	public float _chaseDistance = 50.0f;
+	//Position in enemyDatabase, for use on loading combat level
+	public int _index;
+	//number of enemies to spawn on combat load
+	public int _number = 1;
 
 	void Start(){	
 		_playerSpot = gameObject.GetComponentInChildren<PlayerSpotted>();
@@ -49,6 +53,8 @@ public class EnemyWM : MonoBehaviour {
 		_player.enabled = false;
 		_thisSpawn._fought = true;
 		print("Combat!");
+		_CombatManager._type = _index;
+		_CombatManager._number = _number;
 		_saveGame.Save();
 		SceneManager.LoadScene("Combat");
 	}

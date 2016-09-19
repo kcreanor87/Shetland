@@ -22,11 +22,7 @@ public class CombatGenerator : MonoBehaviour {
 	//Turn Manager Script - Allows allocating of enemies remaining in fight
 	public TurnManager _tM;
 	//Generator stats - how many of what enemy should be spawned
-	//***********To be separated into own class**************
-	public int _totalSpawned = 3;
 	public int _type;
-	public int _enemyRangeLower;
-	public int _enemyRangeUpper = 2;
 
 	//Initializes the EnemyDatabase script and
 	//creates an array of the available spawn points
@@ -48,8 +44,8 @@ public class CombatGenerator : MonoBehaviour {
 	//Spawns an enemy of one of the appropriate types until
 	//the number of enemies equals the expected value.
 	void GenerateEnemies(){
-		for (int i = 0; i < _totalSpawned; i++){
-			_type = Random.Range(_enemyRangeLower, _enemyRangeUpper);
+		for (int i = 0; i < _CombatManager._number; i++){
+			_type = _CombatManager._type;
 			_combatants.Add(new CombatStats(
 				_db._enemyDB[_type]._charName,
 				_db._enemyDB[_type]._id,
@@ -74,7 +70,7 @@ public class CombatGenerator : MonoBehaviour {
 		player._init = _CombatManager._init + Random.Range(1, 101);
 		var playerGO = GameObject.Find("Player");
 		player._go = playerGO;
-		_tM._activeEnemies = _totalSpawned;
+		_tM._activeEnemies = _CombatManager._number;
 	}
 
 	//Organises the currently active combatants by their initiative value

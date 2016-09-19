@@ -57,7 +57,9 @@ public class SpawnPoint : MonoBehaviour {
 	void SpawnEnemy(){
 		var enemyType = Random.Range(0, _enemyDatabase.Count);
 		var newEnemy = (GameObject) Instantiate(_enemyDatabase[enemyType], transform.position, Quaternion.identity);
-		_spawnScript = newEnemy.GetComponent<EnemyWM>();
+		var script = newEnemy.GetComponent<EnemyWM>();
+		script._index = enemyType;
+		_spawnScript = script;
 		_spawnScript._thisSpawn = gameObject.GetComponent<SpawnPoint>();
 		_generated = true;
 	}

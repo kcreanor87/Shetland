@@ -34,6 +34,10 @@ public class _CombatManager : MonoBehaviour {
 	public static WeaponDatabase _weaponDb;
 	public static ArmourDatabase _armourDb;
 
+	//Information for current combat
+	public static int _type;
+	public static int _number;
+
 	//Initialized once only, stop _manager GO from being destroyed when loading a new scene
 	void Awake () {
 		print("_CombatManager Awake() Called");

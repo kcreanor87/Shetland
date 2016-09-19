@@ -21,6 +21,7 @@ sysinfo.txt
 /*.user
 /*.unityproj
 /*.booproj
+/*.meta
 /.idea*/
  
 # ============ #
@@ -36,3 +37,4 @@ ehthumbs.db
 
 # Sublime Text Files
 *.sublime-workspace
+*.sublime-project
